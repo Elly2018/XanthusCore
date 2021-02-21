@@ -1,0 +1,19 @@
+{
+  "name": "xanthuscore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elly2018/XanthusCore.git"
+  },
+  "author": "Elly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elly2018/XanthusCore/issues"
+  },
+  "homepage": "https://github.com/Elly2018/XanthusCore#readme"
+}
