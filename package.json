@@ -1,8 +1,9 @@
 {
   "name": "xanthuscore",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.953",
+  "description": "Xanthus application core",
+  "main": "./main.ts",
+  "exports": "./main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Elly2018/XanthusCore/issues"
   },
-  "homepage": "https://github.com/Elly2018/XanthusCore#readme"
+  "homepage": "https://github.com/Elly2018/XanthusCore#readme",
+  "dependencies": {
+    "@types/ws": "^7.4.0",
+    "mongoose": "^5.11.17",
+    "ws": "^7.4.3"
+  }
 }
