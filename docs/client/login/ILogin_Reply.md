@@ -3,7 +3,7 @@
 ## Body
 
 ```typescript
-interface ILoginReply extends IBase{
+interface ILoginReply extends IBase {
     type: number,
     message: string,
     _id: string,

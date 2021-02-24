@@ -2,7 +2,7 @@
 
 ## Body
 ```typescript
-interface IBase{
+interface IBase {
     header: String,
 }
 ```

@@ -19,7 +19,7 @@ But this will type check, convert data to the type we choose
 
 ## Example
 
-For example let's to create an receiver\
+For example let's create an receiver\
 The action will be user like a post on forum
 
 ```typescript
