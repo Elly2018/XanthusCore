@@ -6,7 +6,7 @@ import {IBase} from '../IBase'
  * @param successfully 0: Successfully, 1: failed
  * @param reason Failed message
  */
-export interface INav_CreateServerReply extends IBase{
+export interface INavCreateServerReply extends IBase{
     successfully: number,
     reason: string,
 }

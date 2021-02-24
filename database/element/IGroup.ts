@@ -8,7 +8,7 @@ import mongoose from "mongoose";
 export interface IGroup{
     name: string
     role: Array<string>,
-    createdate?: number
+    createdate: number
 }
 
 export const SGroup:mongoose.Schema = new mongoose.Schema({

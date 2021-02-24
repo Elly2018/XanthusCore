@@ -13,7 +13,8 @@ export interface IFileFilter{
     start_with: string,
     end_with: string,
     extension: Array<string>,
-    top_only: boolean
+    top_only: boolean,
+    createdate: number
 }
 
 export const SFileFilter:mongoose.Schema = new mongoose.Schema({
@@ -21,5 +22,6 @@ export const SFileFilter:mongoose.Schema = new mongoose.Schema({
     start_with: String,
     end_with: String,
     extension:[String],
-    top_only: {type:Boolean, default: true}
+    top_only: {type:Boolean, default: true},
+    createdate: {type:Date, default:Date.now}
 })

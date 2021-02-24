@@ -14,7 +14,7 @@ export interface IChannel{
     link: string,
     group: boolean,
     groupid: string,
-    createdate?: number
+    createdate: number
 }
 
 export const SChannel:mongoose.Schema = new mongoose.Schema({

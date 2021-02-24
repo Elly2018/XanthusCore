@@ -13,3 +13,17 @@ export enum ChannelType{
     ServerManage = 11,
     Notice = 12
 }
+
+export enum LobbyDynamic{
+    Text = 0,
+    File = 1,
+    Issue = 2,
+    Graph = 4,
+}
+
+export enum GroupDynamic{
+    Text = 0,
+    File = 1,
+    Issue = 2,
+    Graph = 4,
+}

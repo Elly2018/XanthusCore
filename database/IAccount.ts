@@ -14,7 +14,7 @@ export interface IAccount{
     class: string,
     block: boolean,
     servers: Array<string>,
-    createdate?: number
+    createdate: number
 }
 
 export const SAccount:mongoose.Schema = new mongoose.Schema({

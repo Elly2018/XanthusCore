@@ -14,7 +14,7 @@ interface TextSetting{
  */
 export interface ITextChannel{
     setting:TextSetting,
-    createdate?: number
+    createdate: number
 }
 
 export const STextChannel:mongoose.Schema = new mongoose.Schema({

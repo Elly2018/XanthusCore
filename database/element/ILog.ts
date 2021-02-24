@@ -10,7 +10,7 @@ export interface ILog{
     tag: string,
     message: string,
     color: string,
-    createdate?: number
+    createdate: number
 }
 
 export const SLog:mongoose.Schema = new mongoose.Schema({

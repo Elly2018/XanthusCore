@@ -11,7 +11,7 @@ export abstract class MainReceiver {
     public AnalysisData(data:any, ws?:WebSocket){
         for(let i = 0; i < this.receivers.length;i++){
             if(this.receivers[i].Check(data.header)){
-                this.receivers[i].Analysis(ws, data);
+                this.receivers[i].Analysis(data, ws);
                 return;
             }
         }

@@ -5,7 +5,7 @@ import { IBase } from "../IBase";
  * @param username Input username
  * @param password Input password
  */
-export interface ILogin_Login extends IBase {
+export interface ILoginLogin extends IBase {
     username: string,
     password: string
 }

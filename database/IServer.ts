@@ -31,6 +31,8 @@ export interface IServerTemp{
  */
 export interface IServer{
     name: string,
+    owner: string,
+    color: string,
     group: Array<IServerElement>,
     staff: Array<IServerElement>,
     role: Array<string>,
@@ -42,11 +44,16 @@ export interface IServer{
         lobby:Array<string>,
         group:Array<string>
     },
-    createdate?: number
+    createdate: number
 }
 
 export const SServer:mongoose.Schema = new mongoose.Schema({
     name: String,
+    owner: String,
+    color: {
+        type: String,
+        default: "#129853"
+    },
     group: [
         {
             id: String,

@@ -5,6 +5,6 @@ import { IBase } from "../IBase";
  * Add server request
  * @param code Server invite code
  */
-export interface INav_AddServer extends IBase{
+export interface INavAddServer extends IBase{
     code: string
 }

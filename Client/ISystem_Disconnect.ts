@@ -5,6 +5,6 @@ import { IBase } from "../IBase";
  * Disconnect signal
  * @param reason Reason of disconnect
  */
-export interface ISystem_Disconnect extends IBase{
+export interface ISystemDisconnect extends IBase{
     reason: string
 }

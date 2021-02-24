@@ -4,11 +4,13 @@ import mongoose from "mongoose";
  * Role data module
  * @param name Role name
  * @param color Role color
+ * @param dynamic Can it be modify by anyone
  * @param permission Role permission
  */
 export interface IRole{
     name: string,
     color: string,
+    dynamic: boolean,
     permission: {
         server: {
             server_modify: boolean,
@@ -21,12 +23,13 @@ export interface IRole{
             task_modify: boolean
         }
     },
-    createdate?: number
+    createdate: number
 }
 
 export const SRole:mongoose.Schema = new mongoose.Schema({
     name: String,
     color: String,
+    dynamic: Boolean,
     permission: {
         server: {
             server_modify: Boolean,

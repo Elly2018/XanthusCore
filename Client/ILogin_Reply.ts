@@ -1,18 +1,5 @@
-import {IBase} from './../IBase'
-
-/**
- * Login account information
- * @param _id Account ID
- * @param username Account username
- * @param class Account class
- * @param servers Join server list
- */
-interface IAccount{
-    _id: string,
-    username: string,
-    class: string,
-    servers:Array<string>
-}
+import { IBase } from './../IBase'
+import { IAccount } from './../database/IAccount'
 
 /**
  * Client receiver message\
@@ -21,8 +8,9 @@ interface IAccount{
  * @param message Login reply message
  * @param account Account information
  */
-export interface ILogin_Reply extends IBase{
+export interface ILoginReply extends IBase{
     type: number,
     message: string,
+    _id: string,
     account?: IAccount
 }

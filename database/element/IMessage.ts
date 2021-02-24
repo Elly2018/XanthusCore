@@ -20,7 +20,7 @@ export interface IMessage{
     user: string,
     reply: IReply,
     message: string,
-    createdate?: number
+    createdate: number
 }
 
 export const SMessage:mongoose.Schema = new mongoose.Schema({

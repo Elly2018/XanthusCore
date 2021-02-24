@@ -9,11 +9,13 @@ import mongoose from "mongoose";
 export interface IFileURL{
     name: string,
     filters:Array<string>,
-    page_url:Array<string>
+    page_url:Array<string>,
+    createdate: number
 }
 
 export const SFileURL:mongoose.Schema = new mongoose.Schema({
     name: String,
     filters:[String],
-    page_url:[String]
+    page_url:[String],
+    createdate: {type:Date, default:Date.now}
 })

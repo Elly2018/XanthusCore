@@ -28,6 +28,7 @@ interface FileSetting{
 export interface IFileChannel{
     setting:FileSetting,
     root: string,
+    createdate: number,
 }
 
 export const SFileChannel:mongoose.Schema = new mongoose.Schema({

@@ -14,7 +14,7 @@ interface LogSetting{
  */
 export interface ILogChannel{
     setting:LogSetting,
-    createdate?: number
+    createdate: number
 }
 
 export const SLogChannel:mongoose.Schema = new mongoose.Schema({
