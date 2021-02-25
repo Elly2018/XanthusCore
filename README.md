@@ -17,7 +17,7 @@ npm install xanthuscore
 
 ## Documentation
 
-[Docs](./docs/overview.md)
+[Documentation](./docs/overview.md)
 
 ## License
 

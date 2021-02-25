@@ -68,6 +68,9 @@ const SServer:mongoose.Schema = new mongoose.Schema({
 
 ## Description
 
+Define server data format\
+About sub interface, see more detail in\
+[IServerElement](./IServerElement.md), [IServerTemp](./IServerTemp.md), [IServerGroupChannel](./IServerGroupChannel.md)
 
 ## Properties
 

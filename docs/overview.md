@@ -34,6 +34,7 @@ Server receive data format, it is also client sender data format
 1. [INav_ToProfile](./server/nav/INav_ToProfile.md)
 2. [INav_ToServer](./server/nav/INav_ToServer.md)
 3. [INav_CreateServer](./server/nav/INav_CreateServer.md)
+    * [INav_Template](./server/nav/INav_Template.md)
 4. [INav_AddServer](./server/nav/INav_AddServer.md)
 5. [INav_UpdateBadgesR](./server/nav/INav_UpdateBadgesR.md)
 6. [INav_UpdateServerListR](./server/nav/INav_UpdateServerListR.md)
@@ -49,11 +50,12 @@ Client receive data format, it is also server sender data format
 
 #### Nav
 
-1. INav_ToServerReply
+1. [INav_ToServerReply](./client/nav/INav_ToServerReply.md)
 2. INav_CreateServerReply
 3. INav_AddServerReply
 4. INav_UpdateUser
-5. INav_UpdateBadges
+5. [INav_UpdateBadges](./client/nav/INav_UpdateBadges.md)
+    * [INav_BadgesPackageElement](./client/nav/INav_BadgesPackageElement.md)
 6. INav_UpdateServerList
 7. INav_UpdateClass
 
