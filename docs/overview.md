@@ -24,10 +24,13 @@ But the structure works little different in client and server
 
 Server receive data format, it is also client sender data format
 
-* Login
+#### Login
+
 1. [ILogin_Login](./server/login/ILogin_Login.md)
 2. [ILogin_Logout](./server/login/ILogin_Logout.md)
-* Nav
+
+#### Nav
+
 1. [INav_ToProfile](./server/nav/INav_ToProfile.md)
 2. [INav_ToServer](./server/nav/INav_ToServer.md)
 3. [INav_CreateServer](./server/nav/INav_CreateServer.md)
@@ -40,9 +43,12 @@ Server receive data format, it is also client sender data format
 
 Client receive data format, it is also server sender data format
 
-* Login
+#### Login
+
 1. [ILogin_Reply](./client/login/ILogin_Reply.md)
-* Nav
+
+#### Nav
+
 1. INav_ToServerReply
 2. INav_CreateServerReply
 3. INav_AddServerReply
