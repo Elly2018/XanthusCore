@@ -25,31 +25,31 @@ But the structure works little different in client and server
 Server receive data format, it is also client sender data format
 
 * Login
-    1. [ILogin_Login](./server/login/ILogin_Login.md)
-    2. [ILogin_Logout](./server/login/ILogin_Logout.md)
+1. [ILogin_Login](./server/login/ILogin_Login.md)
+2. [ILogin_Logout](./server/login/ILogin_Logout.md)
 * Nav
-    1. [INav_ToProfile](./server/nav/INav_ToProfile.md)
-    2. [INav_ToServer](./server/nav/INav_ToServer.md)
-    3. [INav_CreateServer](./server/nav/INav_CreateServer.md)
-    4. [INav_AddServer](./server/nav/INav_AddServer.md)
-    5. [INav_UpdateBadgesR](./server/nav/INav_UpdateBadgesR.md)
-    6. [INav_UpdateServerListR](./server/nav/INav_UpdateServerListR.md)
-    7. [INav_UpdateClassR](./server/nav/INav_UpdateClassR.md)
+1. [INav_ToProfile](./server/nav/INav_ToProfile.md)
+2. [INav_ToServer](./server/nav/INav_ToServer.md)
+3. [INav_CreateServer](./server/nav/INav_CreateServer.md)
+4. [INav_AddServer](./server/nav/INav_AddServer.md)
+5. [INav_UpdateBadgesR](./server/nav/INav_UpdateBadgesR.md)
+6. [INav_UpdateServerListR](./server/nav/INav_UpdateServerListR.md)
+7. [INav_UpdateClassR](./server/nav/INav_UpdateClassR.md)
 
 ## Client receive format
 
 Client receive data format, it is also server sender data format
 
 * Login
-    1. [ILogin_Reply](./client/login/ILogin_Reply.md)
+1. [ILogin_Reply](./client/login/ILogin_Reply.md)
 * Nav
-    1. INav_ToServerReply
-    2. INav_CreateServerReply
-    3. INav_AddServerReply
-    4. INav_UpdateUser
-    5. INav_UpdateBadges
-    6. INav_UpdateServerList
-    7. INav_UpdateClass
+1. INav_ToServerReply
+2. INav_CreateServerReply
+3. INav_AddServerReply
+4. INav_UpdateUser
+5. INav_UpdateBadges
+6. INav_UpdateServerList
+7. INav_UpdateClass
 
 ## Database format
 
