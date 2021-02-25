@@ -17,6 +17,7 @@ interface IReply{
  * @param message Message
  */
 export interface IMessage{
+    _id: string,
     user: string,
     reply: IReply,
     message: string,

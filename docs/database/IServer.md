@@ -76,6 +76,8 @@ About sub interface, see more detail in\
 
 **name**: Server name
 
+**extension**: Server profile picture extension
+
 **owner**: Which account own the server
 
 **color**: Default icon background color

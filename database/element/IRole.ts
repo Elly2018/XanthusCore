@@ -8,6 +8,7 @@ import mongoose from "mongoose";
  * @param permission Role permission
  */
 export interface IRole{
+    _id: string,
     name: string,
     color: string,
     dynamic: boolean,

@@ -9,6 +9,7 @@ import mongoose from "mongoose";
  * @param groupid Group target (ID)
  */
 export interface IChannel{
+    _id: string,
     name: string,
     type: number,
     link: string,

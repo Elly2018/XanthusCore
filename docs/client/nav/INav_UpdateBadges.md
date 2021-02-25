@@ -14,4 +14,4 @@ Update navigation bar element badges info
 
 ## Properties
 
-**element**: List of badges element, see more in [here](./INavBadgesPackageElement.md)
+**element**: List of badges element, see more in [here](./INav_BadgesPackageElement.md)

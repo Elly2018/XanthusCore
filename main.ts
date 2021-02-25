@@ -11,6 +11,9 @@ export { INavUpdateBadges, INavBadgesPackageElement } from './Client/INav_Update
 export { INavUpdateClass } from './Client/INav_UpdateClass'
 export { INavUpdateServerList, INavServerElement } from './Client/INav_UpdateServerList'
 
+export { IProfileChangePasswordReply } from './Client/IProfile_ChangePasswordReply'
+export { IProfileChangeUsernameReply } from './Client/IProfile_ChangeUsernameReply'
+
 export { IServerInviteCode } from './Client/IServer_InviteCode'
 export { IServerUpdate } from './Client/IServer_Update'
 
@@ -27,6 +30,10 @@ export { INavToServer } from './Server/INav_ToServer'
 export { INavUpdateBadgesR } from './Server/INav_UpdateBadgesR'
 export { INavUpdateClassR } from './Server/INav_UpdateClassR'
 export { INavUpdateServerListR } from './Server/INav_UpdateServerListR'
+
+export { IProfileChangeColor } from './Server/IProfile_ChangeColor'
+export { IProfileChangePassword } from './Server/IProfile_ChangePassword'
+export { IProfileChangeUsername } from './Server/IProfile_ChangeUsername'
 
 export { IServerCreateInviteCode } from './Server/IServer_CreateInviteCode'
 export { IServerModifyGroup } from './Server/IServer_ModifyGroup'
@@ -77,6 +84,7 @@ export { SServer } from './database/IServer'
 export { ChannelType } from './Utility/ChannelType'
 export { ClassPermissionList } from './database/element/IClass'
 export { IBase } from './IBase'
+export { IBaseReply } from './IBaseReply'
 export { AccountingFilter } from './Utility/AccountingFilter'
 //#endregion
 

@@ -4,6 +4,7 @@
 
 ```typescript
 interface IAccount{
+    _id: string,
     username: string,
     password: string,
     class: string,
@@ -21,7 +22,25 @@ const SAccount:mongoose.Schema = new mongoose.Schema({
     password: String,
     class: String,
     block: Boolean,
-    servers: [],
+    servers: [String],
     createdate: { type: Date, default: Date.now }
 })
 ```
+
+## Description
+
+Define account data format
+
+## Properties
+
+**username**: Account username
+
+**password**: Account password
+
+**class**: Account class (ID)
+
+**block**: Is account block
+
+**servers**: Join server list
+
+**createdate**: When does the account created

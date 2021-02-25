@@ -4,7 +4,7 @@ import mongoose from "mongoose";
  * Text channel setting
  * @param delay Sending message delay
  */
-interface TextSetting{
+export interface TextSetting{
     delay: number
 }
 
@@ -13,6 +13,7 @@ interface TextSetting{
  * @param setting channel setting
  */
 export interface ITextChannel{
+    _id: string,
     setting:TextSetting,
     createdate: number
 }

@@ -3,7 +3,8 @@
 ## Body
 ```typescript
 interface IBase {
-    header: String,
+    header?: string,
+    meta?:string
 }
 ```
 
@@ -14,6 +15,8 @@ Most of data format will have basic properties
 ## Properties
 
 **header**: Define the network package
+
+**meta**: Extra information about the package
 
 ## Example
 

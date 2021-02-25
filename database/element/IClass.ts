@@ -7,7 +7,6 @@ import mongoose from "mongoose";
  * @param modify_accounting Can modify accounting information
  */
 export interface ClassPermission{
-    administrator: boolean,
     create_server: boolean,
     view_accounting: boolean,
     modify_accounting: boolean
@@ -19,6 +18,7 @@ export interface ClassPermission{
  * @param permission Class permission
  */
 export interface IClass{
+    _id: string,
     name: string,
     cannotDelete: boolean,
     permission: ClassPermission,
@@ -29,7 +29,6 @@ export const SClass:mongoose.Schema = new mongoose.Schema({
     name: String,
     cannotDelete: Boolean,
     permission:{
-        administrator: Boolean,
         create_server: Boolean,
         view_accounting: Boolean,
         modify_accounting: Boolean
@@ -37,6 +36,8 @@ export const SClass:mongoose.Schema = new mongoose.Schema({
     createdate: {type:Date, default:Date.now}
 })
 
-export const ClassPermissionList = [
-    'administrator', 'create_server', 'view_accounting', 'modify_accounting'
-]
+export enum ClassPermissionList{
+    create_server = 0, 
+    view_accounting = 1, 
+    modify_accounting = 2
+}

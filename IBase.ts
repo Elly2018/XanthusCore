@@ -1,3 +1,4 @@
 export interface IBase{
-    header: String,
+    header?: string,
+    meta?:string
 }

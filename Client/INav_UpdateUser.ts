@@ -7,6 +7,5 @@ import { IAccount } from '../database/IAccount'
  * @param account Update account
  */
 export interface INavUpdateUser extends IBase{
-    _id: string,
     account : IAccount
 }

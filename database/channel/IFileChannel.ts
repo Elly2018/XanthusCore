@@ -5,7 +5,7 @@ import mongoose from "mongoose";
  * @param label driver label
  * @param address URL address
  */
-interface Nas{
+export interface Nas{
     label: string,
     address: string
 }
@@ -15,7 +15,7 @@ interface Nas{
  * @param use_nas Use network access driver
  * @param nas network access driver list
  */
-interface FileSetting{
+export interface FileSetting{
     use_nas: boolean,
     nas:Array<Nas>
 }
@@ -26,6 +26,7 @@ interface FileSetting{
  * @param root Root file url (ID)
  */
 export interface IFileChannel{
+    _id: string,
     setting:FileSetting,
     root: string,
     createdate: number,

@@ -6,6 +6,7 @@ import mongoose from "mongoose";
  * @param role Have role list (ID)
  */
 export interface IGroup{
+    _id: string,
     name: string
     role: Array<string>,
     createdate: number

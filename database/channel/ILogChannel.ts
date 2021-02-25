@@ -4,7 +4,7 @@ import mongoose from "mongoose";
  * Log channel setting
  * @param tag_enable Text channel tag signal log
  */
-interface LogSetting{
+export interface LogSetting{
     tag_enable: boolean
 }
 
@@ -13,6 +13,7 @@ interface LogSetting{
  * @param setting channel setting
  */
 export interface ILogChannel{
+    _id: string,
     setting:LogSetting,
     createdate: number
 }

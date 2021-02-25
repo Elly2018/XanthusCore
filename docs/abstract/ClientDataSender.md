@@ -3,8 +3,13 @@
 ## Body
 
 ```typescript
-abstract class ClientDataSender<T>{
+abstract class ClientDataSender<T extends IBase>{
+    header:string = ""
+    constructor(header:string){
+        this.header = header;
+    }
     public SendMessage(data:T, sender:ws){
+        data.header = this.header;
         sender.send(JSON.stringify(data));
     }
 }
@@ -19,6 +24,10 @@ You probably thinking why are we need two sender [DataSender](./DataSender.md)\
 Because according to [ws](https://www.npmjs.com/package/ws)\
 Server store WebSocket instance as clients\
 Client store ws instance as self
+
+## Properties
+
+**header**: Sender package header
 
 ## Method
 
@@ -38,8 +47,8 @@ interface LikePost extends IBase {
 class PostLinkSender extends ClientDataSender<LikePost> {}
 
 // Create sender instance
-const sender:PostLinkSender = new PostLinkSender();
+const sender:PostLinkSender = new PostLinkSender("LinkPost");
 
 // Sending data
-sender.SendMessage({header: "LinkPost", value: post.id}, sender);
+sender.SendMessage({value: post.id}, sender);
 ```

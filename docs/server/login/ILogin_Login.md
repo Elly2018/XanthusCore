@@ -8,3 +8,14 @@ interface ILoginLogin extends IBase {
     password: string
 }
 ```
+
+## Description
+
+Server received message\
+User trying to login, sending login request to server
+
+## Properties
+
+**username**: User input username
+
+**password**: User input password

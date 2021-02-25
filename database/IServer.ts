@@ -28,6 +28,7 @@ export interface IServerGroupChannel{
 /**
  * Server data module
  * @param name Server name
+ * @param extension Server profile picture extension
  * @param group Server group list
  * @param staff Server staff list
  * @param role Server role list
@@ -35,6 +36,7 @@ export interface IServerGroupChannel{
  * @param channel Server channel collection
  */
 export interface IServer{
+    _id: string,
     name: string,
     owner: string,
     color: string,

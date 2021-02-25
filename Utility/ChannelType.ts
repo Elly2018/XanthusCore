@@ -7,11 +7,11 @@ export enum ChannelType{
     Task = 5,
     Bill = 6,
     Log = 7,
-    Social = 8,
-    Setting = 9,
-    Accounting = 10,
-    ServerManage = 11,
-    Notice = 12
+    Social = 50,
+    Setting = 51,
+    Accounting = 52,
+    ServerManage = 53,
+    Notice = 54
 }
 
 export enum LobbyDynamic{

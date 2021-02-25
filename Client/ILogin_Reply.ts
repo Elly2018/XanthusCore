@@ -1,4 +1,4 @@
-import { IBase } from './../IBase'
+import { IBaseReply } from './../IBaseReply'
 import { IAccount } from './../database/IAccount'
 
 /**
@@ -8,9 +8,7 @@ import { IAccount } from './../database/IAccount'
  * @param message Login reply message
  * @param account Account information
  */
-export interface ILoginReply extends IBase{
-    type: number,
-    message: string,
+export interface ILoginReply extends IBaseReply{
     _id: string,
     account?: IAccount
 }
