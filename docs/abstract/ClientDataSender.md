@@ -35,7 +35,7 @@ interface LikePost extends IBase {
 }
 
 // Define sender
-class PostLinkSender extends DataSender<LikePost> {}
+class PostLinkSender extends ClientDataSender<LikePost> {}
 
 // Create sender instance
 const sender:PostLinkSender = new PostLinkSender();

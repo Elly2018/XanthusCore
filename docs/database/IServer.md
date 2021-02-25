@@ -1,40 +1,9 @@
-import mongoose from 'mongoose'
+# IServer
 
-/**
- * Server element
- * @param id Account id
- * @param role Role list (ID)
- */
-export interface IServerElement{
-    id: string,
-    roles: Array<string>
-}
+## Body
 
-/**
- * Server template
- * @param title Channel title
- * @param channeltype Channel type
- */
-export interface IServerTemp{
-    title: string,
-    channeltype: number
-}
-
-export interface IServerGroupChannel{
-    name: string,
-    channel: Array<string>
-}
-
-/**
- * Server data module
- * @param name Server name
- * @param group Server group list
- * @param staff Server staff list
- * @param role Server role list
- * @param template Server use template
- * @param channel Server channel collection
- */
-export interface IServer{
+```typescript
+export interface IServer {
     name: string,
     owner: string,
     color: string,
@@ -51,8 +20,12 @@ export interface IServer{
     },
     createdate: number
 }
+```
 
-export const SServer:mongoose.Schema = new mongoose.Schema({
+## Schema
+
+```typescript
+const SServer:mongoose.Schema = new mongoose.Schema({
     name: String,
     owner: String,
     color: {
@@ -91,3 +64,27 @@ export const SServer:mongoose.Schema = new mongoose.Schema({
     },
     createdate: {type:Date, default:Date.now}
 })
+```
+
+## Description
+
+
+## Properties
+
+**name**: Server name
+
+**owner**: Which account own the server
+
+**color**: Default icon background color
+
+**group**: Server group list
+
+**staff**: Server staff list
+
+**role**: Server role list
+
+**template**: Channel template
+
+**channel**: Channel ID list
+
+**createdate**: Server create date

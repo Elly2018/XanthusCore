@@ -52,7 +52,7 @@ export { IRole } from './database/element/IRole'
 
 export { IChannel } from './database/IChannel'
 export { IAccount } from './database/IAccount'
-export { IServer } from './database/IServer'
+export { IServer, IServerTemp, IServerElement, IServerGroupChannel } from './database/IServer'
 //#endregion
 
 //#region Schema
