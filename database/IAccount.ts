@@ -10,7 +10,7 @@ import mongoose from 'mongoose'
  * @param servers Account join server list
  */
 export interface IAccount{
-    _id: string,
+    _id?: string,
     username: string,
     password: string,
     class: string,

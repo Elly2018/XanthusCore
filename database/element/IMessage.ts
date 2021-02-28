@@ -17,8 +17,9 @@ interface IReply{
  * @param message Message
  */
 export interface IMessage{
-    _id: string,
+    _id?: string,
     user: string,
+    tag: Array<string>,
     reply: IReply,
     message: string,
     createdate: number
@@ -26,6 +27,7 @@ export interface IMessage{
 
 export const SMessage:mongoose.Schema = new mongoose.Schema({
     user: String,
+    tag: [String],
     reply: {
         isreply: Boolean,
         target: String

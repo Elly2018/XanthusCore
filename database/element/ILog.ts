@@ -7,7 +7,7 @@ import mongoose from "mongoose";
  * @param color Tag prefix color
  */
 export interface ILog{
-    _id: string,
+    _id?: string,
     tag: string,
     message: string,
     color: string,

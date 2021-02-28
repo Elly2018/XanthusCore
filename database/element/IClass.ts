@@ -18,7 +18,7 @@ export interface ClassPermission{
  * @param permission Class permission
  */
 export interface IClass{
-    _id: string,
+    _id?: string,
     name: string,
     cannotDelete: boolean,
     permission: ClassPermission,

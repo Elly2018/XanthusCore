@@ -36,7 +36,7 @@ export interface IServerGroupChannel{
  * @param channel Server channel collection
  */
 export interface IServer{
-    _id: string,
+    _id?: string,
     name: string,
     owner: string,
     color: string,

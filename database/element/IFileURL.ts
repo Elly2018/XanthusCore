@@ -7,7 +7,7 @@ import mongoose from "mongoose";
  * @param page_url URL in this page
  */
 export interface IFileURL{
-    _id: string,
+    _id?: string,
     name: string,
     filters:Array<string>,
     page_url:Array<string>,

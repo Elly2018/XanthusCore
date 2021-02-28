@@ -9,7 +9,7 @@ import mongoose from "mongoose";
  * @param top_only Search only top trigger
  */
 export interface IFileFilter{
-    _id: string,
+    _id?: string,
     name: string,
     start_with: string,
     end_with: string,

@@ -7,8 +7,8 @@ import { IServerTemp } from './../database/IServer'
  * @param Group Group channel layout
  */
 export interface INavTemplate{
-    lobby: IServerTemp,
-    group: IServerTemp
+    lobby: Array<IServerTemp>,
+    group: Array<IServerTemp>
 }
 
 /**

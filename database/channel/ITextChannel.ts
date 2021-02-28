@@ -13,7 +13,7 @@ export interface TextSetting{
  * @param setting channel setting
  */
 export interface ITextChannel{
-    _id: string,
+    _id?: string,
     setting:TextSetting,
     createdate: number
 }

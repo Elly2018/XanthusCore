@@ -9,6 +9,5 @@ import { IAccount } from './../database/IAccount'
  * @param account Account information
  */
 export interface ILoginReply extends IBaseReply{
-    _id: string,
     account?: IAccount
 }

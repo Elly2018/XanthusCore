@@ -12,7 +12,6 @@ export interface INavServerElement{
     name: string,
     owner: boolean,
     color: string,
-    extension: string
 }
 
 /**

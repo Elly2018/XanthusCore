@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import {IBaseChannel, IBaseChannelSetting} from './IBaseChannel'
 
 /**
  * Nas element
@@ -15,7 +16,7 @@ export interface Nas{
  * @param use_nas Use network access driver
  * @param nas network access driver list
  */
-export interface FileSetting{
+export interface FileSetting extends IBaseChannelSetting{
     use_nas: boolean,
     nas:Array<Nas>
 }
@@ -25,9 +26,7 @@ export interface FileSetting{
  * @param setting channel setting
  * @param root Root file url (ID)
  */
-export interface IFileChannel{
-    _id: string,
-    setting:FileSetting,
+export interface IFileChannel extends IBaseChannel<FileSetting> {
     root: string,
     createdate: number,
 }

@@ -1,17 +1,8 @@
 import mongoose from "mongoose";
 
-/**
- * Role data module
- * @param name Role name
- * @param color Role color
- * @param dynamic Can it be modify by anyone
- * @param permission Role permission
- */
-export interface IRole{
-    _id: string,
+export interface RoleTemplate {
     name: string,
     color: string,
-    dynamic: boolean,
     permission: {
         server: {
             server_modify: boolean,
@@ -24,6 +15,18 @@ export interface IRole{
             task_modify: boolean
         }
     },
+}
+
+/**
+ * Role data module
+ * @param name Role name
+ * @param color Role color
+ * @param dynamic Can it be modify by anyone
+ * @param permission Role permission
+ */
+export interface IRole extends RoleTemplate {
+    _id?: string,
+    dynamic: boolean,
     createdate: number
 }
 

@@ -45,6 +45,27 @@ Server receive data format, it is also client sender data format
 2. [IProfile_ChangeUsername](./server/profile/IProfile_ChangeUsername.md)
 3. [IProfile_ChangePassword](./server/profile/IProfile_ChangePassword.md)
 
+#### Server
+
+1. IServer_ChangeColor
+2. IServer_ChangeName
+3. IServer_CreateInviteCode
+4. IServer_ModifyGroup
+5. IServer_ModifyRole
+6. IServer_ModifyStaff
+7. IServer_UpdateChannelR
+8. IServer_UpdateR
+
+#### Channel
+
+1. IChannel_ToChannel
+2. IChannel_UpdateBadgesR
+3. IChannel_ReadNotices
+
+#### Text channel
+
+1. ITextChannel_LoadMessage
+
 ## Client receive format
 
 Client receive data format, it is also server sender data format
@@ -63,16 +84,47 @@ Client receive data format, it is also server sender data format
     * [INav_ServerElement](./client/nav/INav_ServerElement.md)
 5. [INav_UpdateClass](./client/nav/INav_UpdateClass.md)
 
+#### Server
+
+1. IServer_InviteCode
+2. IServer_Update
+3. IServer_UpdateChannel
+
+#### Channel
+
+1. IChannel_ToChannelReply
+2. IChannel_UpdateBadges
+
 ## Database format
 
 Database format will affect how [mongoose](https://www.npmjs.com/package/mongoose)
 create collection and document
+
+#### Main
 
 1. [IAccount](./database/IAccount.md)
 2. [IServer](./database/IServer.md)
     * [IServerElement](./database/IServerElement.md)
     * [IServerTemp](./database/IServerTemp.md)
     * [IServerGroupChannel](./database/IServerGroupChannel.md)
+3. IChannel
+
+#### Channel
+
+1. IBaseChannel
+2. IFileChannel
+3. ILogChannel
+4. ITextChannel
+
+#### Element
+
+1. IClass
+2. IFileFilter
+3. IFileURL
+4. IGroup
+5. ILog
+6. IMessage
+7. IRole
 
 ## Utility
 
