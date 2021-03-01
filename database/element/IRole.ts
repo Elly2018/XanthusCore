@@ -1,20 +1,26 @@
 import mongoose from "mongoose";
 
+export interface ServerPermission{
+    server_modify: boolean,
+    channel_modify: boolean
+}
+
+export interface ChannelPermission{
+    text_message_modify: boolean,
+    file_element_modify: boolean,
+    issue_post_modify: boolean,
+    task_modify: boolean
+}
+
+export interface RolePermission{
+    server: ServerPermission,
+    channel: ChannelPermission
+}
+
 export interface RoleTemplate {
     name: string,
     color: string,
-    permission: {
-        server: {
-            server_modify: boolean,
-            channel_modify: boolean
-        },
-        channel: {
-            text_message_modify: boolean,
-            file_element_modify: boolean,
-            issue_post_modify: boolean,
-            task_modify: boolean
-        }
-    },
+    permission: RolePermission,
 }
 
 /**
@@ -26,12 +32,14 @@ export interface RoleTemplate {
  */
 export interface IRole extends RoleTemplate {
     _id?: string,
+    server: string,
     dynamic: boolean,
     createdate: number
 }
 
 export const SRole:mongoose.Schema = new mongoose.Schema({
     name: String,
+    server: String,
     color: String,
     dynamic: Boolean,
     permission: {

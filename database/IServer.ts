@@ -21,6 +21,7 @@ export interface IServerTemp{
 }
 
 export interface IServerGroupChannel{
+    id: string,
     name: string,
     channel: Array<string>
 }
@@ -86,6 +87,7 @@ export const SServer:mongoose.Schema = new mongoose.Schema({
         lobby:[String],
         group:[
             {
+                id: String,
                 name: String,
                 channel: [String]
             }

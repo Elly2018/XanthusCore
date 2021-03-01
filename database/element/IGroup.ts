@@ -7,6 +7,8 @@ import mongoose from "mongoose";
  */
 export interface IGroup{
     _id?: string,
+    description: string,
+    server: string,
     name: string
     role: Array<string>,
     createdate: number
@@ -14,6 +16,8 @@ export interface IGroup{
 
 export const SGroup:mongoose.Schema = new mongoose.Schema({
     name: String,
+    description: String,
+    server: String,
     role: [String],
     createdate: {type:Date, default: Date.now}
 })

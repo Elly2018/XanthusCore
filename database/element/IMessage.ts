@@ -18,6 +18,7 @@ interface IReply{
  */
 export interface IMessage{
     _id?: string,
+    channel: string,
     user: string,
     tag: Array<string>,
     reply: IReply,
@@ -27,6 +28,7 @@ export interface IMessage{
 
 export const SMessage:mongoose.Schema = new mongoose.Schema({
     user: String,
+    channel: String,
     tag: [String],
     reply: {
         isreply: Boolean,

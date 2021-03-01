@@ -13,6 +13,7 @@ export interface IAccount{
     _id?: string,
     username: string,
     password: string,
+    color: string,
     class: string,
     block: boolean,
     servers: Array<string>,
@@ -22,6 +23,7 @@ export interface IAccount{
 export const SAccount:mongoose.Schema = new mongoose.Schema({
     username: String,
     password: String,
+    color: String,
     class: String,
     block: Boolean,
     servers: [String],

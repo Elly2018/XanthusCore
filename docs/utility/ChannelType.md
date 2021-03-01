@@ -15,7 +15,8 @@ export enum ChannelType{
     Setting = 51,
     Accounting = 52,
     ServerManage = 53,
-    Notice = 54
+    Notice = 54,
+    PrivateMessage = 100,
 }
 ```
 

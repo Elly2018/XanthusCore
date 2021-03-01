@@ -3,10 +3,11 @@
 ## Body
 
 ```typescript
-interface IAccount{
+interface IAccount {
     _id: string,
     username: string,
     password: string,
+    color: string,
     class: string,
     block: boolean,
     servers: Array<string>,
@@ -20,6 +21,7 @@ interface IAccount{
 const SAccount:mongoose.Schema = new mongoose.Schema({
     username: String,
     password: String,
+    color: String,
     class: String,
     block: Boolean,
     servers: [String],
@@ -36,6 +38,8 @@ Define account data format
 **username**: Account username
 
 **password**: Account password
+
+**color**: Account profile background color
 
 **class**: Account class (ID)
 
