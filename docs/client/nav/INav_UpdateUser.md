@@ -13,4 +13,4 @@ Server will send a new user data to update client status
 
 ## Properties
 
-**account**: Account information, structure detail see [here](./../../database/IAccount.md)
+**account**: Account information, structure detail see [here](./../../database/Account.md)
