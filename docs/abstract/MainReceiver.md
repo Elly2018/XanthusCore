@@ -5,22 +5,38 @@
 ```typescript
 abstract class MainReceiver {
 
-    receivers:DataReceiverBase[];
+    receivers:ReceiverCategory[] = [];
 
     constructor(receivers:DataReceiverBase[]) {
-        this.receivers = receivers;
+        receivers.forEach(x => {
+            x.keyword.forEach(y => {
+                const prefix = y.split('-')[0];
+                const cate = this.HavePrefix(prefix);
+                if(cate){
+                    cate.Add(x);
+                }else{
+                    const newcate:ReceiverCategory = new ReceiverCategory(prefix);
+                    this.receivers.push(newcate);
+                    newcate.Add(x);
+                }
+            })
+        });
+    }
+
+    private HavePrefix(prefix:string):ReceiverCategory|undefined{
+        return this.receivers.find(x => x.prefix == prefix);
     }
 
     public AnalysisData(data:any, ws?:WebSocket){
-        // Loop all receiver find the right match keyword
-        for(let i = 0; i < this.receivers.length;i++){
-            if(this.receivers[i].Check(data.header)){
-                // Match !
-                this.receivers[i].Analysis(data, ws);
-                return;
+        const prefix = (data.header as string).split('-')[0];
+        const cate = this.receivers.find(x => x.prefix == prefix);
+        if(cate){
+            if(!cate.AnalysisData(data, ws)){
+                this.CannotFindHeader(data);
             }
+        }else{
+            this.CannotFindHeader(data);
         }
-        this.CannotFindHeader(data);
     }
 
     public abstract CannotFindHeader(data:any):void;
@@ -30,13 +46,20 @@ abstract class MainReceiver {
 ## Description
 
 Response for the websocket network receiver\
-Find the match receiver instance then making action
+Find the match receiver category then making analysis
+
+All the receiver keyword should follow the patterm:\
+**(cate)-(address)**\
+At the initialization stage, all receiver will sort into different group\
+Easier for search later
 
 ## Properties
 
-**receivers**: All the receiver we need to check
+**receivers**: All the receiver category we need to check
 
 ## Method
+
+**HavePrefix**: Check receivers already have category, see more in [here](./ReceiverCategory.md)
 
 **AnalysisData**: Start iterate all receiver find match keyword\
 then call it's action, detail see [this](./DataReceiver.md)

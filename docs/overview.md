@@ -15,6 +15,7 @@ There are some class response for complicated work here\
 But the structure works little different in client and server
 
 * [Main Network Receiver](./abstract/MainReceiver.md)
+* [Receiver Category](./abstract/ReceiverCategory.md)
 * [Network Receiver](./abstract/DataReceiver.md)
 * [Network Receiver Base](./abstract/DataReceiverBase.md)
 * [Network Sender](./abstract/DataSender.md)

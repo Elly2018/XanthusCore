@@ -4,5 +4,5 @@ export interface IBaseChannel<T extends IBaseChannelSetting> {
 }
 
 export interface IBaseChannelSetting{
-    
+    color: string,
 }
