@@ -2,7 +2,7 @@
 
 Xanthus core is a library for xanthus client and server\
 The main purpose is to define abstract class and data format\
-In order to organize both application data
+In order to organize both side data
 
 ## Installation
 
