@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "./../IDatabaseBase";
 
-export interface IAccounting{
-    _id?: string,
+export interface IAccounting extends IDatabaseBase{
     title: string,
     description: string,
     income: number,
     outcome: number,
     category: number,
     type: number,
-    createdate: number
 }
 
 export const SAccounting:mongoose.Schema = new mongoose.Schema({

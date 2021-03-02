@@ -36,6 +36,6 @@ const SClass:mongoose.Schema = new mongoose.Schema({
 
 **cannotDelete**: Does class can be delete
 
-**permission**: Account permission status, Structure detail in [here](./ClassPermission.md)
+**permission**: Account permission status, Structure detail in [here](./../ClassPermission.md)
 
 **createdate**: Class create date

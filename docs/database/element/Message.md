@@ -1,4 +1,4 @@
-# TextChannel
+# Message
 
 ## Body
 ```typescript

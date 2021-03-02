@@ -3,17 +3,19 @@
 ## Body
 
 ```typescript
-interface IAccount {
-    _id: string,
+interface IAccount extends IDatabaseBase {
     username: string,
     password: string,
     color: string,
     class: string,
     block: boolean,
     servers: Array<string>,
-    createdate: number
 }
 ```
+
+## Inherit
+
+[IDatabaseBase](./../base/IDatabaseBase.md)
 
 ## Schema
 

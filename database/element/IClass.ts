@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "./../IDatabaseBase";
 
 /**
  * Class permission
@@ -17,12 +18,10 @@ export interface ClassPermission{
  * @param name Class name
  * @param permission Class permission
  */
-export interface IClass{
-    _id?: string,
+export interface IClass extends IDatabaseBase{
     name: string,
     cannotDelete: boolean,
     permission: ClassPermission,
-    createdate: number
 }
 
 export const SClass:mongoose.Schema = new mongoose.Schema({

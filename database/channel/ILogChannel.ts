@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import {IBaseChannel, IBaseChannelSetting} from './IBaseChannel'
+import {IDatabaseBase} from './../IDatabaseBase'
 
 /**
  * Log channel setting
@@ -13,12 +14,12 @@ export interface LogSetting extends IBaseChannelSetting{
  * LogChannel data module
  * @param setting channel setting
  */
-export interface ILogChannel extends IBaseChannel<LogSetting>{
-    createdate: number
+export interface ILogChannel extends IBaseChannel<LogSetting>, IDatabaseBase{
 }
 
 export const SLogChannel:mongoose.Schema = new mongoose.Schema({
     setting:{
+        color: String,
         tag_enable: Boolean
     },
     createdate: {type: Date, default: Date.now}

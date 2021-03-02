@@ -3,7 +3,7 @@
 ## Body
 
 ```typescript
-export interface IServer {
+export interface IServer extends IDatabaseBase {
     name: string,
     owner: string,
     color: string,
@@ -18,7 +18,6 @@ export interface IServer {
         lobby:Array<string>,
         group:Array<IServerGroupChannel>
     },
-    createdate: number
 }
 ```
 
@@ -65,6 +64,10 @@ const SServer:mongoose.Schema = new mongoose.Schema({
     createdate: {type:Date, default:Date.now}
 })
 ```
+
+## Inherit
+
+[IDatabaseBase](./../base/IDatabaseBase.md)
 
 ## Description
 

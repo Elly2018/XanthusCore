@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "../IDatabaseBase";
 
 /**
  * File URL data module
@@ -6,12 +7,10 @@ import mongoose from "mongoose";
  * @param filters Filters in this page
  * @param page_url URL in this page
  */
-export interface IFileURL{
-    _id?: string,
+export interface IFileURL extends IDatabaseBase{
     name: string,
     filters:Array<string>,
     page_url:Array<string>,
-    createdate: number
 }
 
 export const SFileURL:mongoose.Schema = new mongoose.Schema({

@@ -3,17 +3,19 @@
 ## Body
 
 ```typescript
-interface IChannel {
-    _id?: string,
+interface IChannel extends IDatabaseBase {
     name: string,
     type: number,
     link: string,
     group: boolean,
     groupid: string,
     notices: Array<ChannelNotice>,
-    createdate: number
 }
 ```
+
+## Inherit
+
+[IDatabaseBase](./../base/IDatabaseBase.md)
 
 ## Schema
 
@@ -33,7 +35,10 @@ const SChannel:mongoose.Schema = new mongoose.Schema({
 
 ## Description
 
-Define an channel header
+Define an channel header\
+Only contain basic information about the channel\
+Channel data will store in another collection and store in the **link** field\
+Depend on the **type** The link is targeting different collection
 
 ## Properties
 

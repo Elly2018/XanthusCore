@@ -1,20 +1,11 @@
 import mongoose from 'mongoose'
+import { IDatabaseBase } from './IDatabaseBase'
 
-/**
- * Server element
- * @param id Account id
- * @param role Role list (ID)
- */
 export interface IServerElement{
     id: string,
     roles: Array<string>
 }
 
-/**
- * Server template
- * @param title Channel title
- * @param channeltype Channel type
- */
 export interface IServerTemp{
     title: string,
     channeltype: number
@@ -26,18 +17,7 @@ export interface IServerGroupChannel{
     channel: Array<string>
 }
 
-/**
- * Server data module
- * @param name Server name
- * @param extension Server profile picture extension
- * @param group Server group list
- * @param staff Server staff list
- * @param role Server role list
- * @param template Server use template
- * @param channel Server channel collection
- */
-export interface IServer{
-    _id?: string,
+export interface IServer extends IDatabaseBase{
     name: string,
     owner: string,
     color: string,
@@ -52,7 +32,6 @@ export interface IServer{
         lobby:Array<string>,
         group:Array<IServerGroupChannel>
     },
-    createdate: number
 }
 
 export const SServer:mongoose.Schema = new mongoose.Schema({

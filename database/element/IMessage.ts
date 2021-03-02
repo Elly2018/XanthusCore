@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "../IDatabaseBase";
 
 /**
  * Reply information
@@ -16,14 +17,12 @@ interface IReply{
  * @param reply Reply status
  * @param message Message
  */
-export interface IMessage{
-    _id?: string,
+export interface IMessage extends IDatabaseBase{
     channel: string,
     user: string,
     tag: Array<string>,
     reply: IReply,
     message: string,
-    createdate: number
 }
 
 export const SMessage:mongoose.Schema = new mongoose.Schema({

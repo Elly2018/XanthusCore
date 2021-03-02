@@ -2,11 +2,11 @@
 
 Server receive data format, it is also client sender data format
 
-#### Login
+## Login
 
 1. [ILogin_Login](./server/login/ILogin_Login.md)
 
-#### Nav
+## Nav
 
 1. [INav_ToServer](./server/nav/INav_ToServer.md)
 2. [INav_CreateServer](./server/nav/INav_CreateServer.md)
@@ -17,13 +17,13 @@ Server receive data format, it is also client sender data format
 5. [INav_UpdateServerListR](./server/nav/INav_UpdateServerListR.md)
 6. [INav_UpdateClassR](./server/nav/INav_UpdateClassR.md)
 
-#### Profile
+## Profile
 
 1. [IProfile_ChangeColor](./server/profile/IProfile_ChangeColor.md)
 2. [IProfile_ChangeUsername](./server/profile/IProfile_ChangeUsername.md)
 3. [IProfile_ChangePassword](./server/profile/IProfile_ChangePassword.md)
 
-#### Server
+## Server
 
 1. IServer_ChangeColor
 2. IServer_ChangeName
@@ -34,12 +34,12 @@ Server receive data format, it is also client sender data format
 7. IServer_UpdateChannelR
 8. IServer_UpdateR
 
-#### Channel
+## Channel
 
 1. IChannel_ToChannel
 2. IChannel_UpdateBadgesR
 3. IChannel_ReadNotices
 
-#### Text channel
+## Text channel
 
 1. ITextChannel_LoadMessage

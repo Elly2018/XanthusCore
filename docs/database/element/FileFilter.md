@@ -1,4 +1,4 @@
-# TextChannel
+# FileFilter
 
 ## Body
 ```typescript

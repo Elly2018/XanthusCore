@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "./../IDatabaseBase";
 
 /**
  * File Filter data module
@@ -8,14 +9,12 @@ import mongoose from "mongoose";
  * @param extension File extension list
  * @param top_only Search only top trigger
  */
-export interface IFileFilter{
-    _id?: string,
+export interface IFileFilter extends IDatabaseBase{
     name: string,
     start_with: string,
     end_with: string,
     extension: Array<string>,
     top_only: boolean,
-    createdate: number
 }
 
 export const SFileFilter:mongoose.Schema = new mongoose.Schema({

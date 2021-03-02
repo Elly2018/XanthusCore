@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "../IDatabaseBase";
 
 /**
  * Tag data module
@@ -6,12 +7,10 @@ import mongoose from "mongoose";
  * @param message Main message
  * @param color Tag prefix color
  */
-export interface ILog{
-    _id?: string,
+export interface ILog extends IDatabaseBase{
     tag: string,
     message: string,
     color: string,
-    createdate: number
 }
 
 export const SLog:mongoose.Schema = new mongoose.Schema({

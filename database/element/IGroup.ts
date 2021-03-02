@@ -1,17 +1,16 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "../IDatabaseBase";
 
 /**
  * Group data module
  * @param name Group name
  * @param role Have role list (ID)
  */
-export interface IGroup{
-    _id?: string,
+export interface IGroup extends IDatabaseBase{
     description: string,
     server: string,
     name: string
     role: Array<string>,
-    createdate: number
 }
 
 export const SGroup:mongoose.Schema = new mongoose.Schema({

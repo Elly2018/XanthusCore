@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { IDatabaseBase } from "../IDatabaseBase";
 
 export interface ServerPermission{
     server_modify: boolean,
@@ -30,11 +31,9 @@ export interface RoleTemplate {
  * @param dynamic Can it be modify by anyone
  * @param permission Role permission
  */
-export interface IRole extends RoleTemplate {
-    _id?: string,
+export interface IRole extends RoleTemplate, IDatabaseBase{
     server: string,
     dynamic: boolean,
-    createdate: number
 }
 
 export const SRole:mongoose.Schema = new mongoose.Schema({

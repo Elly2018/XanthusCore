@@ -1,4 +1,4 @@
-# TextChannel
+# Group 
 
 ## Body
 ```typescript

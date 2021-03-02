@@ -1,4 +1,4 @@
-# TextChannel
+# Log
 
 ## Body
 ```typescript

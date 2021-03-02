@@ -1,23 +1,13 @@
 import mongoose from 'mongoose'
+import { IDatabaseBase } from './IDatabaseBase'
 
-/**
- * Account data module
- * @param username Account username
- * @param password Account password
- * @param extension Account profile picture extension
- * @param class Account use class (ID)
- * @param block Is account blocked
- * @param servers Account join server list
- */
-export interface IAccount{
-    _id?: string,
+export interface IAccount extends IDatabaseBase{
     username: string,
     password: string,
     color: string,
     class: string,
     block: boolean,
     servers: Array<string>,
-    createdate: number
 }
 
 export const SAccount:mongoose.Schema = new mongoose.Schema({

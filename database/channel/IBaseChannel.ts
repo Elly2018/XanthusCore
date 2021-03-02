@@ -1,5 +1,4 @@
-export interface IBaseChannel<T extends IBaseChannelSetting> {
-    _id?: string,
+export interface IBaseChannel<T extends IBaseChannelSetting>{
     setting:T,
 }
 
