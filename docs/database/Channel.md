@@ -1,4 +1,4 @@
-# IAccount
+# IChannel
 
 ## Body
 
