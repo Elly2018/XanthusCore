@@ -14,5 +14,6 @@ export const SLogChannel:mongoose.Schema = new mongoose.Schema({
         color: String,
         tag_enable: Boolean
     },
+    link: String,
     createdate: {type: Date, default: Date.now}
 })

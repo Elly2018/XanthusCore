@@ -18,4 +18,6 @@ export { IServerUpdate } from './Client/IServer_Update'
 export { IServerUpdateChannel } from './Client/IServer_UpdateChannel'
 export { IServerMember, ServerMember } from './Client/IServer_Member'
 
+export { IMemberUpdate, MemberGroup, MemberPeople } from './Client/IMember_Update'
+
 export { ISystemDisconnect } from './Client/ISystem_Disconnect'

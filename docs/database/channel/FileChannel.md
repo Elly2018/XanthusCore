@@ -19,6 +19,7 @@ const SFileChannel:mongoose.Schema = new mongoose.Schema({
             {label: String, address: String},
         ]
     },
+    link: String,
     root: String,
     createdate: {type: Date, default: Date.now}
 })

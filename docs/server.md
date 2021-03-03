@@ -25,7 +25,7 @@ Server receive data format, it is also client sender data format
 
 ## Server
 
-1. IServer_ChangeColor
+1. [IServer_ChangeColor](./server/server/IServer_ChangeColor.md)
 2. IServer_ChangeName
 3. IServer_CreateInviteCode
 4. IServer_ModifyGroup
@@ -43,3 +43,9 @@ Server receive data format, it is also client sender data format
 ## Text channel
 
 1. ITextChannel_LoadMessage
+
+## Member
+
+1. IMember_UpdateR
+    * MemberGroup
+    * MemberPeople

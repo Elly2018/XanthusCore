@@ -7,7 +7,6 @@ export interface TextSetting extends IBaseChannelSetting{
 }
 
 export interface ITextChannel extends IBaseChannel<TextSetting>, IDatabaseBase{
-    setting:TextSetting,
 }
 
 export const STextChannel:mongoose.Schema = new mongoose.Schema({
@@ -15,5 +14,6 @@ export const STextChannel:mongoose.Schema = new mongoose.Schema({
         color: String,
         delay: Number
     },
+    link: String,
     createdate: {type: Date, default: Date.now}
 })

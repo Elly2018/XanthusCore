@@ -1,4 +1,5 @@
 export interface IBaseChannel<T extends IBaseChannelSetting>{
+    link: string,
     setting:T,
 }
 

@@ -26,12 +26,14 @@ export interface RoleTemplate {
 
 export interface IRole extends RoleTemplate, IDatabaseBase{
     server: string,
+    sidebar: boolean,
     dynamic: boolean,
 }
 
 export const SRole:mongoose.Schema = new mongoose.Schema({
     name: String,
     server: String,
+    sidebar: String,
     color: String,
     dynamic: Boolean,
     permission: {

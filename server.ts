@@ -28,3 +28,5 @@ export { IServerUpdateR } from './Server/IServer_UpdateR'
 export { IServerUpdateChannelR } from './Server/IServer_UpdateChannelR'
 
 export { ISocialAccountList } from './Server/ISocial_AccountList'
+
+export { IMemberUpdateR } from './Server/IMember_UpdateR'

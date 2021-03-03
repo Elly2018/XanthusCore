@@ -4,6 +4,7 @@
 ```typescript
 interface IRole extends RoleTemplate, IDatabaseBase {
     server: string,
+    sidebar: boolean,
     dynamic: boolean,
 }
 ```
@@ -13,6 +14,7 @@ interface IRole extends RoleTemplate, IDatabaseBase {
 const SRole:mongoose.Schema = new mongoose.Schema({
     name: String,
     server: String,
+    sidebar: Boolean,
     color: String,
     dynamic: Boolean,
     permission: {
@@ -43,5 +45,7 @@ Server role element, define a staff's permission in the server
 ## Properties
 
 **server**: Belong to which server
+
+**sidebar**: Does this role should separate to a group and show in sidebar
 
 **dynamic**: Is the role can be modify or delete

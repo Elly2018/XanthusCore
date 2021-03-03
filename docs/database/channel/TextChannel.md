@@ -3,7 +3,6 @@
 ## Body
 ```typescript
 interface ITextChannel extends IBaseChannel<TextSetting>, IDatabaseBase{
-    setting:TextSetting,
 }
 ```
 
@@ -14,6 +13,7 @@ const STextChannel:mongoose.Schema = new mongoose.Schema({
         color: String,
         delay: Number
     },
+    link: String,
     createdate: {type: Date, default: Date.now}
 })
 ```

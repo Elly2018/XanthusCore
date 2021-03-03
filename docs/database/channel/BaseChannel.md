@@ -4,7 +4,7 @@
 
 ```typescript
 interface IBaseChannel<T extends IBaseChannelSetting> {
-    _id?: string,
+    link: string,
     setting:T,
 }
 ```
@@ -18,5 +18,7 @@ In order to manage or create these channel\
 They must inherit it to make it works
 
 ## Properties
+
+**link**: Link channel header
 
 **setting**: Channel setting, see more in [here](./BaseChannelSetting.md)
