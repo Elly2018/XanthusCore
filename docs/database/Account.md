@@ -13,10 +13,6 @@ interface IAccount extends IDatabaseBase {
 }
 ```
 
-## Inherit
-
-[IDatabaseBase](./../base/IDatabaseBase.md)
-
 ## Schema
 
 ```typescript
@@ -30,6 +26,10 @@ const SAccount:mongoose.Schema = new mongoose.Schema({
     createdate: { type: Date, default: Date.now }
 })
 ```
+
+## Inherit
+
+[IDatabaseBase](./../base/IDatabaseBase.md)
 
 ## Description
 

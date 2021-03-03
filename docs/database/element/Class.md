@@ -28,7 +28,13 @@ const SClass:mongoose.Schema = new mongoose.Schema({
 })
 ```
 
+## Inherit
+
+[IDatabaseBase](./../../base/IDatabaseBase.md)
+
 ## Description
+
+Define each account's permission
 
 ## Properties
 

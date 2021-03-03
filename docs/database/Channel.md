@@ -13,10 +13,6 @@ interface IChannel extends IDatabaseBase {
 }
 ```
 
-## Inherit
-
-[IDatabaseBase](./../base/IDatabaseBase.md)
-
 ## Schema
 
 ```typescript
@@ -33,6 +29,10 @@ const SChannel:mongoose.Schema = new mongoose.Schema({
 })
 ```
 
+## Inherit
+
+[IDatabaseBase](./../base/IDatabaseBase.md)
+
 ## Description
 
 Define an channel header\
@@ -46,7 +46,7 @@ Depend on the **type** The link is targeting different collection
 
 **type**: Channel type, see type in [here](./../utility/ChannelType.md)
 
-**link**: Link channel setting and properties
+**link**: Link to channel content (store channel ID)
 
 **group**: Is channel a group channel or lobby channel
 

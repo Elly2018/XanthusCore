@@ -24,13 +24,6 @@ export interface RoleTemplate {
     permission: RolePermission,
 }
 
-/**
- * Role data module
- * @param name Role name
- * @param color Role color
- * @param dynamic Can it be modify by anyone
- * @param permission Role permission
- */
 export interface IRole extends RoleTemplate, IDatabaseBase{
     server: string,
     dynamic: boolean,

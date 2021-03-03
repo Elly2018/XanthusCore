@@ -1,15 +1,10 @@
 import mongoose from "mongoose";
 import { IDatabaseBase } from "../IDatabaseBase";
 
-/**
- * Group data module
- * @param name Group name
- * @param role Have role list (ID)
- */
 export interface IGroup extends IDatabaseBase{
+    name: string,
     description: string,
     server: string,
-    name: string
     role: Array<string>,
 }
 

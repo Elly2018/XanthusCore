@@ -1,14 +1,6 @@
 import mongoose from "mongoose";
 import { IDatabaseBase } from "./../IDatabaseBase";
 
-/**
- * File Filter data module
- * @param name Filter name
- * @param start_with Filename prefix
- * @param end_with Filename suffix
- * @param extension File extension list
- * @param top_only Search only top trigger
- */
 export interface IFileFilter extends IDatabaseBase{
     name: string,
     start_with: string,

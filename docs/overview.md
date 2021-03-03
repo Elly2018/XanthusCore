@@ -8,6 +8,7 @@ we using inheritance to solve this problem
 
 * [IBase](./base/IBase.md)
 * [IBaseReply](./base/IBaseReply.md)
+* [Network Receiver Base](./abstract/DataReceiverBase.md)
 
 ## Abstract class
 
@@ -17,7 +18,6 @@ But the structure works little different in client and server
 * [Main Network Receiver](./abstract/MainReceiver.md)
 * [Receiver Category](./abstract/ReceiverCategory.md)
 * [Network Receiver](./abstract/DataReceiver.md)
-* [Network Receiver Base](./abstract/DataReceiverBase.md)
 * [Network Sender](./abstract/DataSender.md)
 * [Client Network Sender](./abstract/ClientDataSender.md)
 

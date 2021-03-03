@@ -31,6 +31,7 @@ The data is separate store in the different collections\
 Because each channel have different feature
 
 1. [TextChannel](./database/channel/TextChannel.md)
+    * [TextSetting](./database/channel/TextSetting.md)
 2. [FileChannel](./database/channel/FileChannel.md)
     * [FileSetting](./database/channel/FileSetting.md)
     * [Nas](./database/channel/Nas.md)

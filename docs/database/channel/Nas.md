@@ -10,6 +10,8 @@ interface Nas {
 
 ## Description
 
+Nas connection data structure
+
 ## Properties
 
 **label**: Use system drive label, for example: 'E' or 'F'
