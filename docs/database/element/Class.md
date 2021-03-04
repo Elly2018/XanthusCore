@@ -20,7 +20,7 @@ const SClass:mongoose.Schema = new mongoose.Schema({
     cannotDelete: Boolean,
     permission:{
         administrator: Boolean,
-        create_server: Boolean,
+        create_project: Boolean,
         view_accounting: Boolean,
         modify_accounting: Boolean
     },
@@ -32,6 +32,10 @@ const SClass:mongoose.Schema = new mongoose.Schema({
 
 [IDatabaseBase](./../../base/IDatabaseBase.md)
 
+## Reference
+
+[ClassPermission](./ClassPermission.md)
+
 ## Description
 
 Define each account's permission
@@ -42,6 +46,6 @@ Define each account's permission
 
 **cannotDelete**: Does class can be delete
 
-**permission**: Account permission status, Structure detail in [here](./../ClassPermission.md)
+**permission**: Account permission status
 
 **createdate**: Class create date

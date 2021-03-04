@@ -28,7 +28,13 @@ const SMessage:mongoose.Schema = new mongoose.Schema({
 
 [IDatabaseBase](./../../base/IDatabaseBase.md)
 
+## Reference
+
+[IReply](./IReply.md)
+
 ## Description
+
+Text message data format
 
 ## Properties
 
@@ -38,6 +44,6 @@ const SMessage:mongoose.Schema = new mongoose.Schema({
 
 **tag**: Contain tags
 
-**reply**: Is message reply to other message, see more in [here](./IReply.md)
+**reply**: Is message reply to other message
 
 **message**: Message content

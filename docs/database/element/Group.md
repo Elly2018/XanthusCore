@@ -5,7 +5,7 @@
 interface IGroup extends IDatabaseBase {
     name: string,
     description: string,
-    server: string,
+    project: string,
     role: Array<string>,
 }
 ```
@@ -15,7 +15,7 @@ interface IGroup extends IDatabaseBase {
 const SGroup:mongoose.Schema = new mongoose.Schema({
     name: String,
     description: String,
-    server: String,
+    project: String,
     role: [String],
     createdate: {type:Date, default: Date.now}
 })
@@ -27,7 +27,7 @@ const SGroup:mongoose.Schema = new mongoose.Schema({
 
 ## Description
 
-Server group data format
+project group data format
 
 ## Properties
 
@@ -35,6 +35,6 @@ Server group data format
 
 **description**: Group description
 
-**server**: Belong which server
+**project**: Belong which project
 
 **role**: Contain rule (ID list)

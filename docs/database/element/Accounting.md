@@ -31,6 +31,10 @@ const SAccounting:mongoose.Schema = new mongoose.Schema({
 
 [IDatabaseBase](./../../base/IDatabaseBase.md)
 
+## Reference
+
+[AccountingFormat](./../../utility/AccountingFormat.md)
+
 ## Description
 
 Bill content
@@ -45,6 +49,6 @@ Bill content
 
 **outcome**: Outcome
 
-**category**: Bill main category, see more in [here](./../../utility/AccountingFormat.md)
+**category**: Bill main category
 
-**type**: Bill sub category, see more in [here](./../../utility/AccountingFormat.md)
+**type**: Bill sub category

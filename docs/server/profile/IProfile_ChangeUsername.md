@@ -9,6 +9,10 @@ interface IProfileChangeUsername extends IBase{
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
 ## Description
 
 User trying to change username

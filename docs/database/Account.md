@@ -9,7 +9,7 @@ interface IAccount extends IDatabaseBase {
     color: string,
     class: string,
     block: boolean,
-    servers: Array<string>,
+    projects: Array<string>,
 }
 ```
 
@@ -22,7 +22,7 @@ const SAccount:mongoose.Schema = new mongoose.Schema({
     color: String,
     class: String,
     block: Boolean,
-    servers: [String],
+    projects: [String],
     createdate: { type: Date, default: Date.now }
 })
 ```
@@ -47,6 +47,6 @@ Define account data format
 
 **block**: Is account block
 
-**servers**: Join server list
+**projects**: Join project list
 
 **createdate**: When does the account created

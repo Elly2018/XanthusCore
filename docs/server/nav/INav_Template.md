@@ -4,15 +4,18 @@
 
 ```typescript
 interface INavTemplate {
-    lobby: IServerTemp,
-    group: IServerTemp
+    lobby: IProjectTemp,
+    group: IProjectTemp
 }
 ```
 
+## Reference
+
+[IProjectTemp](./../../database/IProjectTemp.md)
+
 ## Description
 
-Channel template, when contain lobby and group channel structure\
-see [IServerTemp](./../../database/IServerTemp.md) detail
+Channel template, when contain lobby and group channel structure
 
 ## Properties
 

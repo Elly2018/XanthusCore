@@ -3,10 +3,15 @@
 ## Body
 ```typescript
 interface RolePermission {
-    server: ServerPermission,
+    project: ProjectPermission,
     channel: ChannelPermission
 }
 ```
+
+## Reference
+
+[ProjectPermission](./ProjectPermission.md),
+[ChannelPermission](./ChannelPermission.md)
 
 ## Description
 
@@ -14,6 +19,6 @@ Define role permission structure
 
 ## Properties
 
-**server**: Server management side permission options, see more in [here](./ServerPermission.md)
+**project**: Project management side permission options
 
-**channel**: Channel management side permission options, see more in [here](./ChannelPermission.md)
+**channel**: Channel management side permission options

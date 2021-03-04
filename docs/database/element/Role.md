@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IRole extends RoleTemplate, IDatabaseBase {
-    server: string,
+    project: string,
     sidebar: boolean,
     dynamic: boolean,
 }
@@ -13,13 +13,13 @@ interface IRole extends RoleTemplate, IDatabaseBase {
 ```typescript
 const SRole:mongoose.Schema = new mongoose.Schema({
     name: String,
-    server: String,
+    project: String,
     sidebar: Boolean,
     color: String,
     dynamic: Boolean,
     permission: {
-        server: {
-            server_modify: Boolean,
+        project: {
+            project_modify: Boolean,
             channel_modify: Boolean
         },
         channel: {
@@ -40,11 +40,11 @@ const SRole:mongoose.Schema = new mongoose.Schema({
 
 ## Description
 
-Server role element, define a staff's permission in the server
+Project role element, define a staff's permission in the project
 
 ## Properties
 
-**server**: Belong to which server
+**project**: Belong to which project
 
 **sidebar**: Does this role should separate to a group and show in sidebar
 

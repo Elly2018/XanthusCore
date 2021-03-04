@@ -8,6 +8,10 @@ interface INavUpdateClassR extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
 ## Description
 
 Request class element message\

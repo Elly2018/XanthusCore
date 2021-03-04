@@ -16,7 +16,7 @@ Client receive data format, it is also server sender data format
     * [INav_ServerElement](./client/nav/INav_ServerElement.md)
 5. [INav_UpdateClass](./client/nav/INav_UpdateClass.md)
 
-## Server
+## Project
 
 1. IServer_InviteCode
 2. IServer_Update
@@ -26,3 +26,7 @@ Client receive data format, it is also server sender data format
 
 1. IChannel_ToChannelReply
 2. IChannel_UpdateBadges
+
+## Sidebar
+
+## Text Channel

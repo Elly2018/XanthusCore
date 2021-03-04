@@ -33,6 +33,10 @@ const SChannel:mongoose.Schema = new mongoose.Schema({
 
 [IDatabaseBase](./../base/IDatabaseBase.md)
 
+## Reference
+
+[ChannelType](./../utility/ChannelType.md)
+
 ## Description
 
 Define an channel header\
@@ -44,7 +48,7 @@ Depend on the **type** The link is targeting different collection
 
 **name**: Channel name
 
-**type**: Channel type, see type in [here](./../utility/ChannelType.md)
+**type**: Channel type
 
 **link**: Link to channel content (store channel ID)
 

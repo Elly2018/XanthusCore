@@ -9,6 +9,10 @@ interface ILoginLogin extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
 ## Description
 
 Server received message\

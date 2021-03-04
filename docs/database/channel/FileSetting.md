@@ -12,12 +12,18 @@ interface FileSetting extends IBaseChannelSetting {
 
 [IBaseChannelSetting](./../../base/IBaseChannelSetting.md)
 
+## Reference
+
+[Nas](./Nas.md)
+
 ## Description
 
-File channel setting, check [nas](./Nas.md)
+File channel setting
 
 ## Properties
 
 **use_nas**: Is this file channel have NAS mode on
 
-**nas**: It is meaningless when **use_nas** is false, it contain nas element array
+**nas**: It is meaningless when 
+
+**use_nas** is false, it contain nas element array

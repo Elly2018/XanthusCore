@@ -8,6 +8,10 @@ interface IProfileChangeColor extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
 ## Description
 
 Change account profile background color

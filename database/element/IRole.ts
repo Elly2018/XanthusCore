@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import { IDatabaseBase } from "../IDatabaseBase";
 
-export interface ServerPermission{
-    server_modify: boolean,
+export interface ProjectPermission{
+    project_modify: boolean,
     channel_modify: boolean
 }
 
@@ -14,7 +14,7 @@ export interface ChannelPermission{
 }
 
 export interface RolePermission{
-    server: ServerPermission,
+    project: ProjectPermission,
     channel: ChannelPermission
 }
 
@@ -25,20 +25,20 @@ export interface RoleTemplate {
 }
 
 export interface IRole extends RoleTemplate, IDatabaseBase{
-    server: string,
+    project: string,
     sidebar: boolean,
     dynamic: boolean,
 }
 
 export const SRole:mongoose.Schema = new mongoose.Schema({
     name: String,
-    server: String,
+    project: String,
     sidebar: String,
     color: String,
     dynamic: Boolean,
     permission: {
-        server: {
-            server_modify: Boolean,
+        project: {
+            project_modify: Boolean,
             channel_modify: Boolean
         },
         channel: {

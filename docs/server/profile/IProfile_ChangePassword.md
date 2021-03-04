@@ -9,6 +9,10 @@ export interface IProfileChangePassword extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
 ## Description
 
 User trying to change password

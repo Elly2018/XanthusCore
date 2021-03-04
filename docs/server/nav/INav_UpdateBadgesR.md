@@ -4,16 +4,20 @@
 
 ```typescript
 interface INavUpdateBadgesR extends IBase {
-    servers: Array<string>
+    projects: Array<string>
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
 ## Description
 
-Servers notification count request\
-User want to know how many how many unread or uncheck messages it has miss in server\
+Projects notification count request\
+User want to know how many how many unread or uncheck messages it has miss in project\
 Server will reply with [INav_UpdateBadgesR](./../../client/nav/INav_UpdateBadges.md)
 
 ## Properties
 
-**servers**: Server ID list
+**projects**: Project ID list
