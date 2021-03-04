@@ -8,19 +8,19 @@ Client receive data format, it is also server sender data format
 
 ## Nav
 
-1. [INav_ToServerReply](./client/nav/INav_ToServerReply.md)
+1. [INav_ToProjectReply](./client/nav/INav_ToProjectReply.md)
 2. [INav_UpdateUser](./client/nav/INav_UpdateUser.md)
 3. [INav_UpdateBadges](./client/nav/INav_UpdateBadges.md)
     * [INav_BadgesPackageElement](./client/nav/INav_BadgesPackageElement.md)
-4. [INav_UpdateServerList](./client/nav/INav_UpdateServerList.md)
-    * [INav_ServerElement](./client/nav/INav_ServerElement.md)
+4. [INav_UpdateProjectList](./client/nav/INav_UpdateProjectList.md)
+    * [INav_ProjectElement](./client/nav/INav_ProjectElement.md)
 5. [INav_UpdateClass](./client/nav/INav_UpdateClass.md)
 
 ## Project
 
-1. IServer_InviteCode
-2. IServer_Update
-3. IServer_UpdateChannel
+1. IProject_InviteCode
+2. IProject_Update
+3. IProject_UpdateChannel
 
 ## Channel
 
@@ -28,5 +28,7 @@ Client receive data format, it is also server sender data format
 2. IChannel_UpdateBadges
 
 ## Sidebar
+
+1. ISidebar_Update
 
 ## Text Channel

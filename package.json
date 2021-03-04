@@ -1,6 +1,6 @@
 {
   "name": "xanthuscore",
-  "version": "0.2.132",
+  "version": "0.2.14",
   "description": "Xanthus application core",
   "main": "./main.ts",
   "exports": "./main.ts",

@@ -1,12 +1,20 @@
-# INav_UpdateServerList
+# INav_UpdateProjectList
 
 ## Body
 
 ```typescript
-interface INavUpdateServerList extends IBase {
-    servers: Array<INavServerElement>
+interface INavUpdateProjectList extends IBase {
+    projects: Array<INavProjectElement>
 }
 ```
+
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
+## Reference
+
+[INav_ProjectElement](./INav_ProjectElement.md)
 
 ## Description
 
@@ -17,4 +25,4 @@ User can manually trigger server feedback information by sending [request](./../
 
 ## Properties
 
-**servers**: The servers create / update element, see more in [here](./INav_ServerElement.md)
+**projects**: The servers create / update element

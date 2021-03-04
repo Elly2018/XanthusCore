@@ -8,6 +8,14 @@ interface INavUpdateClass extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
+## Reference
+
+[IClass](./../../database/element/Class.md)
+
 ## Description
 
 Client components will sometime need to know user class to determine\
@@ -18,4 +26,4 @@ Client will get message after sending [request](./../../server/nav/INav_UpdateCl
 
 ## Properties
 
-**class**: Class element, see more in [here](./../../database/IClass.md)
+**class**: Class object

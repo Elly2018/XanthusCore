@@ -17,5 +17,5 @@ export const SAccounting:mongoose.Schema = new mongoose.Schema({
     outcome: Number,
     category: Number,
     type: Number,
-    createdate: Number
+    createdate: {default: Date.now, type: Date}
 })

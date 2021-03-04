@@ -8,10 +8,13 @@ abstract class DataReceiver<T> extends DataReceiverBase{
 }
 ```
 
+## Inherit
+
+[DataReceiverBase](./DataReceiverBase.md)
+
 ## Description
 
-Inherit [DataReceiverBase](./DataReceiverBase.md) for basic feature\
-But this will type check, convert data to the type we choose
+Type checking, convert data to the type we choose
 
 ## Method
 

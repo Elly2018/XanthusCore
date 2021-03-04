@@ -4,7 +4,7 @@
 
 ```typescript
 interface INavBadgesPackageElement {
-    server_id: string,
+    project_id: string,
     isProfile: boolean,
     value: number
 }
@@ -16,9 +16,9 @@ Navigation bar badges update element
 
 ## Properties
 
-**server_id**: Target server
+**project_id**: Target project
 
-**isProfile**: If it's profile, logic will ignore server_id
+**isProfile**: If it's profile, logic will ignore project_id
 Then update the badges on profile button
 
 **value**: Value number

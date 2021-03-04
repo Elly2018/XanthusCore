@@ -25,13 +25,17 @@ class ReceiverCategory {
 }
 ```
 
+## Reference
+
+[DataReceiverBase](./DataReceiverBase.md)
+
 ## Description
 
 Categorize receiver
 
 ## Properties
 
-**receivers**: Data receivers, see more in [here](./DataReceiverBase.md)
+**receivers**: Data receivers
 
 **prefix**: Receiver header prefix, we use this identify receiver category
 

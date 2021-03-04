@@ -6,6 +6,14 @@ interface INavUpdateUser extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
+## Reference
+
+[IAccount](./../../database/Account.md)
+
 ## Description
 
 When user data has change while user is logining\
@@ -13,4 +21,4 @@ Server will send a new user data to update client status
 
 ## Properties
 
-**account**: Account information, structure detail see [here](./../../database/Account.md)
+**account**: Account information

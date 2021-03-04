@@ -43,6 +43,11 @@ abstract class MainReceiver {
 }
 ```
 
+## Reference
+
+[ReceiverCategory](./ReceiverCategory.md),
+[DataReceiver](./DataReceiver.md)
+
 ## Description
 
 Response for the websocket network receiver\
@@ -59,10 +64,10 @@ Easier for search later
 
 ## Method
 
-**HavePrefix**: Check receivers already have category, see more in [here](./ReceiverCategory.md)
+**HavePrefix**: Check receivers already have category
 
 **AnalysisData**: Start iterate all receiver find match keyword\
-then call it's action, detail see [this](./DataReceiver.md)
+then call it's action
 
 **CannotFindHeader**: When iterate all receiver but cannot find the match
 

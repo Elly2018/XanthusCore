@@ -8,10 +8,18 @@ interface INavUpdateBadges extends IBase {
 }
 ```
 
+## Inherit
+
+[IBase](./../../base/IBase.md)
+
+## Reference
+
+[INav_BadgesPackageElement](./INav_BadgesPackageElement.md)
+
 ## Description
 
 Update navigation bar element badges info
 
 ## Properties
 
-**element**: List of badges element, see more in [here](./INav_BadgesPackageElement.md)
+**element**: List of badges element
