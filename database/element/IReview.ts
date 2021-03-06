@@ -8,21 +8,10 @@ export interface Attendance{
     notes: string,
 }
 
-export interface Activity{
-    title: string,
-    project: string,
-    description: string,
-    week: number,
-    property: number,
-    hours: number,
-    finishrate: number,
-    quality: number,
-}
-
 export interface IReview extends IDatabaseBase{
     account: string,
     attendance: Array<Attendance>,
-    activity: Array<Activity>,
+    activity: Array<string>,
 }
 
 export const SReview:mongoose.Schema = new mongoose.Schema({
@@ -35,17 +24,6 @@ export const SReview:mongoose.Schema = new mongoose.Schema({
             notes: String,
         }
     ],
-    activity:[
-        {
-            title: String,
-            project: String,
-            description: String,
-            week: Number,
-            property: Number,
-            hours: Number,
-            finishrate: Number,
-            quality: Number,
-        }
-    ],
+    activity:[String],
     createdate: Number
 })

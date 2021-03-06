@@ -5,7 +5,7 @@
 interface IReview extends IDatabaseBase {
     account: string,
     attendance: Array<Attendance>,
-    activity: Array<Activity>,
+    activity: Array<string>,
 }
 ```
 
@@ -21,18 +21,7 @@ const SReview:mongoose.Schema = new mongoose.Schema({
             notes: String,
         }
     ],
-    activity:[
-        {
-            title: String,
-            project: String,
-            description: String,
-            week: Number,
-            property: Number,
-            hours: Number,
-            finish_rate: Number,
-            quality: Number,
-        }
-    ],
+    activity:[String],
     createdate: Number
 })
 ```
@@ -44,7 +33,7 @@ const SReview:mongoose.Schema = new mongoose.Schema({
 ## Reference
 
 [Attendance](./Attendance.md),
-[Activity](./Activity.md)
+[IActivity](./IActivity.md)
 
 ## Description
 
