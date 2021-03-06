@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectModifyRole extends IBase {
-    role_id: string,
+    role: string,
     name: string,
     content: RoleTemplate,
 }

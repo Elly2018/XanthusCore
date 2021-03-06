@@ -1,44 +1,44 @@
 // Login
-export { ILoginLogin } from './Server/ILogin_Login'
+export { ILoginLogin } from './Server/login/ILogin_Login'
 
 // Nav
-export { INavToProject } from './Server/INav_ToProject'
-export { INavCreateProject, INavTemplate } from './Server/INav_CreateProject'
-export { INavAddProject } from './Server/INav_AddProject'
-export { INavUpdateBadgesR } from './Server/INav_UpdateBadgesR'
-export { INavUpdateClassR } from './Server/INav_UpdateClassR'
-export { INavDeleteProject } from './Server/INav_DeleteProject'
+export { INavToProject } from './Server/nav/INav_ToProject'
+export { INavCreateProject, INavTemplate } from './Server/nav/INav_CreateProject'
+export { INavAddProject } from './Server/nav/INav_AddProject'
+export { INavUpdateBadgesR } from './Server/nav/INav_UpdateBadgesR'
+export { INavUpdateClassR } from './Server/nav/INav_UpdateClassR'
+export { INavDeleteProject } from './Server/nav/INav_DeleteProject'
 
 // Profile
-export { IProfileChangeColor } from './Server/IProfile_ChangeColor'
-export { IProfileChangePassword } from './Server/IProfile_ChangePassword'
-export { IProfileChangeUsername } from './Server/IProfile_ChangeUsername'
+export { IProfileChangeColor } from './Server/project/IProfile_ChangeColor'
+export { IProfileChangePassword } from './Server/project/IProfile_ChangePassword'
+export { IProfileChangeUsername } from './Server/project/IProfile_ChangeUsername'
 
 // Project
-export { IProjectChangeColor } from './Server/IProject_ChangeColor'
-export { IProjectChangeName } from './Server/IProject_ChangeName'
-export { IProjectCreateInviteCode } from './Server/IProject_CreateInviteCode'
-export { IProjectDeleteInviteCode } from './Server/IProject_DeleteInviteCode'
-export { IProjectCreateGroup } from './Server/IProject_CreateGroup'
-export { IProjectModifyGroup } from './Server/IProject_ModifyGroup'
-export { IProjectDeleteGroup } from './Server/IProject_DeleteGroup'
-export { IProjectCreateRole } from './Server/IProject_CreateRole'
-export { IProjectModifyRole } from './Server/IProject_ModifyRole'
-export { IProjectDeleteRole } from './Server/IProject_DeleteRole'
-export { IProjectModifyStaff } from './Server/IProject_ModifyStaff'
-export { IProjectRemoveStaff } from './Server/IProject_RemoveStaff'
-export { IProjectUpdateR } from './Server/IProject_UpdateR'
-export { IProjectUpdateChannelR } from './Server/IProject_UpdateChannelR'
+export { IProjectChangeColor } from './Server/project/IProject_ChangeColor'
+export { IProjectChangeName } from './Server/project/IProject_ChangeName'
+export { IProjectCreateInviteCode } from './Server/project/IProject_CreateInviteCode'
+export { IProjectDeleteInviteCode } from './Server/project/IProject_DeleteInviteCode'
+export { IProjectCreateGroup } from './Server/project/IProject_CreateGroup'
+export { IProjectModifyGroup } from './Server/project/IProject_ModifyGroup'
+export { IProjectDeleteGroup } from './Server/project/IProject_DeleteGroup'
+export { IProjectCreateRole } from './Server/project/IProject_CreateRole'
+export { IProjectModifyRole } from './Server/project/IProject_ModifyRole'
+export { IProjectDeleteRole } from './Server/project/IProject_DeleteRole'
+export { IProjectModifyStaff } from './Server/project/IProject_ModifyStaff'
+export { IProjectRemoveStaff } from './Server/project/IProject_RemoveStaff'
+export { IProjectUpdateR } from './Server/project/IProject_UpdateR'
+export { IProjectUpdateChannelR } from './Server/project/IProject_UpdateChannelR'
 
 // Sidebar
-export { ISidebarUpdateR } from './Server/ISidebar_UpdateR'
+export { ISidebarUpdateR } from './Server/sidebar/ISidebar_UpdateR'
 
 // Social
-export { ISocialAccountList } from './Server/ISocial_AccountList'
+export { ISocialAccountList } from './Server/social/ISocial_AccountList'
 
 // Channel
-export { IChannelToChannel } from './Server/IChannel_ToChannel'
-export { IChannelUpdateBadgesR } from './Server/IChannel_UpdateBadgesR'
-export { IChannelReadNotices } from './Server/IChannel_ReadNotices'
+export { IChannelToChannel } from './Server/channel/IChannel_ToChannel'
+export { IChannelUpdateBadgesR } from './Server/channel/IChannel_UpdateBadgesR'
+export { IChannelReadNotices } from './Server/channel/IChannel_ReadNotices'
 
-export { ITextChannelLoadMessage } from './Server/channel/ITextChannel_LoadMessages'
+export { ITextLoadMessage } from './Server/text/IText_LoadMessages'

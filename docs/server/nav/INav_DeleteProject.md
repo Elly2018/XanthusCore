@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface INavDeleteProject extends IBase{
-    project_id: string
+    project: string
 }
 ```
 
@@ -17,4 +17,4 @@ Asking for leave or delete project
 
 ## Properties
 
-**project_id**: Project target
+**project**: Project target

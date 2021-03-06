@@ -8,9 +8,12 @@ export enum PostType{
     RequestPost = 10,
 
     TaskPost = 20,
+
+    Notice = 30,
 }
 
 export interface IPost extends IDatabaseBase {
+    belong: string,
     title: string,
     posttype : number,
     sender: string,
@@ -19,6 +22,7 @@ export interface IPost extends IDatabaseBase {
 }
 
 export const SPost:mongoose.Schema = new mongoose.Schema({
+    belong: String,
     title: String,
     posttype : Number,
     sender: String,

@@ -4,9 +4,11 @@
 
 ```typescript
 interface ClassPermission{
-    create_project: boolean,
-    view_accounting: boolean,
-    modify_accounting: boolean
+    createProject: boolean,
+    accountManagement: boolean,
+    viewAccounting: boolean,
+    modifyAccounting: boolean,
+    projectManagement: boolean,
 }
 ```
 
@@ -16,8 +18,12 @@ Class permission setting
 
 ## Properties
 
-**create_project**: Can create project
+**createProject**: Can create project
 
-**view_accounting**: Can see accounting menu
+**accountManagement**: Can create modify delete and view account detail
 
-**modify_accounting**: Can submit or delete or modify accounting data
+**viewAccounting**: Can see accounting menu
+
+**modifyAccounting**: Can submit or delete or modify accounting data
+
+**projectManagement**: Can see project manage menu

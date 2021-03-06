@@ -15,7 +15,7 @@ Server receive data format, it is also client sender data format
 3. [INav_AddProject](./server/nav/INav_AddProject.md)
 4. [INav_UpdateBadgesR](./server/nav/INav_UpdateBadgesR.md)
 5. [INav_UpdateClassR](./server/nav/INav_UpdateClassR.md)
-6. [INav_DeleteProject](./server/nav/INav_DeleteClassR.md)
+6. [INav_DeleteProject](./server/nav/INav_DeleteProject.md)
 
 ## Profile
 

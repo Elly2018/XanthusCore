@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectModifyGroup extends IBase {
-    group_id: string,
+    group: string,
     roles: Array<string>
 }
 ```

@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectModifyStaff extends IBase {
-    account_id: string,
+    account: string,
     roles: Array<string>,
 }
 ```

@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectChangeName extends IBase {
-    new_name: string,
+    newname: string,
 }
 ```
 
@@ -17,4 +17,4 @@ Project manager trying to change project title
 
 ## Properties
 
-**new_name**: New project title
+**newname**: New project title

@@ -4,7 +4,7 @@
 
 ```typescript
 interface INavToProject extends IBase {
-    project_id: string
+    project: string
 }
 ```
 
@@ -21,4 +21,4 @@ Server will response with [INav_ToProjectReply](./../../client/nav/INav_ToProjec
 
 ## Properties
 
-**project_id**: Enter project id
+**project**: Enter project id

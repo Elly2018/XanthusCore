@@ -4,7 +4,7 @@
 
 ```typescript
 interface IProfileChangeUsername extends IBase{
-    new_username: string,
+    newusername: string,
     password:string,
 }
 ```
@@ -19,6 +19,6 @@ User trying to change username
 
 ## Properties
 
-**new_username**: New username
+**newusername**: New username
 
 **password**: Confirm password

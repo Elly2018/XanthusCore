@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface ChannelNotice {
-    account_id: string,
+    account: string,
     value: number
 }
 ```
@@ -14,6 +14,6 @@ Notification element count for each staff
 
 ## Properties
 
-**account_id**: Account target
+**account**: Account target
 
 **value**: Number value

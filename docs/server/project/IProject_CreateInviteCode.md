@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectCreateInviteCode extends IBase {
-    project_id: string,
+    project: string,
     code: string
 }
 ```
@@ -18,6 +18,6 @@ Project manager trying to create an new invite code
 
 ## Properties
 
-**project_id**: Which project does invite belong
+**project**: Which project does invite belong
 
 **code**: Code content

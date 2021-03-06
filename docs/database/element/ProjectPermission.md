@@ -3,8 +3,13 @@
 ## Body
 ```typescript
 interface ProjectPermission {
-    project_modify: boolean,
-    channel_modify: boolean
+    projectModify: boolean,
+    channelModify: boolean,
+    billVisibility: boolean,
+    billModify: boolean,
+    graphVisibility: boolean,
+    taskModify: boolean,
+    requestModify: boolean,
 }
 ```
 
@@ -14,6 +19,16 @@ Project management permission options
 
 ## Properties
 
-**project_modify**: Can open administrator panel
+**projectModify**: Can open administrator panel
 
-**channel_modify**: Can modify any channel setting
+**channelModify**: Can modify any channel setting
+
+**billVisibility**: Can see bill channel
+
+**billModify**: Can submit bill data and modify it
+
+**graphVisibility**: Can see graph channel
+
+**taskModify**: Can submit task data and modify and delete it
+
+**requestModify**: Cab submit response to request

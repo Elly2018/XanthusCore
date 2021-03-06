@@ -57,3 +57,5 @@ Because each channel have different feature
     * [RolePermission](./database/element/RolePermission.md)
     * [ProjectPermission](./database/element/ProjectPermission.md)
     * [ChannelPermission](./database/element/ChannelPermission.md)
+11. [Post](./database/element/IPost.md)
+    * [PostType](./database/element/PostType.md))

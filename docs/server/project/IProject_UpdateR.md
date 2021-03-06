@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectUpdateR extends IBase {
-    project_id: string
+    project: string
 }
 ```
 

@@ -5,7 +5,7 @@
 interface IActivity extends IDatabaseBase {
     title: string,
     account: string,
-    project: string,
+    task: string,
     description: string,
     starttime: number,
     endtime: number,
@@ -21,7 +21,7 @@ interface IActivity extends IDatabaseBase {
 const SActivity:mongoose.Schema = new mongoose.Schema({
     title: String,
     account: String,
-    project: String,
+    task: String,
     description: String,
     starttime: Number,
     endtime: Number,

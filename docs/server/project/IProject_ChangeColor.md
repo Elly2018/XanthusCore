@@ -3,7 +3,7 @@
 ## Body
 ```typescript
 interface IProjectChangeColor extends IBase {
-    new_color: string,
+    newcolor: string,
 }
 ```
 
@@ -17,4 +17,4 @@ Project manager trying to change project profile background color
 
 ## Properties
 
-**new_color**: Project profile background color
+**newcolor**: Project profile background color
