@@ -1,15 +1,56 @@
 import mongoose from "mongoose";
 import { IDatabaseBase } from "../IDatabaseBase";
 
+export enum LogType{
+    Login = 0,
+    Logout = 1,
+
+    CreateProject = 10,
+    ModifyProject = 11,
+    DeleteProject = 12,
+
+    AccountCreate = 20,
+    AccountModify = 21,
+    AccountDelete = 22,
+
+    StaffJoinProject = 30,
+    StaffRoleModify = 31,
+    StaffGroupModify = 32,
+
+    RoleCreate = 40,
+    RoleModify = 41,
+    RoleDelete = 42,
+
+    GroupCreate = 50,
+    GroupModify = 51,
+    GroupRoleModify = 52,
+    GroupDelete = 53,
+
+    TaskCreate = 60,
+    TaskDelete = 61,
+    TaskStart = 62,
+    TaskEnd = 63,
+    TaskFinish = 64,
+
+    RequestSend = 70,
+    RequestAccept = 71,
+    RequestReject = 72,
+    RequestDelete = 73,
+}
+
 export interface ILog extends IDatabaseBase{
-    channel: string,
+    sender: string,
+    target: Array<string>,
+    type: number,
     tag: string,
     message: string,
     color: string,
 }
 
 export const SLog:mongoose.Schema = new mongoose.Schema({
-    channel: String,
+    sender: String,
+    target: String,
+    type: Number,
     tag: String,
     message: String,
     color: String,

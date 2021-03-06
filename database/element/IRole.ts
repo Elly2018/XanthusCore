@@ -2,15 +2,19 @@ import mongoose from "mongoose";
 import { IDatabaseBase } from "../IDatabaseBase";
 
 export interface ProjectPermission{
-    project_modify: boolean,
-    channel_modify: boolean
+    projectModify: boolean,
+    channelModify: boolean,
+    billVisibility: boolean,
+    billModify: boolean,
+    graphVisibility: boolean,
+    taskModify: boolean,
+    requestModify: boolean,
 }
 
 export interface ChannelPermission{
-    text_message_modify: boolean,
-    file_element_modify: boolean,
-    issue_post_modify: boolean,
-    task_modify: boolean
+    textModify: boolean,
+    fileModify: boolean,
+    issueModify: boolean
 }
 
 export interface RolePermission{
@@ -38,14 +42,18 @@ export const SRole:mongoose.Schema = new mongoose.Schema({
     dynamic: Boolean,
     permission: {
         project: {
-            project_modify: Boolean,
-            channel_modify: Boolean
+            projectModify: Boolean,
+            channelModify: Boolean,
+            billVisibility: Boolean,
+            billModify: Boolean,
+            graphVisibility: Boolean,
+            taskModify: Boolean,
+            requestModify: Boolean,
         },
         channel: {
-            text_message_modify: Boolean,
-            file_element_modify: Boolean,
-            issue_post_modify: Boolean,
-            task_modify: Boolean
+            textModify: Boolean,
+            fileModify: Boolean,
+            issueModify: Boolean
         }
     },
     createdate: {type: Date,default: Date.now}

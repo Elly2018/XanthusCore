@@ -15,11 +15,12 @@ export { ILogChannel, SLogChannel, LogSetting } from './database/channel/ILogCha
 
 // Element
 export { IAccounting, SAccounting } from './database/element/IAccounting'
+export { IActivity, SActivity } from './database/element/IActivity'
 export { IClass, SClass, ClassPermission } from './database/element/IClass'
 export { IFileFilter, SFileFilter } from './database/element/IFileFilter'
 export { IFileURL, SFileURL } from './database/element/IFileURL'
 export { IGroup, SGroup } from './database/element/IGroup'
-export { ILog, SLog } from './database/element/ILog'
+export { ILog, SLog, LogType } from './database/element/ILog'
 export { IMessage, SMessage } from './database/element/IMessage'
-export { IReview, SReview } from './database/element/IReview'
+export { IReview, SReview, Attendance } from './database/element/IReview'
 export { IRole, SRole, RoleTemplate, RolePermission, ProjectPermission, ChannelPermission } from './database/element/IRole'

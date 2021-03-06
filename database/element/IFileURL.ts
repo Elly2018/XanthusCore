@@ -5,13 +5,13 @@ export interface IFileURL extends IDatabaseBase{
     name: string,
     url: string,
     filters:Array<string>,
-    page_url:Array<string>,
+    pageURL:Array<string>,
 }
 
 export const SFileURL:mongoose.Schema = new mongoose.Schema({
     name: String,
     url: String,
     filters:[String],
-    page_url:[String],
+    pageURL:[String],
     createdate: {type:Date, default:Date.now}
 })

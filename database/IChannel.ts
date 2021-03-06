@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { IDatabaseBase } from "./IDatabaseBase";
 
 export interface ChannelNotice {
-    account_id: string,
+    account: string,
     value: number
 }
 
@@ -22,7 +22,7 @@ export const SChannel:mongoose.Schema = new mongoose.Schema({
     group: Boolean,
     groupid: String,
     notices: [
-        {account_id: String, value: Number}
+        {account: String, value: Number}
     ],
     createdate: {type: Date, default: Date.now}
 })

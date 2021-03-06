@@ -3,17 +3,17 @@ import { IDatabaseBase } from "./../IDatabaseBase";
 
 export interface IFileFilter extends IDatabaseBase{
     name: string,
-    start_with: string,
-    end_with: string,
+    startWith: string,
+    endWith: string,
     extension: Array<string>,
-    top_only: boolean,
+    topOnly: boolean,
 }
 
 export const SFileFilter:mongoose.Schema = new mongoose.Schema({
     name: String,
-    start_with: String,
-    end_with: String,
+    startWith: String,
+    endWith: String,
     extension:[String],
-    top_only: {type:Boolean, default: true},
+    topOnly: {type:Boolean, default: true},
     createdate: {type:Date, default:Date.now}
 })
