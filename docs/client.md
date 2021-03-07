@@ -21,6 +21,8 @@ Client receive data format, it is also server sender data format
 1. IProject_InviteCode
 2. IProject_Update
 3. IProject_UpdateChannel
+4. IProject_Member
+    * ProjectMember
 
 ## Channel
 

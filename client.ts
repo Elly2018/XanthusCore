@@ -3,15 +3,13 @@ export { ITextChannelLoadMessageReply } from './Client/channel/ITextChannel_Load
 export { IChannelToChannelReply } from './Client/IChannel_ToChannelReply'
 export { IChannelUpdateBadges } from './Client/IChannel_UpdateBadges'
 
-export { ILoginForceBlock } from './Client/ILogin_ForceBlock'
-export { ILoginForceLogout } from './Client/ILogin_ForceLogout'
-export { ILoginReply } from './Client/ILogin_Reply'
+export { ILoginReply } from './Client/login/ILogin_Reply'
 
-export { INavToProjectReply } from './Client/INav_ToProjectReply'
-export { INavUpdateUser } from './Client/INav_UpdateUser'
-export { INavUpdateBadges, INavBadgesPackageElement } from './Client/INav_UpdateBadges'
-export { INavUpdateClass } from './Client/INav_UpdateClass'
-export { INavUpdateProjectList, INavProjectElement } from './Client/INav_UpdateProjectList'
+export { INavToProjectReply } from './Client/nav/INav_ToProjectReply'
+export { INavUpdateUser } from './Client/nav/INav_UpdateUser'
+export { INavUpdateBadges, INavBadgesPackageElement } from './Client/nav/INav_UpdateBadges'
+export { INavUpdateClass } from './Client/nav/INav_UpdateClass'
+export { INavUpdateProjectList, INavProjectElement } from './Client/nav/INav_UpdateProjectList'
 
 export { IProjectInviteCode } from './Client/IProject_InviteCode'
 export { IProjectUpdate } from './Client/IProject_Update'
