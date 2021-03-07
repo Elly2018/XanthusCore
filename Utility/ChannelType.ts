@@ -17,6 +17,25 @@ export enum ChannelType{
     PrivateMessage = 100,
 }
 
+export const ChannelIcon = {
+    0: "mdi-message-processing", 
+    1: "mdi-file-multiple", 
+    2: "mdi-help-circle", 
+    3: "mdi-checkbox-multiple-marked", 
+    4: "mdi-chart-bar", 
+    5: "mdi-shopping", 
+    6: "mdi-chart-line",
+    7: "mdi-pound",
+
+    50: "mdi-puzzle",
+    51: "mdi-gamepad-square",
+    52: "mdi-bell",
+    53: "mdi-account-multiple", 
+    
+    60: "mdi-bank", 
+    61: "mdi-server", 
+}
+
 export enum LobbyDynamic{
     Text = 0,
     File = 1,

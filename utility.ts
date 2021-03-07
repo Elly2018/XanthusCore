@@ -1,5 +1,5 @@
 //#region Utility
-export { ChannelType } from './Utility/ChannelType'
+export { ChannelType, ChannelIcon, LobbyDynamic, GroupDynamic } from './Utility/ChannelType'
 export { IBase } from './IBase'
 export { IBaseReply } from './IBaseReply'
 export { AccountingFilter } from './Utility/AccountingFilter'
