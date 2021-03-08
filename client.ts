@@ -1,7 +1,7 @@
-export { ITextChannelLoadMessageReply } from './Client/channel/ITextChannel_LoadMessagesReply'
+export { ITextChannelLoadMessageReply } from './Client/text/ITextChannel_LoadMessagesReply'
 
-export { IChannelToChannelReply } from './Client/IChannel_ToChannelReply'
-export { IChannelUpdateBadges } from './Client/IChannel_UpdateBadges'
+export { IChannelToChannelReply } from './Client/channel/IChannel_ToChannelReply'
+export { IChannelUpdateBadges } from './Client/channel/IChannel_UpdateBadges'
 
 export { ILoginReply } from './Client/login/ILogin_Reply'
 
@@ -11,10 +11,10 @@ export { INavUpdateBadges, INavBadgesPackageElement } from './Client/nav/INav_Up
 export { INavUpdateClass } from './Client/nav/INav_UpdateClass'
 export { INavUpdateProjectList, INavProjectElement } from './Client/nav/INav_UpdateProjectList'
 
-export { IProjectInviteCode } from './Client/IProject_InviteCode'
-export { IProjectUpdate } from './Client/IProject_Update'
-export { IProjectUpdateChannel } from './Client/IProject_UpdateChannel'
-export { IProjectMember, ProjectMember } from './Client/IProject_Member'
+export { IProjectInviteCode } from './Client/project/IProject_InviteCode'
+export { IProjectUpdate } from './Client/project/IProject_Update'
+export { IProjectUpdateChannel } from './Client/project/IProject_UpdateChannel'
+export { IProjectMember, ProjectMember } from './Client/project/IProject_Member'
 
 export { ISidebarUpdate, SidebarGroup, SidebarPeople } from './Client/ISidebar_Update'
 

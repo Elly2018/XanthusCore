@@ -1,5 +1,5 @@
-import { RolePermission } from "../database/element/IRole";
-import { IBase } from "../IBase";
+import { RolePermission } from "../../database/element/IRole";
+import { IBase } from "../../IBase";
 
 export interface ProjectMember {
     owner: boolean,
