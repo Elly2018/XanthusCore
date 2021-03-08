@@ -3,7 +3,7 @@ import { IDatabaseBase } from "./../IDatabaseBase";
 
 export interface IActivity extends IDatabaseBase {
     title: string,
-    account: string,
+    account: Array<string>,
     task: string,
     description: string,
     starttime: number,
@@ -15,7 +15,7 @@ export interface IActivity extends IDatabaseBase {
 
 export const SActivity:mongoose.Schema = new mongoose.Schema({
     title: String,
-    account: String,
+    account: [String],
     task: String,
     description: String,
     starttime: Number,

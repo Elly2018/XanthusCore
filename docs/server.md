@@ -44,28 +44,34 @@ Server receive data format, it is also client sender data format
 
 1. [ISidebar_UpdateR](./server/project/ISidebar_UpdateR.md)
 
+## Post
+
+1. IPost_Like
+2. IPost_ListUpdateR
+3. IPost_UpdateR
+
 ## Channel
 
 1. [IChannel_ToChannel](./server/project/IChannel_ToChannel.md)
 2. [IChannel_UpdateBadgesR](./server/project/IChannel_UpdateBadgesR.md)
 3. [IChannel_ReadNotices](./server/project/IChannel_ReadNotices.md)
 
-## Text Channel
+## Text
 
-1. ITextChannel_LoadMessage
-2. ITextChannel_SendMessage
-3. ITextChannel_ModifyMessage
-4. ITextChannel_DeleteMessage
+1. IText_LoadMessage
+2. IText_SendMessage
+3. IText_ModifyMessage
+4. IText_DeleteMessage
 
-## File Channel
+## File
 
-1. IFileChannel_CreateFilter
-2. IFileChannel_ModifyFilter
-3. IFileChannel_DeleteFilter
-4. IFileChannel_CreateURL
-5. IFileChannel_ModifyURL
-6. IFileChannel_DeleteURL
+1. IFile_CreateFilter
+2. IFile_ModifyFilter
+3. IFile_DeleteFilter
+4. IFile_CreateURL
+5. IFile_ModifyURL
+6. IFile_DeleteURL
 
-## Log Channel
+## Log
 
-1. ILogChannel_LoadLogs
+1. ILog_LoadLogs

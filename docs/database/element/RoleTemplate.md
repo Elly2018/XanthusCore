@@ -2,16 +2,16 @@
 
 ## Body
 ```typescript
-interface RolePermission {
-    project: ProjectPermission,
-    channel: ChannelPermission
+interface RoleTemplate {
+    name: string,
+    color: string,
+    permission: RolePermission,
 }
 ```
 
 ## Reference
 
-[ProjectPermission](./ProjectPermission.md),
-[ChannelPermission](./ChannelPermission.md)
+[RolePermission](./RolePermission.md),
 
 ## Description
 

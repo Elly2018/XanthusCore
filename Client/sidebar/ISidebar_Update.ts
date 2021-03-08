@@ -1,5 +1,5 @@
-import { IBase } from '../IBase'
-import { RoleTemplate } from '../database/element/IRole'
+import { IBase } from '../../IBase'
+import { RoleTemplate } from '../../database/element/IRole'
 
 export interface SidebarPeople{
     account_id: string,

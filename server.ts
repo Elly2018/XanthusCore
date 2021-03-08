@@ -10,9 +10,9 @@ export { INavUpdateClassR } from './Server/nav/INav_UpdateClassR'
 export { INavDeleteProject } from './Server/nav/INav_DeleteProject'
 
 // Profile
-export { IProfileChangeColor } from './Server/project/IProfile_ChangeColor'
-export { IProfileChangePassword } from './Server/project/IProfile_ChangePassword'
-export { IProfileChangeUsername } from './Server/project/IProfile_ChangeUsername'
+export { IProfileChangeColor } from './Server/profile/IProfile_ChangeColor'
+export { IProfileChangePassword } from './Server/profile/IProfile_ChangePassword'
+export { IProfileChangeUsername } from './Server/profile/IProfile_ChangeUsername'
 
 // Project
 export { IProjectChangeColor } from './Server/project/IProject_ChangeColor'
@@ -35,6 +35,11 @@ export { ISidebarUpdateR } from './Server/sidebar/ISidebar_UpdateR'
 
 // Social
 export { ISocialAccountList } from './Server/social/ISocial_AccountList'
+
+// Post
+export { IPostLike } from './Server/post/IPost_Like'
+export { IPostListUpdateR } from './Server/post/IPost_ListUpdateR'
+export { IPostUpdateR } from './Server/post/IPost_UpdateR'
 
 // Channel
 export { IChannelToChannel } from './Server/channel/IChannel_ToChannel'

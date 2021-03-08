@@ -18,11 +18,11 @@ Client receive data format, it is also server sender data format
 
 ## Project
 
-1. IProject_InviteCode
-2. IProject_Update
-3. IProject_UpdateChannel
-4. IProject_Member
-    * ProjectMember
+1. [IProject_InviteCode](./client/project/IProject_InviteCode.md)
+2. [IProject_Update](./client/project/IProject_Update.md)
+3. [IProject_UpdateChannel](./client/project/IProject_UpdateChannel.md)
+4. [IProject_Member](./client/project/IProject_Member.md)
+    * [ProjectMember](./client/project/ProjectMember.md)
 
 ## Channel
 
@@ -32,5 +32,25 @@ Client receive data format, it is also server sender data format
 ## Sidebar
 
 1. ISidebar_Update
+    * SidebarGroup
+    * SidebarPeople
 
-## Text Channel
+## Social
+
+1. ISocial_Update
+2. ISocial_UpdateActivity
+
+## ProjectManagement
+
+1. IProjectManagement_Update
+
+## Accounting
+
+1. IAccounting_Update
+
+## Post
+
+1. IPost_ListUpdate
+2. IPost_Update
+
+## Text
