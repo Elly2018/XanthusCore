@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "./../IDatabaseBase";
+import { IDatabaseBase } from "../IDatabaseBase";
 
 export interface IAccounting extends IDatabaseBase{
     title: string,
     description: string,
+    salary: string,
     income: number,
     outcome: number,
     category: number,

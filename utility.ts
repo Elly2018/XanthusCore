@@ -4,6 +4,7 @@ export { IBase } from './IBase'
 export { IBaseReply } from './IBaseReply'
 export { AccountingFilter } from './Utility/AccountingFilter'
 export { ChannelTree } from './Utility/ChannelTree'
+export { IProgram, Programs } from './Utility/Programs'
 //#endregion
 
 //#region Template

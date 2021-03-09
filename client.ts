@@ -12,7 +12,7 @@ export { INavUpdateProjectList, INavProjectElement } from './Client/nav/INav_Upd
 export { IProjectInviteCode } from './Client/project/IProject_InviteCode'
 export { IProjectUpdate } from './Client/project/IProject_Update'
 export { IProjectUpdateChannel } from './Client/project/IProject_UpdateChannel'
-export { IProjectMember, ProjectMember } from './Client/project/IProject_Member'
+export { IProjectMember } from './Client/project/IProject_Member'
 
 // Channel
 export { IChannelToChannelReply } from './Client/channel/IChannel_ToChannelReply'

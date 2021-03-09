@@ -7,6 +7,7 @@ export interface IFileFilter extends IDatabaseBase{
     endWith: string,
     extension: Array<string>,
     topOnly: boolean,
+    extra: Array<string>
 }
 
 export const SFileFilter:mongoose.Schema = new mongoose.Schema({
@@ -15,5 +16,6 @@ export const SFileFilter:mongoose.Schema = new mongoose.Schema({
     endWith: String,
     extension:[String],
     topOnly: {type:Boolean, default: true},
+    extra: [String],
     createdate: {type:Date, default:Date.now}
 })

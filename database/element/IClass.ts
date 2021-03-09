@@ -11,12 +11,14 @@ export interface ClassPermission{
 
 export interface IClass extends IDatabaseBase{
     name: string,
+    description: string,
     cannotDelete: boolean,
     permission: ClassPermission,
 }
 
 export const SClass:mongoose.Schema = new mongoose.Schema({
     name: String,
+    description: String,
     cannotDelete: Boolean,
     permission:{
         createProject: Boolean,

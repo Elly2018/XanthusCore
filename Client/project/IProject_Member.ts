@@ -1,12 +1,5 @@
-import { RolePermission } from "../../database/element/IRole";
 import { IBase } from "../../IBase";
-
-export interface ProjectMember {
-    owner: boolean,
-    roles: Array<string>,
-    groups: Array<string>,
-    permission: RolePermission,
-}
+import { ProjectMember } from "../../Utility/Member";
 
 export interface IProjectMember extends IBase {
     member: ProjectMember

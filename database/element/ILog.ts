@@ -15,7 +15,7 @@ export enum LogType{
 
     StaffJoinProject = 30,
     StaffRoleModify = 31,
-    StaffGroupModify = 32,
+    StaffLeaveProject = 32,
 
     RoleCreate = 40,
     RoleModify = 41,
@@ -32,10 +32,11 @@ export enum LogType{
     TaskEnd = 63,
     TaskFinish = 64,
 
-    RequestSend = 70,
-    RequestAccept = 71,
-    RequestReject = 72,
-    RequestDelete = 73,
+    RequestCreate = 70,
+    RequestModify = 71,
+    RequestAccept = 72,
+    RequestReject = 73,
+    RequestDelete = 74,
 }
 
 export interface ILog extends IDatabaseBase{

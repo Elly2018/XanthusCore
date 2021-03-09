@@ -6,6 +6,7 @@ export enum ChannelType{
     Graph = 4,
     Task = 5,
     Bill = 6,
+    Outsource = 7,
 
     Setting = 50,
     Activity = 51,
@@ -25,6 +26,7 @@ export const ChannelTypeDict = {
     4: "Graph",
     5: "Task",
     6: "Bill",
+    7: "Outsource",
 
     50: "Setting",
     51: "Activity",

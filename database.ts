@@ -1,7 +1,5 @@
 // Base
 export { IDatabaseBase } from './database/IDatabaseBase'
-export { IBaseChannel } from './database/channel/IBaseChannel'
-export { IBaseChannelSetting } from './database/channel/IBaseChannel'
 
 // Main
 export { IAccount, SAccount } from './database/IAccount'
@@ -9,9 +7,9 @@ export { IProject, SProject, IProjectTemp, IProjectElement, IProjectGroupChannel
 export { IChannel, SChannel, ChannelNotice } from './database/IChannel'
 
 // Channel
-export { ITextChannel, STextChannel, TextSetting } from './database/channel/ITextChannel'
-export { IFileChannel, SFileChannel, FileSetting, Nas } from './database/channel/IFileChannel'
-export { ILogChannel, SLogChannel, LogSetting } from './database/channel/ILogChannel'
+export { TextSetting } from './database/channel/IText'
+export { FileSetting, Nas } from './database/channel/IFile'
+export { OutsourceSetting } from './database/channel/IOutsource'
 
 // Element
 export { IAccounting, SAccounting } from './database/element/IAccounting'

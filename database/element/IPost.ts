@@ -19,8 +19,6 @@ export interface IPost extends IDatabaseBase {
     sender: string,
     content: string,
     deadline: number,
-    view: Array<string>,
-    like: Array<string>,
 }
 
 export const SPost:mongoose.Schema = new mongoose.Schema({
@@ -30,7 +28,5 @@ export const SPost:mongoose.Schema = new mongoose.Schema({
     sender: String,
     content: String,
     deadline: Date,
-    view: [String],
-    like: [String],
     createdate: {type:Date, default: Date.now}
 })
