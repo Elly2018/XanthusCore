@@ -1,7 +1,7 @@
 import { IBase } from "../../IBase";
 
 export interface INavBadgesPackageElement{
-    project_id: string,
+    projectid: string,
     isProfile: boolean,
     value: number
 }

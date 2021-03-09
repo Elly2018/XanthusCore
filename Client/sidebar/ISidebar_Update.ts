@@ -1,10 +1,15 @@
 import { IBase } from '../../IBase'
 import { RoleTemplate } from '../../database/element/IRole'
 
+export interface SidebarRole{
+    id: string,
+    role: RoleTemplate,
+}
+
 export interface SidebarPeople{
-    account_id: string,
+    account: string,
     nickname: string,
-    roles: RoleTemplate
+    roles: Array<SidebarRole>
 }
 
 export interface SidebarGroup{

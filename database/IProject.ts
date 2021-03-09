@@ -19,6 +19,10 @@ export interface IProjectGroupChannel{
 
 export interface IProject extends IDatabaseBase{
     name: string,
+    secondary: string,
+    budget: number,
+    startday: number,
+    endday: number,
     owner: string,
     color: string,
     group: Array<IProjectElement>,

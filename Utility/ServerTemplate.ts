@@ -1,27 +1,24 @@
-import { IServerTemp } from './../database/IServer'
+import { IProjectTemp } from './../database/IProject'
 import { ChannelType } from './ChannelType'
 
-export const LobbyFixed:IServerTemp[] = [
-    {title: "Notice", channeltype: ChannelType.Text},
-    {title: "General", channeltype: ChannelType.Text},
+export const LobbyFixed:IProjectTemp[] = [
     {title: "Bill", channeltype: ChannelType.Bill},
     {title: "Request", channeltype: ChannelType.Request},
     {title: "Monitor", channeltype: ChannelType.Graph},
-    {title: "Log", channeltype: ChannelType.Log}
 ]
 
-export const GroupFixed:IServerTemp[] = [
+export const GroupFixed:IProjectTemp[] = [
     {title: "<$> Chat", channeltype: ChannelType.Text},
     {title: "<$> Issue", channeltype: ChannelType.Issue},
     {title: "<$> Task", channeltype: ChannelType.Task},
-    {title: "Log", channeltype: ChannelType.Log}
 ]
 
 
-export const LobbyDefault:IServerTemp[] = [
+export const LobbyDefault:IProjectTemp[] = [
+    {title: "General", channeltype: ChannelType.Text},
     {title:"Project", channeltype: ChannelType.File},
 ]
 
-export const GroupDefault:IServerTemp[] = [
-    
+export const GroupDefault:IProjectTemp[] = [
+    {title: "Chat", channeltype: ChannelType.Text},
 ]

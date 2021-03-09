@@ -19,7 +19,7 @@ export { IChannelToChannelReply } from './Client/channel/IChannel_ToChannelReply
 export { IChannelUpdateBadges } from './Client/channel/IChannel_UpdateBadges'
 
 // Sidebar
-export { ISidebarUpdate, SidebarGroup, SidebarPeople } from './Client/sidebar/ISidebar_Update'
+export { ISidebarUpdate, SidebarGroup, SidebarPeople, SidebarRole } from './Client/sidebar/ISidebar_Update'
 
 // Post
 export { IPostListUpdate, PostHeader } from './Client/post/IPost_ListUpdate'

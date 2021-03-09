@@ -17,7 +17,27 @@ export enum ChannelType{
     PrivateMessage = 100,
 }
 
-export const ChannelIcon = {
+export const ChannelTypeDict = {
+    0: "Text",
+    1: "File",
+    2: "Issue",
+    3: "Request",
+    4: "Graph",
+    5: "Task",
+    6: "Bill",
+
+    50: "Setting",
+    51: "Activity",
+    52: "Notice",
+    53: "Social",
+
+    60: "Accounting",
+    61: "ServerManage",
+
+    100: "PrivateMessage",
+}
+
+export const ChannelIconDict = {
     0: "mdi-message-processing", 
     1: "mdi-file-multiple", 
     2: "mdi-help-circle", 
