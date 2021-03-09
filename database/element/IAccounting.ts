@@ -14,6 +14,7 @@ export interface IAccounting extends IDatabaseBase{
 export const SAccounting:mongoose.Schema = new mongoose.Schema({
     title: String,
     description: String,
+    salary: String,
     income: String,
     outcome: Number,
     category: Number,

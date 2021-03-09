@@ -3,13 +3,15 @@
 ## Body
 ```typescript
 interface FileSetting {
-    use_nas: boolean,
+    root: string,
+    usenas: boolean,
     nas:Array<Nas>
 }
 ```
 
 ## Reference
 
+[FileURL](./../element/FileURL.md), 
 [Nas](./Nas.md)
 
 ## Description
@@ -18,8 +20,8 @@ File channel setting
 
 ## Properties
 
-**use_nas**: Is this file channel have NAS mode on
+**root**: Root file URL
+
+**usenas**: Is this file channel have NAS mode on
 
 **nas**: It is meaningless when 
-
-**use_nas** is false, it contain nas element array

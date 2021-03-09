@@ -6,25 +6,12 @@
 interface IAccounting extends IDatabaseBase {
     title: string,
     description: string,
+    salary: string,
     income: number,
     outcome: number,
     category: number,
     type: number,
 }
-```
-
-## Schema
-
-```typescript
-const SAccounting:mongoose.Schema = new mongoose.Schema({
-    title: String,
-    description: String,
-    income: String,
-    outcome: Number,
-    category: Number,
-    type: Number,
-    createdate: Number
-})
 ```
 
 ## Inherit
@@ -33,7 +20,8 @@ const SAccounting:mongoose.Schema = new mongoose.Schema({
 
 ## Reference
 
-[AccountingFormat](./../../utility/AccountingFormat.md)
+[AccountingFilter](./../../utility/AccountingFilter.md), 
+[Salary](./Salary.md)
 
 ## Description
 
@@ -44,6 +32,8 @@ Bill content
 **title**: Show title
 
 **description**: Bill info
+
+**salary**: Salary binding (ID)
 
 **income**: Income
 

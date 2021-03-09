@@ -10,19 +10,13 @@ interface IFileURL extends IDatabaseBase {
 }
 ```
 
-## Schema
-```typescript
-const SFileURL:mongoose.Schema = new mongoose.Schema({
-    name: String,
-    url: String,
-    filters:[String],
-    page_url:[String],
-    createdate: {type:Date, default:Date.now}
-})
-```
 ## Inherit
 
 [IDatabaseBase](./../../base/IDatabaseBase.md)
+
+## Reference
+
+[FileFilter](./FileFilter.md)
 
 ## Description
 

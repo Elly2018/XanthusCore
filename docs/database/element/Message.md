@@ -10,19 +10,6 @@ interface IMessage extends IDatabaseBase{
     message: string,
 }
 ```
-```typescript
-const SMessage:mongoose.Schema = new mongoose.Schema({
-    user: String,
-    channel: String,
-    tag: [String],
-    reply: {
-        isreply: Boolean,
-        target: String
-    },
-    message: String,
-    createdate: {type: Date, default: Date.now}
-})
-```
 
 ## Inherit
 

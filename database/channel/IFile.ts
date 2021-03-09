@@ -5,6 +5,6 @@ export interface Nas{
 
 export interface FileSetting {
     root: string,
-    use_nas: boolean,
+    usenas: boolean,
     nas:Array<Nas>
 }

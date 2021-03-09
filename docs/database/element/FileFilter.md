@@ -8,19 +8,8 @@ interface IFileFilter extends IDatabaseBase {
     end_with: string,
     extension: Array<string>,
     top_only: boolean,
+    extra: Array<string>
 }
-```
-
-## Schema
-```typescript
-const SFileFilter:mongoose.Schema = new mongoose.Schema({
-    name: String,
-    start_with: String,
-    end_with: String,
-    extension:[String],
-    top_only: {type:Boolean, default: true},
-    createdate: {type:Date, default:Date.now}
-})
 ```
 
 ## Inherit
@@ -42,3 +31,5 @@ File channel filter element, Store the values which define the filter result
 **extension**: File name extension
 
 **top_only**: Is filter only search top root folder result
+
+**extra**: Extra file target

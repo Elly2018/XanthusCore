@@ -15,7 +15,7 @@ export interface IOutsource extends IDatabaseBase{
     actualPayDate: number,
 }
 
-export const SRole:mongoose.Schema = new mongoose.Schema({
+export const SOutsource:mongoose.Schema = new mongoose.Schema({
     charge: String,
     project: String,
     group: String,

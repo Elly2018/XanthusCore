@@ -9,6 +9,10 @@ interface IProjectGroupChannel{
     channel: Array<string>
 ```
 
+## Reference
+
+[Channel](./Channel.md)
+
 ## Description
 
 For specified the group channel content\

@@ -12,18 +12,6 @@ interface IPost extends IDatabaseBase {
 }
 ```
 
-## Schema
-```typescript
-const SPost:mongoose.Schema = new mongoose.Schema({
-    belong: String,
-    title: String,
-    posttype : Number,
-    sender: String,
-    content: String,
-    deadline: Date,
-    createdate: {type:Date, default: Date.now}
-})
-```
 ## Inherit
 
 [IDatabaseBase](./../../base/IDatabaseBase.md)
@@ -35,8 +23,7 @@ const SPost:mongoose.Schema = new mongoose.Schema({
 ## Description
 
 A container store html message as content\
-and post data can be use in different scenario\
-Check [here](./PostType.md) to see all the scenario
+and post data can be use in different scenario
 
 ## Properties
 

@@ -14,6 +14,10 @@ interface IProjectElement {
 A container store id and roles id array\
 Useful for define project element like staff or group
 
+## Reference
+
+[Role](./element/Role.md)
+
 ## Properties
 
 **id**: Identifier could be target any collection
