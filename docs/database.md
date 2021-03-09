@@ -24,17 +24,14 @@ They are connect with elements and channels collection
 
 ## Channel
 
-All kinds of channel data format\
+All kinds of channel setting data format\
 Depend on target [channel header](./database/Channel.md)'s type\
-The data is separate store in the different collections\
+The setting will have different format\
 Because each channel have different feature
 
-1. [TextChannel](./database/channel/TextChannel.md)
-    * [TextSetting](./database/channel/TextSetting.md)
-2. [FileChannel](./database/channel/FileChannel.md)
-    * [FileSetting](./database/channel/FileSetting.md)
+1. [TextSetting](./database/channel/TextSetting.md)
+2. [FileSetting](./database/channel/FileSetting.md)
     * [Nas](./database/channel/Nas.md)
-3. [LogChannel](./database/channel/LogChannel.md)
 
 ## Element
 
@@ -45,6 +42,7 @@ Because each channel have different feature
 4. [FileURL](./database/element/FileURL.md)
 5. [Group](./database/element/Group.md)
 6. [Log](./database/element/Log.md)
+    * [LogType](./database/element/LogType.md)
 7. [Message](./database/element/Message.md)
     * [IReply](./database/element/IReply.md)
 8. [Review](./database/element/IReview.md)
@@ -56,4 +54,6 @@ Because each channel have different feature
     * [ProjectPermission](./database/element/ProjectPermission.md)
     * [ChannelPermission](./database/element/ChannelPermission.md)
 11. [Post](./database/element/IPost.md)
-    * [PostType](./database/element/PostType.md))
+    * [PostType](./database/element/PostType.md)
+12. [Leave](./database/element/ILeave.md)
+13. [Outsource](./database/element/IOutsource.md)

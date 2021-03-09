@@ -6,27 +6,11 @@
 interface IChannel extends IDatabaseBase {
     name: string,
     type: number,
-    link: string,
     group: boolean,
     groupid: string,
+    setting: object,
     notices: Array<ChannelNotice>,
 }
-```
-
-## Schema
-
-```typescript
-const SChannel:mongoose.Schema = new mongoose.Schema({
-    name: String,
-    type: Number,
-    link: String,
-    group: Boolean,
-    groupid: String,
-    notices: [
-        {account_id: String, value: Number}
-    ],
-    createdate: {type: Date, default: Date.now}
-})
 ```
 
 ## Inherit
@@ -50,11 +34,11 @@ Depend on the **type** The link is targeting different collection
 
 **type**: Channel type
 
-**link**: Link to channel content (store channel ID)
-
 **group**: Is channel a group channel or lobby channel
 
 **groupid**: If it is group channel, which group it is binding with
+
+**setting**: Channel setting
 
 **notices**: Notices info, Account will see badges base on this value
 

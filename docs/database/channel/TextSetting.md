@@ -3,14 +3,10 @@
 ## Body
 
 ```typescript
-interface TextSetting extends IBaseChannelSetting {
+interface TextSetting {
     delay: number
 }
 ```
-
-## Inherit
-
-[IBaseChannelSetting](./../../base/IBaseChannelSetting.md)
 
 ## Description
 

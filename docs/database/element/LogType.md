@@ -1,7 +1,8 @@
-import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
+# LogType
 
-export enum LogType{
+## Body
+```typescript
+enum LogType{
     Login = 0,
     Logout = 1,
 
@@ -38,20 +39,4 @@ export enum LogType{
     RequestReject = 73,
     RequestDelete = 74,
 }
-
-export interface ILog extends IDatabaseBase{
-    sender: string,
-    target: Array<string>,
-    type: number,
-    tag: string,
-    message: string,
-}
-
-export const SLog:mongoose.Schema = new mongoose.Schema({
-    sender: String,
-    target: String,
-    type: Number,
-    tag: String,
-    message: String,
-    createdate: {type:Date, default: Date.now}
-})
+```

@@ -10,6 +10,7 @@ export enum ChannelType{
     Graph = 4,
     Task = 5,
     Bill = 6,
+    Outsource = 7,
 
     Setting = 50,
     Activity = 51,

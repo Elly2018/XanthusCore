@@ -10,26 +10,7 @@ interface IActivity extends IDatabaseBase {
     starttime: number,
     endtime: number,
     property: number,
-    finishrate: number,
-    quality: number,
 }
-```
-
-## Schema
-
-```typescript
-const SActivity:mongoose.Schema = new mongoose.Schema({
-    title: String,
-    account: String,
-    task: String,
-    description: String,
-    starttime: Number,
-    endtime: Number,
-    property: Number,
-    finishrate: Number,
-    quality: Number,
-    createdate: Number,
-})
 ```
 
 ## Description
@@ -53,7 +34,3 @@ Account activity log
 **property**: Working category
 
 **hours**: Total work hours
-
-**finishrate**: Finish rate
-
-**quality**: Quality rate

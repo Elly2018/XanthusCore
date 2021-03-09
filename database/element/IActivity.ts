@@ -9,8 +9,6 @@ export interface IActivity extends IDatabaseBase {
     starttime: number,
     endtime: number,
     property: number,
-    finishrate: number,
-    quality: number,
 }
 
 export const SActivity:mongoose.Schema = new mongoose.Schema({
@@ -21,7 +19,5 @@ export const SActivity:mongoose.Schema = new mongoose.Schema({
     starttime: Number,
     endtime: Number,
     property: Number,
-    finishrate: Number,
-    quality: Number,
     createdate: Number,
 })
