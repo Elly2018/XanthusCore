@@ -17,4 +17,6 @@ Some basic properties that each database interface should have
 
 **_id**: Document ID
 
+**meta**: Extra information
+
 **createdate**: Document create date

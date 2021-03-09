@@ -8,8 +8,6 @@ create collection and document
 Abstract interface, contain 'must have' properties for some data format
 
 1. [DatabaseBase](./base/IDatabaseBase.md)
-2. [BaseChannel](./base/IBaseChannel.md)
-3. [BaseChannelSetting](./base/IBaseChannelSetting.md)
 
 ## Main
 

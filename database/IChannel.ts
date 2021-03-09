@@ -12,6 +12,7 @@ export interface IChannel extends IDatabaseBase{
     link: string,
     group: boolean,
     groupid: string,
+    setting: object,
     notices: Array<ChannelNotice>,
 }
 
@@ -21,6 +22,7 @@ export const SChannel:mongoose.Schema = new mongoose.Schema({
     link: String,
     group: Boolean,
     groupid: String,
+    setting: Object,
     notices: [
         {account: String, value: Number}
     ],
