@@ -15,7 +15,6 @@ export { IProjectUpdateChannel } from './Client/project/IProject_UpdateChannel'
 export { IProjectMember } from './Client/project/IProject_Member'
 
 // Channel
-export { IChannelToChannelReply } from './Client/channel/IChannel_ToChannelReply'
 export { IChannelUpdateBadges } from './Client/channel/IChannel_UpdateBadges'
 
 // Sidebar
