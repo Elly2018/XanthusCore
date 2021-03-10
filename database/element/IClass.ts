@@ -2,7 +2,9 @@ import mongoose from "mongoose";
 import { IDatabaseBase } from "./../IDatabaseBase";
 
 export interface ClassPermission{
+    administrator: boolean,
     createProject: boolean,
+    createNotice: boolean,
     accountManagement: boolean,
     viewAccounting: boolean,
     modifyAccounting: boolean,

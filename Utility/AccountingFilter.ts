@@ -1,4 +1,4 @@
-enum accountingType {
+export enum AccountingCategory {
     All = 0,
     Assets = 1, 
     Expenses = 2, 
@@ -7,7 +7,7 @@ enum accountingType {
     Revenue = 5
 }
 
-enum accountingAssetType {
+export enum AccountingAssetType {
     All = 0, 
     Checking = 1, 
     Petty_Cash = 2, 
@@ -15,7 +15,7 @@ enum accountingAssetType {
     Accounts_Receivable = 4
 }
 
-enum accountingExpensesType {
+export enum AccountingExpensesType {
     All = 0, 
     Payroll = 1, 
     Insurance = 2, 
@@ -24,7 +24,7 @@ enum accountingExpensesType {
     Cost_of_Goods_Sold = 5
 }
 
-enum accountingLiabilitesType {
+export enum AccountingLiabilitesType {
     All = 0, 
     Payroll_Tax_Liabilities = 1, 
     Sales_Tax_Collected = 2, 
@@ -32,25 +32,16 @@ enum accountingLiabilitesType {
     Accounts_Payable = 4
 }
 
-enum accountingEquityType {
+export enum AccountingEquityType {
     All = 0, 
     Owners_Equity = 1, 
     Common_Stock = 2, 
     Retained_Earnings = 3
 }
 
-enum accountingRevenueType {
+export enum AccountingRevenueType {
     All = 0, 
     Product_Sales = 1, 
     Earned_Interest = 2, 
     Miscellaneous_Income = 3 
-}
-
-export const AccountingFilter = {
-    accountingType,
-    accountingAssetType,
-    accountingExpensesType,
-    accountingLiabilitesType,
-    accountingEquityType,
-    accountingRevenueType
 }

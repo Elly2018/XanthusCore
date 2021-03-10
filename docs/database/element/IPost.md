@@ -5,6 +5,7 @@
 interface IPost extends IDatabaseBase {
     belong: string,
     title: string,
+    color: string,
     posttype : number,
     sender: string,
     content: string,
@@ -30,6 +31,8 @@ and post data can be use in different scenario
 **belong**: Which channel or project it belong
 
 **title**: Post title
+
+**color**: Post Icon background color
 
 **posttype**: Post type
 

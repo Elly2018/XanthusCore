@@ -15,6 +15,7 @@ export enum PostType{
 export interface IPost extends IDatabaseBase {
     belong: string,
     title: string,
+    color: string,
     posttype : number,
     sender: string,
     content: string,
@@ -24,6 +25,7 @@ export interface IPost extends IDatabaseBase {
 export const SPost:mongoose.Schema = new mongoose.Schema({
     belong: String,
     title: String,
+    Color: String,
     posttype : Number,
     sender: String,
     content: String,

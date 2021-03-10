@@ -3,7 +3,7 @@ export { ILoginLogin } from './Server/login/ILogin_Login'
 
 // Nav
 export { INavToProject } from './Server/nav/INav_ToProject'
-export { INavCreateProject, INavTemplate } from './Server/nav/INav_CreateProject'
+export { INavCreateProject } from './Server/nav/INav_CreateProject'
 export { INavAddProject } from './Server/nav/INav_AddProject'
 export { INavUpdateBadgesR } from './Server/nav/INav_UpdateBadgesR'
 export { INavUpdateClassR } from './Server/nav/INav_UpdateClassR'
