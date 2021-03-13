@@ -13,7 +13,7 @@ export enum ChannelType{
     Notice = 52,
     Social = 53,
     Accounting = 60,
-    ServerManage = 61,
+    ProjectManage = 61,
 
     PrivateMessage = 100,
 }
@@ -34,7 +34,7 @@ export const ChannelTypeDict = {
     53: "Social",
 
     60: "Accounting",
-    61: "ServerManage",
+    61: "ProjectManage",
 
     100: "PrivateMessage",
 }
@@ -56,15 +56,4 @@ export const ChannelIconDict = {
     
     60: "mdi-bank", 
     61: "mdi-server", 
-}
-
-export enum LobbyDynamic{
-    Text = 0,
-    File = 1,
-}
-
-export enum GroupDynamic{
-    Text = 0,
-    File = 1,
-    Issue = 2,
 }

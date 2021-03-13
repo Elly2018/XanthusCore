@@ -14,7 +14,7 @@ export interface AccountLink{
 
 export interface ActivityList{
     target: IActivity,
-    deadline: number,
+    deadline?: number,
     project: ProjectLink,
     member: Array<AccountLink>,
 }

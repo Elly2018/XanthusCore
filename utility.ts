@@ -1,14 +1,17 @@
 //#region Utility
-export { ChannelType, ChannelIconDict, ChannelTypeDict, LobbyDynamic, GroupDynamic } from './Utility/ChannelType'
+export { ChannelType, ChannelIconDict, ChannelTypeDict} from './Utility/ChannelType'
 export { IBase } from './IBase'
 export { IBaseReply } from './IBaseReply'
 export { AccountingCategory, AccountingAssetType, AccountingEquityType, AccountingExpensesType, AccountingLiabilitesType, AccountingRevenueType } from './Utility/AccountingFilter'
 export { ChannelTree } from './Utility/ChannelTree'
+export { CalendarData } from './Utility/CalendarData'
 export { IProgram, Programs } from './Utility/Programs'
 export { ProjectMember } from './Utility/Member'
 export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort } from './Utility/SortOption'
 export { ProjectLink, AccountLink, ActivityList } from './Utility/ActivityList'
 export { Lobby, Group, ChannelTemplate } from './Utility/ChannelSpawner'
+export { SocialDisplayAccount, SocialDisplayProjects } from './Utility/SocialDisplayAccount'
+export { AccountDetail } from './Utility/AccountDetail'
 //#endregion
 
 //#region Network Package Handler
