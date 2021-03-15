@@ -11,6 +11,8 @@ export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort } from '
 export { ProjectLink, AccountLink, ActivityList } from './Utility/ActivityList'
 export { Lobby, Group, ChannelTemplate } from './Utility/ChannelSpawner'
 export { SocialDisplayAccount, SocialDisplayProjects } from './Utility/SocialDisplayAccount'
+export { ProjectManageDisplayGroup } from './Utility/ProjectManageDisplayGroup'
+export { ProjectManageDisplayStaff } from './Utility/ProjectManageDisplayStaff'
 export { AccountDetail } from './Utility/AccountDetail'
 //#endregion
 

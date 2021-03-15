@@ -14,6 +14,7 @@ export enum ChannelType{
     Social = 53,
     Accounting = 60,
     ProjectManage = 61,
+    ClassManage = 62,
 
     PrivateMessage = 100,
 }
@@ -35,6 +36,7 @@ export const ChannelTypeDict = {
 
     60: "Accounting",
     61: "ProjectManage",
+    62: "ClassManage",
 
     100: "PrivateMessage",
 }
@@ -56,4 +58,5 @@ export const ChannelIconDict = {
     
     60: "mdi-bank", 
     61: "mdi-server", 
+    62: "mdi-shield", 
 }
