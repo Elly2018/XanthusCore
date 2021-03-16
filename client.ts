@@ -24,5 +24,18 @@ export { ISidebarUpdate, SidebarGroup, SidebarPeople, SidebarRole } from './Clie
 export { IPostListUpdate, PostHeader } from './Client/post/IPost_ListUpdate'
 export { IPostUpdate, Comment } from './Client/post/IPost_Update'
 
+// Social
+export { ISocialData } from './Client/social/ISocial_Data'
+
+// Accounting
+export { IAccountingData } from './Client/accounting/IAccounting_Data'
+
+// Activity
+export { IActivityData } from './Client/activity/IActivity_Data'
+
+// Activity
+export { IClassData } from './Client/class/IClass_Data'
+export { IRankData } from './Client/class/IRank_Data'
+
 // Text
 export { ITextChannelLoadMessageReply } from './Client/text/ITextChannel_LoadMessagesReply'

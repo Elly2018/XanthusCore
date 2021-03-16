@@ -14,6 +14,7 @@ export { SocialDisplayAccount, SocialDisplayProjects } from './Utility/SocialDis
 export { ProjectManageDisplayGroup } from './Utility/ProjectManageDisplayGroup'
 export { ProjectManageDisplayStaff } from './Utility/ProjectManageDisplayStaff'
 export { AccountDetail } from './Utility/AccountDetail'
+export { ManagementPageRequest } from './Utility/ManagementPageRequest'
 //#endregion
 
 //#region Network Package Handler
