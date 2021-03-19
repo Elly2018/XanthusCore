@@ -9,27 +9,48 @@ export enum AccountingCategory {
 
 export enum AccountingAssetType {
     All = 0, 
-    Checking = 1, 
-    Petty_Cash = 2, 
-    Inventory = 3, 
-    Accounts_Receivable = 4
+    Short_Term_Investments = 1, 
+    Bill_Receivable = 2, 
+    Accounts_Receivable = 3,
+    Reserve_For_Doubtful_Account = 4,
+    Income_Receivable = 5,
+    Inventory = 6,
+    Prepaid_Expenses = 7,
+    Inventory_Of_Supplies = 8,
+    Land = 9,
+    Buildings = 10,
+    Equipment = 11,
+    Accumulated_Depreciation = 12
 }
 
 export enum AccountingExpensesType {
     All = 0, 
-    Payroll = 1, 
-    Insurance = 2, 
-    Rent = 3, 
-    Equipment = 4, 
-    Cost_of_Goods_Sold = 5
+    Purchase = 1, 
+    Purchase_Return = 2, 
+    Purchase_Allowance = 3,
+    Purchase_Discount = 4,
+    Purchase_Shipping = 5,
+    Payroll = 6,
+    Advertisement = 7,
+    Utilities= 8,
+    Insurance = 9,
+    Fax = 10,
+    Supplies = 11,
+    Rant = 12,
+    Commission = 13,
+    Interest = 14,
+    Depreciation = 15,
+    Bad_Debts = 16,
+    Tax = 17
 }
 
 export enum AccountingLiabilitesType {
     All = 0, 
-    Payroll_Tax_Liabilities = 1, 
-    Sales_Tax_Collected = 2, 
-    Credit_Memo_Liability = 3, 
-    Accounts_Payable = 4
+    Bill_Payable = 1,
+    Account_Payable = 2,
+    Payable_Expenses = 3,
+    Loan = 4,
+    Mortgage = 5
 }
 
 export enum AccountingEquityType {
@@ -41,7 +62,12 @@ export enum AccountingEquityType {
 
 export enum AccountingRevenueType {
     All = 0, 
-    Product_Sales = 1, 
-    Earned_Interest = 2, 
-    Miscellaneous_Income = 3 
+    Sales = 1, 
+    Sales_Return = 2, 
+    Sales_Allowance = 3,
+    Sales_Discount = 4,
+    Service = 5,
+    Commission = 6,
+    Rent = 7,
+    Interest = 8
 }

@@ -6,7 +6,7 @@ export { AccountingCategory, AccountingAssetType, AccountingEquityType, Accounti
 export { ChannelTree } from './Utility/ChannelTree'
 export { CalendarData } from './Utility/CalendarData'
 export { IProgram, Programs } from './Utility/Programs'
-export { ProjectMember } from './Utility/Member'
+export { ProjectMember, GroupRolePermission } from './Utility/Member'
 export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort } from './Utility/SortOption'
 export { ProjectLink, AccountLink, ActivityList } from './Utility/ActivityList'
 export { Lobby, Group, ChannelTemplate } from './Utility/ChannelSpawner'
@@ -15,6 +15,8 @@ export { ProjectManageDisplayGroup } from './Utility/ProjectManageDisplayGroup'
 export { ProjectManageDisplayStaff } from './Utility/ProjectManageDisplayStaff'
 export { AccountDetail } from './Utility/AccountDetail'
 export { ManagementPageRequest } from './Utility/ManagementPageRequest'
+export { GroupDetail } from './Utility/GroupDetail'
+export { StaffDetail } from './Utility/StaffDetail'
 //#endregion
 
 //#region Network Package Handler

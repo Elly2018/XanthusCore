@@ -11,7 +11,7 @@ export interface ProjectPermission{
     requestModify: boolean,
 }
 
-export interface ChannelPermission{
+export interface GroupPermission{
     textModify: boolean,
     fileModify: boolean,
     issueModify: boolean
@@ -19,7 +19,7 @@ export interface ChannelPermission{
 
 export interface RolePermission{
     project: ProjectPermission,
-    channel: ChannelPermission
+    channel: GroupPermission
 }
 
 export interface RoleTemplate {
