@@ -4,6 +4,7 @@ import { IDatabaseBase } from "../IDatabaseBase";
 export interface ProjectPermission{
     projectModify: boolean,
     channelModify: boolean,
+    fileModify: boolean,
     billVisibility: boolean,
     billModify: boolean,
     graphVisibility: boolean,
@@ -13,8 +14,8 @@ export interface ProjectPermission{
 
 export interface GroupPermission{
     textModify: boolean,
-    fileModify: boolean,
-    issueModify: boolean
+    issueModify: boolean,
+    taskSubmit: boolean,
 }
 
 export interface RolePermission{

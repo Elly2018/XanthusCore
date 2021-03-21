@@ -17,6 +17,7 @@ export { AccountDetail } from './Utility/AccountDetail'
 export { ManagementPageRequest } from './Utility/ManagementPageRequest'
 export { GroupDetail } from './Utility/GroupDetail'
 export { StaffDetail } from './Utility/StaffDetail'
+export { FileStructure, RealFileStructure } from './Utility/FileStructure'
 //#endregion
 
 //#region Network Package Handler
