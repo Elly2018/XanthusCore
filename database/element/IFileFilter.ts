@@ -10,12 +10,14 @@ export interface SingleFilter{
 
 export interface IFileFilter extends IDatabaseBase{
     name: string,
+    url: string,
     filter: Array<SingleFilter>,
     extra: Array<string>,
 }
 
 export const SFileFilter:mongoose.Schema = new mongoose.Schema({
     name: String,
+    url: String,
     filter:[
         {
             startWith: String,

@@ -12,8 +12,17 @@ export enum PostType{
     Notice = 30,
 }
 
+export enum RequestState{
+    Normal = 0,
+    Accepted = 1,
+    Rejected = 2
+}
+
 export interface IPost extends IDatabaseBase {
     belong: string,
+    group: string,
+    state: number,
+    target: string,
     title: string,
     color: string,
     posttype : number,
