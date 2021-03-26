@@ -12,23 +12,40 @@ export enum PostType{
     Notice = 30,
 }
 
+export enum IssueState{
+    All = 0,
+    Open = 1,
+    Closed = 2,
+    Solved = 3
+}
+
 export enum RequestState{
-    Normal = 0,
-    Accepted = 1,
-    Rejected = 2
+    All = 0,
+    Normal = 1,
+    Accepted = 2,
+    Rejected = 3
+}
+
+export enum TaskState{
+    All = 0,
+    Active = 1,
+    Finished = 2,
 }
 
 export interface IPost extends IDatabaseBase {
-    belong: string,
-    group: string,
-    state: number,
-    target: string,
-    title: string,
-    color: string,
-    posttype : number,
-    sender: string,
-    content: string,
-    deadline: number,
+    belong: string
+    group: string
+    state: number
+    target: string
+    title: string
+    color: string
+    posttype: number
+    sender: string
+    content: string
+    files: Array<string>
+    view: number
+    like: Array<string>
+    deadline: number
 }
 
 export const SPost:mongoose.Schema = new mongoose.Schema({

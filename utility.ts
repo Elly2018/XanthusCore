@@ -2,12 +2,12 @@
 export { ChannelType, ChannelIconDict, ChannelTypeDict} from './Utility/ChannelType'
 export { IBase } from './IBase'
 export { IBaseReply } from './IBaseReply'
-export { AccountingCategory, AccountingAssetType, AccountingEquityType, AccountingExpensesType, AccountingLiabilitesType, AccountingRevenueType } from './Utility/AccountingFilter'
+export { AccountingCategory, AccountingPayrollType, AccountingPurchaseType, AccountingTravelType, AccountingRecievedPaymentType, AccountingOutsourceType } from './Utility/AccountingFilter'
 export { ChannelTree } from './Utility/ChannelTree'
 export { CalendarData } from './Utility/CalendarData'
 export { IProgram, Programs } from './Utility/Programs'
 export { ProjectMember, GroupRolePermission } from './Utility/Member'
-export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort } from './Utility/SortOption'
+export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort, RequestSort, IssueSort, TaskSort } from './Utility/SortOption'
 export { ProjectLink, AccountLink, ActivityList } from './Utility/ActivityList'
 export { Lobby, Group, ChannelTemplate } from './Utility/ChannelSpawner'
 export { SocialDisplayAccount, SocialDisplayProjects } from './Utility/SocialDisplayAccount'
@@ -18,7 +18,7 @@ export { ManagementPageRequest } from './Utility/ManagementPageRequest'
 export { GroupDetail } from './Utility/GroupDetail'
 export { StaffDetail } from './Utility/StaffDetail'
 export { FileStructure, RealFileStructure } from './Utility/FileStructure'
-export { RequestPostTitle, IssuePostTitle, TaskPostTitle,  } from './Utility/PostTItle'
+export { RequestPostTitle, IssuePostTitle, TaskPostTitle, IssueComment } from './Utility/PostTItle'
 export { CommentElement } from "./Utility/CommentElement"
 //#endregion
 

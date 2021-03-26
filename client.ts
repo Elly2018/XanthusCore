@@ -35,7 +35,6 @@ export { IActivityData } from './Client/activity/IActivity_Data'
 
 // Activity
 export { IClassData } from './Client/class/IClass_Data'
-export { IRankData } from './Client/class/IRank_Data'
 
 // Text
 export { ITextChannelLoadMessageReply } from './Client/text/ITextChannel_LoadMessagesReply'

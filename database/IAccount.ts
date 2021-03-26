@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import { IDatabaseBase } from './IDatabaseBase'
 
 export interface IAccount extends IDatabaseBase{
+    level: number,
     email: string,
     username: string,
     password: string,
@@ -20,10 +21,12 @@ export interface IAccount extends IDatabaseBase{
     healthinsurance: number,
     pension: number,
     block: boolean,
+    googlekey: string,
     projects: Array<string>,
 }
 
 export const SAccount:mongoose.Schema = new mongoose.Schema({
+    level: Number,
     email: String,
     username: String,
     password: String,
@@ -42,6 +45,7 @@ export const SAccount:mongoose.Schema = new mongoose.Schema({
     healthinsurance: Number,
     pension: Number,
     block: Boolean,
+    googlekey: String,
     projects: [String],
     createdate: {type: Date, default: Date.now}
 })

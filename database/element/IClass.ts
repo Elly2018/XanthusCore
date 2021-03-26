@@ -11,17 +11,47 @@ export interface ClassPermission{
     projectManagement: boolean,
 }
 
+export interface ClassLevel {
+    promote: number
+    technicalResponsibility: number
+
+    salary: number
+    salaryBasic: number
+    salaryLimit: number
+    food: number
+    performanceAppraisalStandard: number
+}
+
 export interface IClass extends IDatabaseBase{
-    name: string,
-    description: string,
-    cannotDelete: boolean,
-    permission: ClassPermission,
+    name: string
+    description: string
+    cannotDelete: boolean
+
+    rank: number
+    level: Array<ClassLevel>
+
+    permission: ClassPermission
 }
 
 export const SClass:mongoose.Schema = new mongoose.Schema({
     name: String,
     description: String,
     cannotDelete: Boolean,
+
+    rank: Number,
+    level: [
+        {
+            promote: Number,
+            technicalResponsibility: Number,
+
+            salary: Number,
+            salaryBasic: Number,
+            salaryLimit: Number,
+            food: Number,
+            performanceAppraisalStandard: Number
+        }
+    ],
+
     permission:{
         createProject: Boolean,
         accountManagement: Boolean,
