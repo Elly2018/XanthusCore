@@ -36,7 +36,9 @@ export const SChannel:mongoose.Schema = new mongoose.Schema({
                 label: String,
                 address: String
             }
-        ]
+        ],
+        realBookmark:[String],
+        virtualBookmark: [String]
     },
 
     

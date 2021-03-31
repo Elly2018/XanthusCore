@@ -32,29 +32,59 @@ export enum TaskState{
     Finished = 2,
 }
 
-export interface IPost extends IDatabaseBase {
-    belong: string
+export interface ScheduleRequirement{
+    targetTask: string
+    phase: number
+}
+
+export interface PostSchedule{
     group: string
+    startday: number
+    endday: number
+    requirement: Array<ScheduleRequirement>
+}
+
+export interface IPost extends IDatabaseBase {
+    belong: string // Project ID
+    group: string // Group ID, for request
     state: number
-    target: string
-    title: string
+    target: string // Target, for issue comment and request
     color: string
+    title: string
     posttype: number
-    sender: string
+    sender: string // Account ID
     content: string
     files: Array<string>
-    view: number
-    like: Array<string>
-    deadline: number
+    schedule: Array<PostSchedule> // For Task
+    view: number // For issue
+    like: Array<string> // For issue
 }
 
 export const SPost:mongoose.Schema = new mongoose.Schema({
     belong: String,
+    group: String,
+    state: Number,
+    target: String,
+    color: String,
     title: String,
-    Color: String,
-    posttype : Number,
+    posttype: Number,
     sender: String,
     content: String,
-    deadline: Date,
+    files: [String],
+    schedule: [
+        {
+            group: String,
+            startday: Date,
+            endday: Date,
+            requirement:[
+                {
+                    targetTask: String,
+                    phase: Number
+                }
+            ]
+        }   
+    ],
+    view: Number,
+    like: [String],
     createdate: {type:Date, default: Date.now}
 })

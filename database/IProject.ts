@@ -19,6 +19,8 @@ export interface IProject extends IDatabaseBase{
     budget: number,
     startday: number,
     endday: number,
+    sign: number,
+    Initial: number,
     owner: string,
     color: string,
     group: Array<IProjectElement>,
@@ -32,6 +34,13 @@ export interface IProject extends IDatabaseBase{
 
 export const SProject:mongoose.Schema = new mongoose.Schema({
     name: String,
+    secondary: String,
+    description: String,
+    budget: Number,
+    startday: Number,
+    endday: Number,
+    sign: Number,
+    Initial: Number,
     owner: String,
     color: {
         type: String,
