@@ -6,10 +6,14 @@ export enum PostType{
     IssueComment = 1,
 
     RequestPost = 10,
+    RequestConfirm = 11,
+    RequestReject = 12,
 
     TaskPost = 20,
 
     Notice = 30,
+
+    WorkPost = 40,
 }
 
 export enum IssueState{

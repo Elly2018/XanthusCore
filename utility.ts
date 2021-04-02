@@ -18,8 +18,9 @@ export { ManagementPageRequest } from './Utility/ManagementPageRequest'
 export { GroupDetail } from './Utility/GroupDetail'
 export { StaffDetail } from './Utility/StaffDetail'
 export { FileStructure, RealFileStructure } from './Utility/FileStructure'
-export { RequestPostTitle, IssuePostTitle, TaskPostTitle, IssueComment } from './Utility/PostTItle'
+export { RequestPostContent, IssuePostContent, TaskPostContent, IssueCommentContent, NoticePostContent, } from './Utility/PostContent'
 export { CommentElement } from "./Utility/CommentElement"
+export { PerformanceAppraisalData } from './Utility/PerformanceAppraisalData'
 //#endregion
 
 //#region Network Package Handler

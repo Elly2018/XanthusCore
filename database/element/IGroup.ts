@@ -7,7 +7,7 @@ export interface IGroup extends IDatabaseBase{
     deputy: string,
     description: string,
     project: string,
-    role: Array<string>,
+    member: Array<string>,
 }
 
 export const SGroup:mongoose.Schema = new mongoose.Schema({
@@ -16,6 +16,6 @@ export const SGroup:mongoose.Schema = new mongoose.Schema({
     deputy: String,
     description: String,
     project: String,
-    role: [String],
+    member: [String],
     createdate: {type:Date, default: Date.now}
 })

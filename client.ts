@@ -38,3 +38,9 @@ export { IClassData } from './Client/class/IClass_Data'
 
 // Text
 export { ITextChannelLoadMessageReply } from './Client/text/ITextChannel_LoadMessagesReply'
+
+// Issue
+export { IIssuePost } from './Client/issue/IIssue_Post'
+
+// Request
+export { IRequestPost } from './Client/request/IRequest_Post'
