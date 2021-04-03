@@ -35,6 +35,8 @@ export { ISidebarUpdateR } from './Server/sidebar/ISidebar_UpdateR'
 
 // Social
 export { ISocialAccountList } from './Server/social/ISocial_AccountList'
+export { ISocialCreateAccount } from './Server/social/ISocial_CreateAccount'
+export { ISocialModifyAccount } from './Server/social/ISocial_ModifyAccount'
 
 // Post
 export { IPostLike } from './Server/post/IPost_Like'
@@ -47,3 +49,18 @@ export { IChannelUpdateBadgesR } from './Server/channel/IChannel_UpdateBadgesR'
 export { IChannelReadNotices } from './Server/channel/IChannel_ReadNotices'
 
 export { ITextLoadMessage } from './Server/text/IText_LoadMessages'
+
+// Accounting
+export { IAccountingGetBill } from './Server/accounting/IAccounting_GetBill'
+export { IAccountingCreateBill } from './Server/accounting/IAccounting_CreateBill'
+export { IAccountingModifyBill } from './Server/accounting/IAccounting_ModifyBill'
+
+// Activity
+export { IActivityEnd } from './Server/activity/IActivity_End'
+export { IActivityFinish } from './Server/activity/IActivity_Finish'
+export { IActivityDelete } from './Server/activity/IActivity_Delete'
+
+// Notice
+export { INoticeGetPost } from './Server/notice/INotice_GetPost'
+export { INoticeSubmit } from './Server/notice/INotice_Submit'
+export { INoticeDelete } from './Server/notice/INotice_Delete'

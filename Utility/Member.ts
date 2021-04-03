@@ -1,13 +1,9 @@
-import { ProjectPermission, GroupPermission, IRole } from "../database/element/IRole";
+import { IGroup } from "../database/element/IGroup";
+import { ProjectPermission, IRole } from "../database/element/IRole";
 
 export interface ProjectMember {
     owner: boolean,
-    roles: Array<IRole>,
-    groups: Array<GroupRolePermission>,
-    permission: ProjectPermission,
-}
-
-export interface GroupRolePermission{
-    group: string,
-    permission: GroupPermission
+    roles: Array<IRole>, // All role this staff have
+    groups: Array<IGroup>, // All group this staff join
+    permission: ProjectPermission, // Calculate result
 }

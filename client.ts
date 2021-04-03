@@ -24,14 +24,17 @@ export { ISidebarUpdate, SidebarGroup, SidebarPeople, SidebarRole } from './Clie
 export { IPostListUpdate, PostHeader } from './Client/post/IPost_ListUpdate'
 export { IPostUpdate, Comment } from './Client/post/IPost_Update'
 
+// Notice
+export { INoticeGetPostReply } from './Client/notice/INotice_GetPostReply'
+
 // Social
-export { ISocialData } from './Client/social/ISocial_Data'
+export { ISocialData } from './Client/social/ISocial_GetAccountReply'
 
 // Accounting
-export { IAccountingData } from './Client/accounting/IAccounting_Data'
+export { IAccountingGetBillReply } from './Client/accounting/IAccounting_GetBillReply'
 
 // Activity
-export { IActivityData } from './Client/activity/IActivity_Data'
+export { IActivityActivityReply } from './Client/activity/IActivity_ActivityReply'
 
 // Activity
 export { IClassData } from './Client/class/IClass_Data'

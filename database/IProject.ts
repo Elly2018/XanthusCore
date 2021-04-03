@@ -6,6 +6,12 @@ export interface IProjectElement{
     roles: Array<string>
 }
 
+export interface IProjectGroupElement{
+    id: string,
+    roles: Array<string>
+    group: Array<string>
+}
+
 export interface IProjectGroupChannel{
     id: string,
     name: string,
@@ -25,7 +31,7 @@ export interface IProject extends IDatabaseBase{
     owner: string,
     color: string,
     group: Array<IProjectElement>,
-    staff: Array<IProjectElement>,
+    staff: Array<IProjectGroupElement>,
     role: Array<string>,
     channel:{
         lobby:Array<string>,
@@ -57,7 +63,8 @@ export const SProject:mongoose.Schema = new mongoose.Schema({
     staff: [
         {
             id: String,
-            roles: [String]
+            roles: [String],
+            group: [String]
         }
     ],
     role:[String],

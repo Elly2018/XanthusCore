@@ -6,7 +6,7 @@ export { AccountingCategory, AccountingPayrollType, AccountingPurchaseType, Acco
 export { ChannelTree } from './Utility/ChannelTree'
 export { CalendarData } from './Utility/CalendarData'
 export { IProgram, Programs } from './Utility/Programs'
-export { ProjectMember, GroupRolePermission } from './Utility/Member'
+export { ProjectMember } from './Utility/Member'
 export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort, RequestSort, IssueSort, TaskSort } from './Utility/SortOption'
 export { ProjectLink, AccountLink, ActivityList } from './Utility/ActivityList'
 export { Lobby, Group, ChannelTemplate } from './Utility/ChannelSpawner'

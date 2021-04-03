@@ -2,14 +2,16 @@ import mongoose from "mongoose";
 import { IDatabaseBase } from "../IDatabaseBase";
 
 export interface ProjectPermission{
-    projectModify: boolean,
-    channelModify: boolean,
-    fileModify: boolean,
-    billVisibility: boolean,
-    billModify: boolean,
-    graphVisibility: boolean,
-    taskModify: boolean,
-    requestModify: boolean,
+    projectModify: boolean
+    channelModify: boolean
+    fileModify: boolean
+    billVisibility: boolean
+    billModify: boolean
+    graphVisibility: boolean
+    outsourceVisibility: boolean
+    outsourceModify: boolean
+    taskModify: boolean
+    requestModify: boolean
 }
 
 export interface GroupPermission{

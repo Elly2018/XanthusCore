@@ -3,7 +3,7 @@ export { IDatabaseBase } from './database/IDatabaseBase'
 
 // Main
 export { IAccount, SAccount } from './database/IAccount'
-export { IProject, SProject, IProjectElement, IProjectGroupChannel } from './database/IProject'
+export { IProject, SProject, IProjectElement, IProjectGroupElement, IProjectGroupChannel } from './database/IProject'
 export { IChannel, SChannel, ChannelNotice } from './database/IChannel'
 
 // Channel
