@@ -14,6 +14,7 @@ export interface IProjectGroupChannel{
 
 export interface IProject extends IDatabaseBase{
     name: string,
+    projectGroup: string,
     secondary: string,
     description: string,
     budget: number,
@@ -34,6 +35,7 @@ export interface IProject extends IDatabaseBase{
 
 export const SProject:mongoose.Schema = new mongoose.Schema({
     name: String,
+    projectGroup: String,
     secondary: String,
     description: String,
     budget: Number,

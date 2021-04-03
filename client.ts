@@ -44,3 +44,6 @@ export { IIssuePost } from './Client/issue/IIssue_Post'
 
 // Request
 export { IRequestPost } from './Client/request/IRequest_Post'
+
+// Task
+export { ITaskPost } from './Client/task/ITask_Post'
