@@ -1,8 +1,8 @@
-import { IAccount } from '../../database/IAccount'
 import { IBaseReply } from '../../IBaseReply';
+import { SocialDisplayAccount } from '../../Utility/SocialDisplayAccount';
 
-export interface ISocialData extends IBaseReply{
-    accounts: Array<IAccount>
+export interface ISocialGetAccountReply extends IBaseReply{
+    accounts: Array<SocialDisplayAccount>
     page: number
     pageLength: number
 }

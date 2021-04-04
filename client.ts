@@ -28,7 +28,7 @@ export { IPostUpdate, Comment } from './Client/post/IPost_Update'
 export { INoticeGetPostReply } from './Client/notice/INotice_GetPostReply'
 
 // Social
-export { ISocialData } from './Client/social/ISocial_GetAccountReply'
+export { ISocialGetAccountReply } from './Client/social/ISocial_GetAccountReply'
 
 // Accounting
 export { IAccountingGetBillReply } from './Client/accounting/IAccounting_GetBillReply'

@@ -34,6 +34,7 @@ export enum TaskState{
     All = 0,
     Active = 1,
     Finished = 2,
+    Uninitiated = 3,
 }
 
 export interface ScheduleRequirement{
