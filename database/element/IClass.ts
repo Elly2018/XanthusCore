@@ -1,37 +1,37 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
 /**
  * Class permission status
  */
-export interface ClassPermission{
+export class ClassPermission{
     /**
      * Unlock all ability
      */
-    administrator: boolean,
+    administrator: boolean = false
     /**
      * You can create project and delete project at toolbar
      */
-    createProject: boolean,
+    createProject: boolean = false
     /**
      * You can create notice post
      */
-    createNotice: boolean,
+    createNotice: boolean = false
     /**
      * You can view staff detail and be able to modify them and view detail record
      */
-    accountManagement: boolean,
+    accountManagement: boolean = false
     /**
      * You can see accounting channel and check bill record
      */
-    viewAccounting: boolean,
+    viewAccounting: boolean = false
     /**
      * You can sumbit and modify bill record
      */
-    modifyAccounting: boolean,
+    modifyAccounting: boolean = false
     /**
      * You can view project management channel and be able to modify them and view detail record
      */
-    projectManagement: boolean,
+    projectManagement: boolean = false
 }
 
 /**
@@ -48,34 +48,47 @@ export interface ClassLevel {
     performanceAppraisalStandard: number
 }
 
+export interface IClass{
+    _id?: string
+    /**
+     * Class name
+     */
+     name: string
+     /**
+      * Class description
+      */
+     description: string
+     /**
+      * Rank of class
+      */
+     rank: number
+     /**
+      * Each level detail
+      */
+     level: Array<ClassLevel>
+     /**
+      * Permission status
+      */
+     permission: ClassPermission
+}
+
 /**
  * Account class\
  * It manage the permission status for each account
  */
-export interface IClass extends mongoose.Document {
-    /**
-     * Class name
-     */
-    name: string
-    /**
-     * Class description
-     */
-    description: string
-    /**
-     * Rank of class
-     */
-    rank: number
-    /**
-     * Each level detail
-     */
-    level: Array<ClassLevel>
-    /**
-     * Permission status
-     */
-    permission: ClassPermission
+export class IClassDocs extends Document implements IClass {
+    name: string = ""
+    description: string = ""
+    rank: number = 0
+    level: Array<ClassLevel> = []
+    permission: ClassPermission = new ClassPermission()
+
+    getLevel(level:number):ClassLevel | undefined{
+        return this.level[level];
+    }
 }
 
-export const SClass:mongoose.Schema = new mongoose.Schema({
+export const SClass:Schema = new Schema({
     name: String,
     description: String,
 

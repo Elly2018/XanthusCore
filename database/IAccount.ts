@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
-import { IBaseModel } from '../IBaseModel'
+import { Schema, Document } from 'mongoose'
 
 /**
  * User account
  */
-export interface IAccount extends mongoose.Document {
+export interface IAccount {
+    _id?: string
     /**
      * User level, For class to identify level
      */
@@ -29,13 +29,33 @@ export interface IAccount extends mongoose.Document {
     projects: Array<string>
 }
 
-export class MAccount extends IBaseModel<IAccount> {
+export class IAccountDocs extends Document implements IAccount {
+    level: number = 0
+    email: string = ""
+    username: string = ""
+    password: string = ""
+    identitycard: string = ""
+    firstname: string = ""
+    lastname: string = ""
+    passportname: string = ""
+    phone: string = ""
+    firstdayofwork: number = 0
+    lastdayofwork: number = 0
+    color: string = ""
+    class: string = ""
+    laborinsurance: number = 0
+    healthinsurance: number = 0
+    pension: number = 0
+    block: boolean = false
+    googlekey: string = ""
+    projects: Array<string> = []
+
     profileURL(address:string):string{
-        return `${address}/Account/${this.data.id}`
+        return `${address}/Account/${this.id}`
     }
 }
 
-export const SAccount:mongoose.Schema = new mongoose.Schema({
+export const SAccount:Schema = new Schema({
     level: Number,
     email: String,
     username: String,

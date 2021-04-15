@@ -1,20 +1,34 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
-export interface IOutsource extends mongoose.Document{
-    charge: string,
-    deputy: string,
-    project: string,
-    group: string,
-    vendor: string,
-    email: string,
-    website: string,
-    phone: string,
-    payment: string,
-    expectedPayDate: number,
-    actualPayDate: number,
+export interface IOutsource{
+    charge: string
+    deputy: string
+    project: string
+    group: string
+    vendor: string
+    email: string
+    website: string
+    phone: string
+    payment: string
+    expectedPayDate: number
+    actualPayDate: number
 }
 
-export const SOutsource:mongoose.Schema = new mongoose.Schema({
+export class IOutsourceDocs extends Document implements IOutsource{
+    charge: string = ""
+    deputy: string = ""
+    project: string = ""
+    group: string = ""
+    vendor: string = ""
+    email: string = ""
+    website: string = ""
+    phone: string = ""
+    payment: string = ""
+    expectedPayDate: number = 0
+    actualPayDate: number = 0
+}
+
+export const SOutsource:Schema = new Schema({
     charge: String,
     project: String,
     group: String,

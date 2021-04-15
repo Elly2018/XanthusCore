@@ -1,43 +1,125 @@
-import mongoose from 'mongoose'
+import { Schema, Document } from 'mongoose'
 
 export interface IProjectElement{
     id: string,
     roles: Array<string>
 }
 
-export interface IProjectGroupElement{
-    id: string,
-    roles: Array<string>
-    group: Array<string>
+export class IProjectLobbyChannel{
+    /**
+     * Group ID
+     */
+    id: string = ""
+    /**
+     * Group name
+     */
+    name: string = ""
+
+    text: string = ""
+    file: string = ""
+    request: string = ""
+    graph: string = ""
+    bill: string = ""
+    outsource: string = ""
 }
 
-export interface IProjectGroupChannel{
-    id: string,
-    name: string,
-    channel: Array<string>
+export class IProjectGroupChannel{
+    /**
+     * Group ID
+     */
+    id: string = ""
+    /**
+     * Group name
+     */
+    name: string = ""
+
+    text: string = ""
+    task: string = ""
+    issue: string = ""
 }
 
-export interface IProject extends mongoose.Document {
-    name: string,
-    secondary: string,
-    description: string,
-    budget: number,
-    startday: number,
-    endday: number,
-    sign: number,
-    Initial: number,
-    owner: string,
-    color: string,
-    group: Array<IProjectElement>,
-    staff: Array<IProjectGroupElement>,
-    role: Array<string>,
+export interface IProject {
+    _id?: string
+    /**
+     * Project name
+     */
+    name: string
+    /**
+     * Project second name, usually English name
+     */
+    secondary: string
+    description: string
+    /**
+     * Total budget for the project, TWD
+     */
+    budget: number
+    /**
+     * Project start daytime
+     */
+    startday: number
+    /**
+     * Project end daytime
+     */
+    endday: number
+    /**
+     * Sign daytime
+     */
+    sign: number
+    /**
+     * Initial cash, TWD
+     */
+    Initial: number
+    /**
+     * Who's the owner of this project
+     */
+    owner: string
+    color: string
+    group: Array<IProjectElement>
+    staff: Array<IProjectElement>
+    role: Array<string>
     channel:{
-        lobby:Array<string>,
+        lobby:IProjectLobbyChannel
         group:Array<IProjectGroupChannel>
-    },
+    }
 }
 
-export const SProject:mongoose.Schema = new mongoose.Schema({
+export class IProjectDocs extends Document implements IProject {
+    name: string = ""
+    secondary: string = ""
+    description: string = ""
+    budget: number = 0
+    startday: number = 0
+    endday: number = 0
+    sign: number = 0
+    Initial: number = 0
+    owner: string = ""
+    color: string = ""
+    group: Array<IProjectElement> = []
+    staff: Array<IProjectElement> = []
+    role: Array<string> = []
+    channel:{
+        lobby:IProjectLobbyChannel,
+        group:Array<IProjectGroupChannel>
+    } = {
+        lobby: new IProjectLobbyChannel(),
+        group: []
+    }
+
+    profileURL(address:string):string{
+        return `${address}/Project/${this.id}`
+    }
+    GroupCount():number{
+        return this.group.length;
+    }
+    StaffCount():number{
+        return this.staff.length;
+    }
+    RoleCount():number{
+        return this.role.length;
+    }
+}
+
+export const SProject:Schema = new Schema({
     name: String,
     secondary: String,
     description: String,
@@ -61,17 +143,27 @@ export const SProject:mongoose.Schema = new mongoose.Schema({
         {
             id: String,
             roles: [String],
-            group: [String]
         }
     ],
     role:[String],
     channel:{
-        lobby:[String],
+        lobby:{
+            id: String,
+            name: String,
+            text: String,
+            file: String,
+            request: String,
+            graph: String,
+            bill: String,
+            outsource: String
+        },
         group:[
             {
                 id: String,
                 name: String,
-                channel: [String]
+                text: String,
+                task: String,
+                issue: String
             }
         ]
     },

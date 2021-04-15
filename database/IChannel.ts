@@ -1,25 +1,32 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
+import { ChannelType } from "../Utility/ChannelType";
 import { FileSetting } from "./channel/IFile";
 import { TextSetting } from "./channel/IText";
 
-export interface ChannelNotice {
-    account: string
-    value: number
-}
-
-export interface IChannel extends mongoose.Document {
+export interface IChannel {
+    _id?: string
     name: string
     type: number
     group: boolean
     groupid: string
     textSetting?: TextSetting
     fileSetting?: FileSetting
-    notices: Array<ChannelNotice>
 }
 
-export interface IChannelDocs extends mongoose.Document {}
+export class IChannelDocs extends Document {
+    name: string = ""
+    type: number = 0
+    group: boolean = false
+    groupid: string = ""
+    textSetting?: TextSetting = undefined
+    fileSetting?: FileSetting = undefined
 
-export const SChannel:mongoose.Schema = new mongoose.Schema({
+    GetChannelType(){
+        return ChannelType[this.type]
+    }
+}
+
+export const SChannel:Schema = new Schema({
     name: String,
     type: Number,
     group: Boolean,

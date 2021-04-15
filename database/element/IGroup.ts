@@ -1,20 +1,27 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
-export interface IGroup extends mongoose.Document{
-    name: string,
-    charge: string,
-    deputy: string,
-    description: string,
-    project: string,
-    member: Array<string>,
+export interface IGroup{
+    _id?: string
+    name: string
+    charge: string
+    deputy: string
+    description: string
+    member: Array<string>
 }
 
-export const SGroup:mongoose.Schema = new mongoose.Schema({
+export class IGroupDocs extends Document implements IGroup{
+    name: string = ""
+    charge: string = ""
+    deputy: string = ""
+    description: string = ""
+    member: Array<string> = []
+}
+
+export const SGroup:Schema = new Schema({
     name: String,
     charge: String,
     deputy: String,
     description: String,
-    project: String,
     member: [String],
     createdate: {type:Date, default: Date.now}
 })

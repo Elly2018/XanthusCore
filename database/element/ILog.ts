@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
 export enum LogType{
     Login = 0,
@@ -38,33 +38,42 @@ export enum LogType{
     RequestDelete = 74,
 }
 
-/**
- * The server log record
- */
-export interface ILog extends mongoose.Document{
+export interface ILog{
+     _id?: string
     /**
      * Who or what send this message
      */
-    sender: string,
-    /**
-     * Send to who or what
-     */
-    target: Array<string>,
-    /**
-     * Log type will define sender type and target type
-     */
-    type: number,
-    /**
-     * Prefix of log message
-     */
-    tag: string,
-    /**
-     * Log message
-     */
-    message: string,
+     sender: string
+     /**
+      * Send to who or what
+      */
+     target: Array<string>
+     /**
+      * Log type will define sender type and target type
+      */
+     type: number
+     /**
+      * Prefix of log message
+      */
+     tag: string
+     /**
+      * Log message
+      */
+     message: string
 }
 
-export const SLog:mongoose.Schema = new mongoose.Schema({
+/**
+ * The server log record
+ */
+export class ILogDocs extends Document implements ILog{
+    sender: string = ""
+    target: Array<string> = []
+    type: number = 0
+    tag: string = ""
+    message: string = ""
+}
+
+export const SLog:Schema = new Schema({
     sender: String,
     target: String,
     type: Number,

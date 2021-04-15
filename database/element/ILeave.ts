@@ -1,26 +1,34 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
 export enum LeaveType{
     
 }
 
-/**
- * Staff leave record
- */
-export interface ILeave extends mongoose.Document{
+export interface ILeave{
+    _id?: string
     /**
      * Who sign up this leave record
      */
-    account: string,
-    /**
-     * Type of leave
-     */
-    type: number,
-    subject: string,
-    content: string
+     account: string
+     /**
+      * Type of leave
+      */
+     type: number
+     subject: string
+     content: string
 }
 
-export const SLeave:mongoose.Schema = new mongoose.Schema({
+/**
+ * Staff leave record
+ */
+export class ILeaveDocs extends Document implements ILeave{
+    account: string = ""
+    type: number = 0
+    subject: string = ""
+    content: string = ""
+}
+
+export const SLeave:Schema = new Schema({
     account: String,
     type: Number,
     subject: String,

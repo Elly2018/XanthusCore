@@ -1,12 +1,19 @@
-import mongoose from 'mongoose'
+import { Schema, Document } from 'mongoose'
 
-export interface IProjectGroup extends mongoose.Document {
+export interface IProjectGroup{
+    _id?: string
     name: string
     projects: Array<string>
     invitecode: Array<string>
 }
 
-export const SProjectGroup:mongoose.Schema = new mongoose.Schema({
+export class IProjectGroupDocs extends Document implements IProjectGroup {
+    name: string = ""
+    projects: Array<string> = []
+    invitecode: Array<string> = []
+}
+
+export const SProjectGroup:Schema = new Schema({
     name: String,
     projects: [String],
     invitecode: [String],

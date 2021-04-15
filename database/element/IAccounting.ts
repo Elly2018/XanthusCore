@@ -1,10 +1,20 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
+/**
+ * Bill detail
+ */
 export interface AccountingElement{
+    /**
+     * Cost type\
+     * Check subtype for accounting bill
+     */
     type: number
     value: number
 }
 
+/**
+ * Payroll info
+ */
 export interface AccountPayroll{
     salary: number,
     laborinsurance: number,
@@ -12,6 +22,9 @@ export interface AccountPayroll{
     pension: number
 }
 
+/**
+ * Outsource info
+ */
 export interface AccountingOutsource{
     vendor: string
     email: string
@@ -22,6 +35,9 @@ export interface AccountingOutsource{
     estimatedPayDay: number
 }
 
+/**
+ * Travel info
+ */
 export interface AccountingTravel {
     place: string
     nation: string
@@ -29,6 +45,9 @@ export interface AccountingTravel {
     endday: number
 }
 
+/**
+ * Receive bill info
+ */
 export interface AccountingReceive{
     client: string
     clientUID: string
@@ -39,6 +58,9 @@ export interface AccountingReceive{
     billDate: number
 }
 
+/**
+ * Puchase info
+ */
 export interface AccountingPurchase{
     itemName: string
     count: number
@@ -53,10 +75,8 @@ export interface AccountingPurchase{
     billDate: number
 }
 
-/**
- * Accounting bill
- */
-export interface IAccounting extends mongoose.Document {
+export interface IAccounting {
+    _id?: string
     title: string
     description: string
 
@@ -86,10 +106,33 @@ export interface IAccounting extends mongoose.Document {
 
     contact?: string
     payday?: number
-    payMethod?: string,
+    payMethod?: string
 }
 
-export const SAccounting:mongoose.Schema = new mongoose.Schema({
+/**
+ * Accounting bill
+ */
+export class IAccountingDocs extends Document {
+    title: string = ""
+    description: string = ""
+    sender: string = ""
+    target: string = ""
+    content: Array<AccountingElement> = []
+
+    payroll?:AccountPayroll = undefined
+    receive?: AccountingReceive = undefined
+    travel?: AccountingTravel = undefined
+    outsource?: AccountingOutsource = undefined
+    purchase?:AccountingPurchase = undefined
+
+    category: number = 0
+
+    contact?: string = ""
+    payday?: number = 0
+    payMethod?: string = ""
+}
+
+export const SAccounting:Schema = new Schema({
     title: String,
     description: String,
     sender: String,

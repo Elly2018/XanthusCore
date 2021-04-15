@@ -1,12 +1,19 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
-export interface IInviteCode extends mongoose.Document {
-    projectGroup: string,
-    code: string,
-    expiredata: number,
+export interface IInviteCode{
+    _id?: string
+    projectGroup: string
+    code: string
+    expiredata: number
 }
 
-export const SInviteCode:mongoose.Schema = new mongoose.Schema({
+export class IInviteCodeDocs extends Document implements IInviteCode {
+    projectGroup: string = ""
+    code: string = ""
+    expiredata: number = 0
+}
+
+export const SInviteCode:Schema = new Schema({
     projectGroup: String,
     code: String,
     expiredata: Number,

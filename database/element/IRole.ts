@@ -1,92 +1,95 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
 /**
  * Project permission
  */
-export interface ProjectPermission{
+export class ProjectPermission{
     /**
      * Can modify everything in the project
      */
-    projectModify: boolean
+    projectModify: boolean = false
     /**
      * Can modify each channel setting
      */
-    channelModify: boolean
+    channelModify: boolean = false
     /**
      * Can modify file channel
      */
-    fileModify: boolean
+    fileModify: boolean = false
     /**
      * Can view bill channel
      */
-    billVisibility: boolean
+    billVisibility: boolean = false
     /**
      * Can submit bill and check record detail
      */
-    billModify: boolean
+    billModify: boolean = false
     /**
      * Can view graph channel
      */
-    graphVisibility: boolean
+    graphVisibility: boolean = false
     /**
      * Can view outsource channel
      */
-    outsourceVisibility: boolean
+    outsourceVisibility: boolean = false
     /**
      * Can submit bill and check record detail
      */
-    outsourceModify: boolean
+    outsourceModify: boolean = false
     /**
      * Can modify schedule
      */
-    taskModify: boolean
+    taskModify: boolean = false
     /**
      * Can rating and modify request
      */
-    requestModify: boolean
+    requestModify: boolean = false
 }
 
 /**
  * Group permission
  */
-export interface GroupPermission{
-    textModify: boolean,
-    issueModify: boolean,
-    taskSubmit: boolean,
+export class GroupPermission{
+    textModify: boolean = false
+    issueModify: boolean = false 
+    taskSubmit: boolean = false
 }
 
 /**
  * Role permission structure
  */
-export interface RolePermission{
+export class RolePermission{
     /**
      * Project permission
      */
-    project: ProjectPermission,
+    project: ProjectPermission = new ProjectPermission()
     /**
      * Group permission
      */
-    group: GroupPermission
+    group: GroupPermission = new GroupPermission()
+}
+
+export interface IRole{
+    name: string
+    project: string
+    color: string
+    permission: RolePermission
 }
 
 /**
  * Project member role
  */
-export interface IRole extends mongoose.Document {
-    name: string,
-    color: string,
-    permission: RolePermission,
-    project: string,
-    sidebar: boolean,
-    dynamic: boolean,
+export class IRoleDocs extends Document implements IRole{
+    name: string = ""
+    project: string = ""
+    color: string = ""
+    permission: RolePermission = new RolePermission()
 }
 
-export const SRole:mongoose.Schema = new mongoose.Schema({
+export const SRole:Schema = new Schema({
     name: String,
     project: String,
-    sidebar: String,
     color: String,
-    dynamic: Boolean,
     permission: {
         project: {
             projectModify: Boolean,

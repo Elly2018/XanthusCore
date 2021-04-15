@@ -1,9 +1,41 @@
-import { IGroup } from "../database/element/IGroup";
-import { ProjectPermission, IRole } from "../database/element/IRole";
+import { ProjectPermission, IRole, GroupPermission } from "../database/element/IRole";
 
+/**
+ * In group position
+ */
+export interface ProjectGroupMember{
+    /**
+     * Target group ID
+     */
+    group: string
+    /**
+     * Can this staff view this group
+     */
+    visible: boolean
+    /**
+     * In group permission
+     */
+    permission: GroupPermission
+}
+
+/**
+ * Project position
+ */
 export interface ProjectMember {
+    /**
+     * Is this staff owner
+     */
     owner: boolean,
-    roles: Array<IRole>, // All role this staff have
-    groups: Array<IGroup>, // All group this staff join
-    permission: ProjectPermission, // Calculate result
+    /**
+     * All role this staff have
+     */
+    roles: Array<IRole>
+    /**
+     * All group member position
+     */
+    groups: Array<ProjectGroupMember>
+    /**
+     * Project position
+     */
+    permission: ProjectPermission
 }

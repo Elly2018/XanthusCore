@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import { Schema, Document } from 'mongoose'
 
 export enum PostType{
     IssuePost = 0,
@@ -53,65 +53,123 @@ export interface IssueProperty{
     like: Array<string> // Like account
 }
 
-export interface IPost extends mongoose.Document {
+export interface IPost{
+    _id?:string
     /**
      * Belong to which project\
      * Ignore when notice
      */
-    belong: string
+     belong: string
+     /**
+      * Belong to which channel
+      * Only work for issue
+      */
+     channel: string
+     /**
+      * Belong to which group
+      * Ignore when notice
+      */
+     group: string
+     /**
+      * Type define behavier
+      */
+     posttype: number
+     /**
+      * State of the post\
+      * Work for type: Issue, Request, Task
+      */
+     state: number
+ 
+     /**
+      * Targeting object\
+      * Request => task\
+      * Issue comment => Issue post
+      */
+     target: string
+     /**
+      * Post color\
+      * Only work for Task container
+      */
+     color: string
+     
+     /**
+      * Who send the post
+      */
+     sender: string
+     title: string
+     content: string
+     /**
+      * File absolute path
+      */
+     files: Array<string>
+     /**
+      * Image name
+      */
+     image: Array<string>
+     
+     task?: TaskProperty
+     issue?: IssueProperty
+}
+
+export class IPostDocs extends Document implements IPost {
+    /**
+     * Belong to which project\
+     * Ignore when notice
+     */
+    belong: string = ""
     /**
      * Belong to which channel
      * Only work for issue
      */
-    channel: string
+    channel: string = ""
     /**
      * Belong to which group
      * Ignore when notice
      */
-    group: string
+    group: string = ""
     /**
      * Type define behavier
      */
-    posttype: number
+    posttype: number = 0
     /**
      * State of the post\
      * Work for type: Issue, Request, Task
      */
-    state: number
+    state: number = 0
 
     /**
      * Targeting object\
      * Request => task\
      * Issue comment => Issue post
      */
-    target: string
+    target: string = ""
     /**
      * Post color\
      * Only work for Task container
      */
-    color: string
+    color: string = ""
     
     /**
      * Who send the post
      */
-    sender: string
-    title: string
-    content: string
+    sender: string = ""
+    title: string = ""
+    content: string = ""
     /**
      * File absolute path
      */
-    files: Array<string>
+    files: Array<string> = []
     /**
      * Image name
      */
-    image: Array<string>
+    image: Array<string> = []
     
-    task?: TaskProperty
-    issue?: IssueProperty
+    task?: TaskProperty = undefined
+    issue?: IssueProperty = undefined
     
 }
 
-export const SPost:mongoose.Schema = new mongoose.Schema({
+export const SPost:Schema = new Schema({
     belong: String,
     channel: String,
     group: String,
