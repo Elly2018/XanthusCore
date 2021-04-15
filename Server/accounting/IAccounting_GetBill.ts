@@ -1,6 +1,4 @@
-import { IBase } from "../../IBase";
-
-export interface IAccountingGetBill extends IBase{
+export interface IAccountingGetBill{
     page: number
     sort: number
     category: number

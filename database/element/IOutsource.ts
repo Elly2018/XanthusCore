@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
 
-export interface IOutsource extends IDatabaseBase{
+export interface IOutsource extends mongoose.Document{
     charge: string,
     deputy: string,
     project: string,

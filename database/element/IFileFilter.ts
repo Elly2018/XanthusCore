@@ -1,29 +1,59 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "./../IDatabaseBase";
 
+/**
+ * Filter option
+ */
 export interface SingleFilter{
+    /**
+     * File name must start with what\
+     * Empty means none
+     */
     startWith: string,
+    /**
+     * File name must end with what\
+     * Empty means none
+     */
     endWith: string,
+    /**
+     * File extensions must be what
+     * Empty array means none
+     */
     extension: Array<string>,
-    topOnly: boolean,
 }
 
-export interface IFileFilter extends IDatabaseBase{
+/**
+ * Virtual filter\
+ * It loop the target url\
+ * And passing all filter get the file result
+ */
+export interface IFileFilter extends mongoose.Document {
+    /**
+     * Filter name
+     */
     name: string,
-    url: string,
+    /**
+     * Filter root url
+     */
+    root: string,
+    /**
+     * Filter options
+     */
     filter: Array<SingleFilter>,
+    /**
+     * Extra file means the absolute name\
+     * It will search these name and get pass ignore filter options
+     */
     extra: Array<string>,
 }
 
 export const SFileFilter:mongoose.Schema = new mongoose.Schema({
     name: String,
-    url: String,
+    root: String,
     filter:[
         {
             startWith: String,
             endWith: String,
-            extension:[String],
-            topOnly: {type:Boolean, default: true},
+            extension:[String]
         }
     ],
     extra: [String],

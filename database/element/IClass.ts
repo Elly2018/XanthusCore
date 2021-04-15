@@ -1,16 +1,42 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "./../IDatabaseBase";
 
+/**
+ * Class permission status
+ */
 export interface ClassPermission{
+    /**
+     * Unlock all ability
+     */
     administrator: boolean,
+    /**
+     * You can create project and delete project at toolbar
+     */
     createProject: boolean,
+    /**
+     * You can create notice post
+     */
     createNotice: boolean,
+    /**
+     * You can view staff detail and be able to modify them and view detail record
+     */
     accountManagement: boolean,
+    /**
+     * You can see accounting channel and check bill record
+     */
     viewAccounting: boolean,
+    /**
+     * You can sumbit and modify bill record
+     */
     modifyAccounting: boolean,
+    /**
+     * You can view project management channel and be able to modify them and view detail record
+     */
     projectManagement: boolean,
 }
 
+/**
+ * Each level will effect salary promote value etc...
+ */
 export interface ClassLevel {
     promote: number
     technicalResponsibility: number
@@ -22,21 +48,36 @@ export interface ClassLevel {
     performanceAppraisalStandard: number
 }
 
-export interface IClass extends IDatabaseBase{
+/**
+ * Account class\
+ * It manage the permission status for each account
+ */
+export interface IClass extends mongoose.Document {
+    /**
+     * Class name
+     */
     name: string
+    /**
+     * Class description
+     */
     description: string
-    cannotDelete: boolean
-
+    /**
+     * Rank of class
+     */
     rank: number
+    /**
+     * Each level detail
+     */
     level: Array<ClassLevel>
-
+    /**
+     * Permission status
+     */
     permission: ClassPermission
 }
 
 export const SClass:mongoose.Schema = new mongoose.Schema({
     name: String,
     description: String,
-    cannotDelete: Boolean,
 
     rank: Number,
     level: [
@@ -53,11 +94,13 @@ export const SClass:mongoose.Schema = new mongoose.Schema({
     ],
 
     permission:{
+        administrator: Boolean,
         createProject: Boolean,
+        createNotice: Boolean,
         accountManagement: Boolean,
         viewAccounting: Boolean,
         modifyAccounting: Boolean,
-        projectManagement: Boolean,
+        projectManagement: Boolean
     },
     createdate: {type:Date, default:Date.now}
 })

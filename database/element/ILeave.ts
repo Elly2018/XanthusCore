@@ -1,8 +1,20 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "./../IDatabaseBase";
 
-export interface ILeave extends IDatabaseBase{
+export enum LeaveType{
+    
+}
+
+/**
+ * Staff leave record
+ */
+export interface ILeave extends mongoose.Document{
+    /**
+     * Who sign up this leave record
+     */
     account: string,
+    /**
+     * Type of leave
+     */
     type: number,
     subject: string,
     content: string

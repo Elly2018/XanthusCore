@@ -1,5 +1,6 @@
 //#region Utility
-export { ChannelType, ChannelIconDict, ChannelTypeDict} from './Utility/ChannelType'
+export { AccountPrivacy } from './Utility/AccountPrivacy'
+export { ChannelType, ChannelIconDict, ChannelTypeDict } from './Utility/ChannelType'
 export { IBase } from './IBase'
 export { IBaseReply } from './IBaseReply'
 export { AccountingCategory, AccountingPayrollType, AccountingPurchaseType, AccountingTravelType, AccountingRecievedPaymentType, AccountingOutsourceType } from './Utility/AccountingFilter'

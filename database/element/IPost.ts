@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
 
 export enum PostType{
     IssuePost = 0,
@@ -10,6 +9,7 @@ export enum PostType{
     RequestReject = 12,
 
     TaskPost = 20,
+    TaskContainerPost = 21,
 
     Notice = 30,
 
@@ -37,59 +37,108 @@ export enum TaskState{
     Uninitiated = 3,
 }
 
-export interface ScheduleRequirement{
-    targetTask: string
-    phase: number
-}
-
 export interface PostSchedule{
-    group: string
-    startday: number
-    endday: number
-    requirement: Array<ScheduleRequirement>
+    container: string // 
+    estimate: number // Estimate working time
 }
 
-export interface IPost extends IDatabaseBase {
-    belong: string // Project ID
-    group: string // Group ID, for request
-    state: number
-    target: string // Target, for issue comment and request
-    color: string
-    title: string
-    posttype: number
-    sender: string // Account ID
-    content: string
-    files: Array<string>
+export interface TaskProperty {
+    start: number // Task container start day
+    manpower: number
     schedule: Array<PostSchedule> // For Task
-    view: number // For issue
-    like: Array<string> // For issue
+}
+
+export interface IssueProperty{
+    view: number // View count
+    like: Array<string> // Like account
+}
+
+export interface IPost extends mongoose.Document {
+    /**
+     * Belong to which project\
+     * Ignore when notice
+     */
+    belong: string
+    /**
+     * Belong to which channel
+     * Only work for issue
+     */
+    channel: string
+    /**
+     * Belong to which group
+     * Ignore when notice
+     */
+    group: string
+    /**
+     * Type define behavier
+     */
+    posttype: number
+    /**
+     * State of the post\
+     * Work for type: Issue, Request, Task
+     */
+    state: number
+
+    /**
+     * Targeting object\
+     * Request => task\
+     * Issue comment => Issue post
+     */
+    target: string
+    /**
+     * Post color\
+     * Only work for Task container
+     */
+    color: string
+    
+    /**
+     * Who send the post
+     */
+    sender: string
+    title: string
+    content: string
+    /**
+     * File absolute path
+     */
+    files: Array<string>
+    /**
+     * Image name
+     */
+    image: Array<string>
+    
+    task?: TaskProperty
+    issue?: IssueProperty
+    
 }
 
 export const SPost:mongoose.Schema = new mongoose.Schema({
     belong: String,
+    channel: String,
     group: String,
+    posttype: Number,
     state: Number,
+
     target: String,
     color: String,
-    title: String,
-    posttype: Number,
+
     sender: String,
+    title: String,
     content: String,
     files: [String],
-    schedule: [
-        {
-            group: String,
-            startday: Date,
-            endday: Date,
-            requirement:[
-                {
-                    targetTask: String,
-                    phase: Number
-                }
-            ]
-        }   
-    ],
-    view: Number,
-    like: [String],
+    image: [String],
+    task:{
+        start: Number,
+        manpower: Number,
+        schedule: [
+            {
+                container: String,
+                estimate: Number
+            }
+        ]
+    },
+    issue:{
+        view: Number,
+        like: [String],
+    },
     createdate: {type:Date, default: Date.now}
 })

@@ -1,6 +1,4 @@
-import { IBase } from "../../IBase";
-
-export interface ISocialAccountList extends IBase{
+export interface ISocialAccountList{
     page: number
     sort: number
     search: string

@@ -1,6 +1,4 @@
-import { IBase } from "../../IBase";
-
-export interface INavCreateProject extends IBase{
+export interface INavCreateProject{
     name: string
     budget: number
     startday: number

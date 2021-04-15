@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "./../IDatabaseBase";
 
-export interface IActivity extends IDatabaseBase {
+export interface IActivity extends mongoose.Document {
     title: string,
     account: Array<string>,
     task: string,

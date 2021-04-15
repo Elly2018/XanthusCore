@@ -1,9 +1,15 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
 
 export interface AccountingElement{
     type: number
     value: number
+}
+
+export interface AccountPayroll{
+    salary: number,
+    laborinsurance: number,
+    healthinsurance: number,
+    pension: number
 }
 
 export interface AccountingOutsource{
@@ -33,7 +39,7 @@ export interface AccountingReceive{
     billDate: number
 }
 
-export interface AccountPurchase{
+export interface AccountingPurchase{
     itemName: string
     count: number
 
@@ -47,18 +53,35 @@ export interface AccountPurchase{
     billDate: number
 }
 
-export interface IAccounting extends IDatabaseBase{
+/**
+ * Accounting bill
+ */
+export interface IAccounting extends mongoose.Document {
     title: string
     description: string
+
+    /**
+     * Who send the bill
+     */
     sender: string
+    /**
+     * Targeting to which project
+     */
     target: string
+    /**
+     * Cost or income list
+     */
     content: Array<AccountingElement>
 
+    payroll?:AccountPayroll
     receive?: AccountingReceive
     travel?: AccountingTravel
     outsource?: AccountingOutsource
-    purchase?:AccountPurchase
+    purchase?:AccountingPurchase
 
+    /**
+     * Bill category
+     */
     category: number
 
     contact?: string
@@ -77,7 +100,50 @@ export const SAccounting:mongoose.Schema = new mongoose.Schema({
             value: Number,
         }
     ],
-    detail: Object,
+
+    payroll:{
+        salary: Number,
+        laborinsurance: Number,
+        healthinsurance: Number,
+        pension: Number
+    },
+    receive: {
+        client: String,
+        clientUID: String,
+        email: String,
+        phone: String,
+        
+        billNumber: String,
+        billDate: Number
+    },
+    travel: {
+        place: String,
+        nation: String,
+        startday: Number,
+        endday: Number
+    },
+    outsource: {
+        vendor: String,
+        email: String,
+        phone: String,
+        billNumber: String,
+        billDate: Number,
+        startday: Number,
+        estimatedPayDay: Number
+    },
+    purchase:{
+        itemName: String,
+        count: Number,
+
+        client: String,
+        clientUID: String,
+        email: String,
+        phone: String,
+        quote: Boolean,
+
+        billNumber: String,
+        billDate: Number
+    },
 
     category: Number,
 

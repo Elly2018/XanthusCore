@@ -1,6 +1,4 @@
-import { IBase } from './../../IBase'
-
-export interface IProfileChangePassword extends IBase {
+export interface IProfileChangePassword{
     oldpassword: string,
     newpassword: string,
 }

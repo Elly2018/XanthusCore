@@ -1,25 +1,43 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "./../IDatabaseBase";
 
-export interface IPerformanceAppraisal extends IDatabaseBase{
+/**
+ * Rating for staff\
+ * Whenever task is done
+ */
+export interface IPerformanceAppraisal extends mongoose.Document {
+  /**
+   * Who sign up the record
+   */
+  sender: string
+  /**
+   * Who is getting rate
+   */
   account: string
-  description: string
+  /**
+   * Which task
+   */
   task: string
-  property: number
+  /**
+   * Cost time
+   */
   time: number
+  /**
+   * Manager message post
+   */
+  post: string
 
   finishRate: number
   quality: number
 }
 
 export const SPerformanceAppraisal:mongoose.Schema = new mongoose.Schema({
-    account: String,
-    description: String,
-    task: String,
-    property: Number,
-    time: Number,
+  sender: String,
+  account: String,
+  task: String,
+  time: Number,
+  post: String,
 
-    finishRate: Number,
-    quality: Number,
-    createdate: {default: Date.now, type: Date}
+  finishRate: Number,
+  quality: Number,
+  createdate: {default: Date.now, type: Date}
 })

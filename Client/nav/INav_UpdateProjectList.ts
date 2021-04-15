@@ -1,5 +1,3 @@
-import { IBase } from "../../IBase";
-
 export interface INavProjectElement{
     _id: string
     name: string
@@ -11,8 +9,4 @@ export interface INavProjectElement{
 export interface INavProjectGroupElement{
     group: string
     projects: Array<INavProjectElement>
-}
-
-export interface INavUpdateProjectList extends IBase{
-    projects: Array<INavProjectGroupElement>
 }

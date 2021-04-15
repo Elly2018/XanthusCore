@@ -1,5 +1,3 @@
-import { IBase } from "../../IBase";
-
 export interface PostHeader{
     _id?: string,
     title: string,
@@ -10,8 +8,4 @@ export interface PostHeader{
     like: number,
     viewed: boolean,
     view: number,
-}
-
-export interface IPostListUpdate extends IBase {
-    posts: Array<PostHeader>
 }

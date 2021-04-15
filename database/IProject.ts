@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-import { IDatabaseBase } from './IDatabaseBase'
 
 export interface IProjectElement{
     id: string,
@@ -18,9 +17,8 @@ export interface IProjectGroupChannel{
     channel: Array<string>
 }
 
-export interface IProject extends IDatabaseBase{
+export interface IProject extends mongoose.Document {
     name: string,
-    projectGroup: string,
     secondary: string,
     description: string,
     budget: number,
@@ -41,7 +39,6 @@ export interface IProject extends IDatabaseBase{
 
 export const SProject:mongoose.Schema = new mongoose.Schema({
     name: String,
-    projectGroup: String,
     secondary: String,
     description: String,
     budget: Number,

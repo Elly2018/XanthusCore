@@ -1,27 +1,30 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
 
-interface IReply{
-    isreply: boolean,
-    target: string
-}
-
-export interface IMessage extends IDatabaseBase{
-    channel: string,
-    user: string,
-    tag: Array<string>,
-    reply: IReply,
-    message: string,
+/**
+ * Text channel message
+ */
+export interface IMessage extends mongoose.Document{
+    /**
+     * Belong to which text channel
+     */
+    channel: string
+    /**
+     * Who send the message
+     */
+    user: string
+    /**
+     * Content
+     */
+    message: string
+    /**
+     * Image names
+     */
+    image: Array<string>
 }
 
 export const SMessage:mongoose.Schema = new mongoose.Schema({
     user: String,
     channel: String,
-    tag: [String],
-    reply: {
-        isreply: Boolean,
-        target: String
-    },
     message: String,
     createdate: {type: Date, default: Date.now}
 })

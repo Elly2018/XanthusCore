@@ -1,28 +1,38 @@
 import mongoose from 'mongoose'
-import { IDatabaseBase } from './IDatabaseBase'
+import { IBaseModel } from '../IBaseModel'
 
-export interface IAccount extends IDatabaseBase{
-    level: number,
-    email: string,
-    username: string,
-    password: string,
-    identitycard: string,
-    firstname: string,
-    lastname: string,
-    passportname: string,
-    phone: string,
-    firstdayofwork: number,
-    lastdayofwork: number,
-    color: string,
-    rank: string,
-    class: string,
-    salary: number,
-    laborinsurance: number,
-    healthinsurance: number,
-    pension: number,
-    block: boolean,
-    googlekey: string,
-    projects: Array<string>,
+/**
+ * User account
+ */
+export interface IAccount extends mongoose.Document {
+    /**
+     * User level, For class to identify level
+     */
+    level: number
+    email: string
+    username: string
+    password: string
+    identitycard: string
+    firstname: string
+    lastname: string
+    passportname: string
+    phone: string
+    firstdayofwork: number
+    lastdayofwork: number
+    color: string
+    class: string
+    laborinsurance: number
+    healthinsurance: number
+    pension: number
+    block: boolean
+    googlekey: string
+    projects: Array<string>
+}
+
+export class MAccount extends IBaseModel<IAccount> {
+    profileURL(address:string):string{
+        return `${address}/Account/${this.data.id}`
+    }
 }
 
 export const SAccount:mongoose.Schema = new mongoose.Schema({
@@ -38,9 +48,7 @@ export const SAccount:mongoose.Schema = new mongoose.Schema({
     firstdayofwork: Number,
     lastdayofwork: Number,
     color: String,
-    rank: String,
     class: String,
-    salary: Number,
     laborinsurance: Number,
     healthinsurance: Number,
     pension: Number,

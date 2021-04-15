@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
 
 export enum LogType{
     Login = 0,
@@ -39,11 +38,29 @@ export enum LogType{
     RequestDelete = 74,
 }
 
-export interface ILog extends IDatabaseBase{
+/**
+ * The server log record
+ */
+export interface ILog extends mongoose.Document{
+    /**
+     * Who or what send this message
+     */
     sender: string,
+    /**
+     * Send to who or what
+     */
     target: Array<string>,
+    /**
+     * Log type will define sender type and target type
+     */
     type: number,
+    /**
+     * Prefix of log message
+     */
     tag: string,
+    /**
+     * Log message
+     */
     message: string,
 }
 

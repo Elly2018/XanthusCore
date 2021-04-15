@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 import { FileSetting } from "./channel/IFile";
 import { TextSetting } from "./channel/IText";
-import { IDatabaseBase } from "./IDatabaseBase";
 
 export interface ChannelNotice {
     account: string
     value: number
 }
 
-export interface IChannel extends IDatabaseBase{
+export interface IChannel extends mongoose.Document {
     name: string
     type: number
     group: boolean
@@ -17,6 +16,8 @@ export interface IChannel extends IDatabaseBase{
     fileSetting?: FileSetting
     notices: Array<ChannelNotice>
 }
+
+export interface IChannelDocs extends mongoose.Document {}
 
 export const SChannel:mongoose.Schema = new mongoose.Schema({
     name: String,

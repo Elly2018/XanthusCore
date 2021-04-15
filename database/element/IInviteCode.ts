@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-import { IDatabaseBase } from "../IDatabaseBase";
 
-export interface IInviteCode extends IDatabaseBase{
+export interface IInviteCode extends mongoose.Document {
     projectGroup: string,
     code: string,
     expiredata: number,
