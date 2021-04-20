@@ -16,9 +16,9 @@ export abstract class DataReceiverBase{
         return false;
     }
 
-    public abstract Analysis(data:any, ws?:WebSocket):void;
+    public abstract Analysis(data:any, ws?:WebSocket) : Promise<void>;
 }
 
 export abstract class DataReceiver<T> extends DataReceiverBase{
-    public abstract Analysis(data:T, ws?:WebSocket):void;
+    abstract Analysis(data:T, ws?:WebSocket) : Promise<void>;
 }

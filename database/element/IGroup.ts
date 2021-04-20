@@ -2,6 +2,7 @@ import { Schema, Document } from 'mongoose'
 
 export interface IGroup{
     _id?: string
+    belong: string
     name: string
     charge: string
     deputy: string
@@ -11,6 +12,7 @@ export interface IGroup{
 
 export class IGroupDocs extends Document implements IGroup{
     name: string = ""
+    belong: string = ""
     charge: string = ""
     deputy: string = ""
     description: string = ""
@@ -19,6 +21,7 @@ export class IGroupDocs extends Document implements IGroup{
 
 export const SGroup:Schema = new Schema({
     name: String,
+    belong: String,
     charge: String,
     deputy: String,
     description: String,

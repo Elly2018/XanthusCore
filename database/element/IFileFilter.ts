@@ -56,7 +56,7 @@ export class IFileFilterDocs extends Document implements IFileFilter{
     extra: Array<string> = []
 
     FilterFiles(files:Array<string>):Array<string>{
-        const result = [];
+        const result:Array<string> = [];
         files.forEach(v => {
             // Before we do filter, we want to get the file.ext format
             // Because user might enter absolute path

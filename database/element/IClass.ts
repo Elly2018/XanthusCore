@@ -3,35 +3,45 @@ import { Schema, Document } from 'mongoose'
 /**
  * Class permission status
  */
-export class ClassPermission{
+ export class ClassPermission{
+    constructor(de?:boolean){
+        if(!de) return;
+        this.administrator = de;
+        this.createProject = de;
+        this.createNotice = de;
+        this.accountManagement = de;
+        this.viewAccounting = de;
+        this.modifyAccounting = de;
+        this.projectManagement = de;
+    }
     /**
      * Unlock all ability
      */
-    administrator: boolean = false
+    administrator?: boolean = undefined
     /**
      * You can create project and delete project at toolbar
      */
-    createProject: boolean = false
+    createProject?: boolean = undefined
     /**
      * You can create notice post
      */
-    createNotice: boolean = false
+    createNotice?: boolean = undefined
     /**
      * You can view staff detail and be able to modify them and view detail record
      */
-    accountManagement: boolean = false
+    accountManagement?: boolean = undefined
     /**
      * You can see accounting channel and check bill record
      */
-    viewAccounting: boolean = false
+    viewAccounting?: boolean = undefined
     /**
      * You can sumbit and modify bill record
      */
-    modifyAccounting: boolean = false
+    modifyAccounting?: boolean = undefined
     /**
      * You can view project management channel and be able to modify them and view detail record
      */
-    projectManagement: boolean = false
+    projectManagement?: boolean = undefined
 }
 
 /**
@@ -81,7 +91,7 @@ export class IClassDocs extends Document implements IClass {
     description: string = ""
     rank: number = 0
     level: Array<ClassLevel> = []
-    permission: ClassPermission = new ClassPermission()
+    permission: ClassPermission = new ClassPermission(false)
 
     getLevel(level:number):ClassLevel | undefined{
         return this.level[level];

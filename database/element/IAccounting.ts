@@ -8,18 +8,8 @@ export interface AccountingElement{
      * Cost type\
      * Check subtype for accounting bill
      */
-    type: number
+    subtype: number
     value: number
-}
-
-/**
- * Payroll info
- */
-export interface AccountPayroll{
-    salary: number,
-    laborinsurance: number,
-    healthinsurance: number,
-    pension: number
 }
 
 /**
@@ -93,7 +83,6 @@ export interface IAccounting {
      */
     content: Array<AccountingElement>
 
-    payroll?:AccountPayroll
     receive?: AccountingReceive
     travel?: AccountingTravel
     outsource?: AccountingOutsource
@@ -119,7 +108,6 @@ export class IAccountingDocs extends Document {
     target: string = ""
     content: Array<AccountingElement> = []
 
-    payroll?:AccountPayroll = undefined
     receive?: AccountingReceive = undefined
     travel?: AccountingTravel = undefined
     outsource?: AccountingOutsource = undefined
@@ -137,19 +125,14 @@ export const SAccounting:Schema = new Schema({
     description: String,
     sender: String,
     target: String,
+
     content: [
         {
-            type: Number,
+            subtype: Number,
             value: Number,
         }
     ],
 
-    payroll:{
-        salary: Number,
-        laborinsurance: Number,
-        healthinsurance: Number,
-        pension: Number
-    },
     receive: {
         client: String,
         clientUID: String,

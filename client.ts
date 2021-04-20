@@ -9,7 +9,7 @@ export { IProjectUpdateChannel } from './Client/project/IProject_UpdateChannel'
 export { IProjectMember } from './Client/project/IProject_Member'
 
 // Sidebar
-export { ISidebarUpdate, SidebarGroup, SidebarPeople, SidebarRole } from './Client/sidebar/ISidebar_Update'
+export { ISidebarUpdate, SidebarGroup, SidebarPeople } from './Client/sidebar/ISidebar_Update'
 
 // Post
 export { PostHeader } from './Client/post/IPost_ListUpdate'

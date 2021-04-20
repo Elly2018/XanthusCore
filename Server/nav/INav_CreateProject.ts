@@ -4,4 +4,5 @@ export interface INavCreateProject{
     startday: number
     sign: number
     initial: number
+    group: string
 }

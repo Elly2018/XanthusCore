@@ -70,6 +70,7 @@ export class RolePermission{
 }
 
 export interface IRole{
+    _id?: string
     name: string
     project: string
     color: string

@@ -58,8 +58,8 @@ export class IAccountDocs extends Document implements IAccount {
 export const SAccount:Schema = new Schema({
     level: Number,
     email: String,
-    username: String,
-    password: String,
+    username: {type: String, required: true, unique: true},
+    password: {type: String, required: true},
     identitycard: String,
     firstname: String,
     lastname: String,

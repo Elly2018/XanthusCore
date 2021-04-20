@@ -1,7 +1,9 @@
 import { Schema, Document } from 'mongoose'
 import { ChannelType } from "../Utility/ChannelType";
-import { FileSetting } from "./channel/IFile";
-import { TextSetting } from "./channel/IText";
+import { TextSetting } from "./channel/TextSetting";
+import { FileSetting } from "./channel/FileSetting";
+import { IssueSetting } from './channel/IssueSetting';
+import { RequestSetting } from './channel/RequestSetting';
 
 export interface IChannel {
     _id?: string
@@ -11,15 +13,19 @@ export interface IChannel {
     groupid: string
     textSetting?: TextSetting
     fileSetting?: FileSetting
+    issueSetting?: IssueSetting
+    requestSetting?: RequestSetting
 }
 
-export class IChannelDocs extends Document {
+export class IChannelDocs extends Document implements IChannel {
     name: string = ""
     type: number = 0
     group: boolean = false
     groupid: string = ""
     textSetting?: TextSetting = undefined
     fileSetting?: FileSetting = undefined
+    issueSetting?: IssueSetting = undefined
+    requestSetting?: RequestSetting = undefined
 
     GetChannelType(){
         return ChannelType[this.type]
@@ -49,10 +55,14 @@ export const SChannel:Schema = new Schema({
         virtualBookmark: [String]
     },
 
-    
+    issueSetting: {
+        canpost: Boolean,
+        cancomment: Boolean
+    },
 
-    notices: [
-        {account: String, value: Number}
-    ],
+    requestSetting: {
+        canpost: Boolean
+    },
+    
     createdate: {type: Date, default: Date.now}
 })

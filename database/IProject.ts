@@ -6,15 +6,6 @@ export interface IProjectElement{
 }
 
 export class IProjectLobbyChannel{
-    /**
-     * Group ID
-     */
-    id: string = ""
-    /**
-     * Group name
-     */
-    name: string = ""
-
     text: string = ""
     file: string = ""
     request: string = ""
@@ -45,6 +36,10 @@ export interface IProject {
      */
     name: string
     /**
+     * Belong to which project group
+     */
+    belong: string
+    /**
      * Project second name, usually English name
      */
     secondary: string
@@ -68,7 +63,7 @@ export interface IProject {
     /**
      * Initial cash, TWD
      */
-    Initial: number
+    initial: number
     /**
      * Who's the owner of this project
      */
@@ -77,6 +72,7 @@ export interface IProject {
     group: Array<IProjectElement>
     staff: Array<IProjectElement>
     role: Array<string>
+    code: Array<string>
     channel:{
         lobby:IProjectLobbyChannel
         group:Array<IProjectGroupChannel>
@@ -85,18 +81,20 @@ export interface IProject {
 
 export class IProjectDocs extends Document implements IProject {
     name: string = ""
+    belong: string = ""
     secondary: string = ""
     description: string = ""
     budget: number = 0
     startday: number = 0
     endday: number = 0
     sign: number = 0
-    Initial: number = 0
+    initial: number = 0
     owner: string = ""
     color: string = ""
     group: Array<IProjectElement> = []
     staff: Array<IProjectElement> = []
     role: Array<string> = []
+    code: Array<string> = []
     channel:{
         lobby:IProjectLobbyChannel,
         group:Array<IProjectGroupChannel>
@@ -121,6 +119,7 @@ export class IProjectDocs extends Document implements IProject {
 
 export const SProject:Schema = new Schema({
     name: String,
+    belong: String,
     secondary: String,
     description: String,
     budget: Number,
@@ -146,10 +145,9 @@ export const SProject:Schema = new Schema({
         }
     ],
     role:[String],
+    code:[String],
     channel:{
         lobby:{
-            id: String,
-            name: String,
             text: String,
             file: String,
             request: String,

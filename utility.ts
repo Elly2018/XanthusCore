@@ -22,6 +22,8 @@ export { FileStructure, RealFileStructure } from './Utility/FileStructure'
 export { RequestPostContent, IssuePostContent, TaskPostContent, IssueCommentContent, NoticePostContent, } from './Utility/PostContent'
 export { CommentElement } from "./Utility/CommentElement"
 export { PerformanceAppraisalData } from './Utility/PerformanceAppraisalData'
+export { LoginState } from './Utility/LoginState'
+export { NavProject } from './Utility/NavProject'
 //#endregion
 
 //#region Network Package Handler

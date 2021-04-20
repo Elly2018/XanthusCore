@@ -13,6 +13,7 @@ export enum AccountingPayrollType {
     FullAttendanceAllowance,
     LivingAllowance,
     HousingAllowance,
+    Pension,
 }
 
 export enum AccountingPurchaseType {

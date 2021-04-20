@@ -18,6 +18,10 @@ export interface IMessage{
       * Image names
       */
      image: Array<string>
+     /**
+      * Image names
+     */
+     file: Array<string>
 }
 
 /**
@@ -28,9 +32,10 @@ export class IMessageDocs extends Document implements IMessage{
     user: string = ""
     message: string = ""
     image: Array<string> = []
+    file: Array<string> = []
 
     imageURL(address:string):Array<string>{
-        const result = [];
+        const result:Array<string> = [];
         this.image.forEach(v => {
             result.push(`${address}/Message/${this.id}/${v}`);
         })
@@ -42,5 +47,7 @@ export const SMessage:Schema = new Schema({
     user: String,
     channel: String,
     message: String,
+    image:[String],
+    file:[String],
     createdate: {type: Date, default: Date.now}
 })

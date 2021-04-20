@@ -6,11 +6,11 @@ export class ReceiverCategory {
     constructor(prefix:string){
         this.prefix = prefix;
     }
-    public Add(receiver:DataReceiverBase){
+    Add(receiver:DataReceiverBase){
         this.receivers.push(receiver);
     }
 
-    public AnalysisData(data:any, ws?:WebSocket):boolean{
+    AnalysisData(data:any, ws?:WebSocket):boolean{
         for(let i = 0; i < this.receivers.length;i++){
             if(this.receivers[i].Check(data.header)){
                 this.receivers[i].Analysis(data, ws);
@@ -45,7 +45,7 @@ export abstract class MainReceiver {
         return this.receivers.find(x => x.prefix == prefix);
     }
 
-    public AnalysisData(data:any, ws?:WebSocket){
+    AnalysisData(data:any, ws?:WebSocket){
         const prefix = (data.header as string).split('-')[0];
         const cate = this.receivers.find(x => x.prefix == prefix);
         if(cate){
@@ -57,5 +57,5 @@ export abstract class MainReceiver {
         }
     }
 
-    public abstract CannotFindHeader(data:any):void;
+    abstract CannotFindHeader(data:any):void;
 }

@@ -1,15 +1,15 @@
 // Main
 export { IAccount, SAccount, IAccountDocs } from './database/IAccount'
-export { IProject, SProject, IProjectDocs, IProjectElement, IProjectGroupElement, IProjectGroupChannel } from './database/IProject'
+export { IProject, SProject, IProjectDocs, IProjectElement, IProjectLobbyChannel, IProjectGroupChannel } from './database/IProject'
 export { IProjectGroup, SProjectGroup, IProjectGroupDocs } from './database/IProjectGroup'
 export { IChannel, SChannel, IChannelDocs } from './database/IChannel'
 
 // Channel
-export { TextSetting } from './database/channel/IText'
-export { FileSetting, Nas } from './database/channel/IFile'
+export { TextSetting } from './database/channel/TextSetting'
+export { FileSetting, Nas } from './database/channel/FileSetting'
 
 // Element
-export { IAccounting, SAccounting, IAccountingDocs, AccountingElement, AccountingOutsource, AccountingTravel, AccountingReceive, AccountingPurchase, AccountPayroll } from './database/element/IAccounting'
+export { IAccounting, SAccounting, IAccountingDocs, AccountingElement, AccountingOutsource, AccountingTravel, AccountingReceive, AccountingPurchase } from './database/element/IAccounting'
 export { IActivity, SActivity, IActivityDocs } from './database/element/IActivity'
 export { IClass, SClass, IClassDocs, ClassPermission, ClassLevel } from './database/element/IClass'
 export { IFileURL, SFileURL, IFileURLDocs } from './database/element/IFileURL'
