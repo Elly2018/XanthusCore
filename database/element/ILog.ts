@@ -60,6 +60,7 @@ export interface ILog{
       * Log message
       */
      message: string
+     createdate?: number
 }
 
 /**

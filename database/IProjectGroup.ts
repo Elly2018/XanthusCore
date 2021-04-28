@@ -4,6 +4,7 @@ export interface IProjectGroup{
     _id?: string
     name: string
     projects: Array<string>
+    createdate?: number
 }
 
 export class IProjectGroupDocs extends Document implements IProjectGroup {
@@ -13,6 +14,6 @@ export class IProjectGroupDocs extends Document implements IProjectGroup {
 
 export const SProjectGroup:Schema = new Schema({
     name: String,
-    projects: [String],
+    projects: [{ type: Schema.Types.ObjectId, ref: 'project' }],
     createdate: {type:Date, default:Date.now}
 })

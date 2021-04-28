@@ -96,6 +96,8 @@ export interface IAccounting {
     contact?: string
     payday?: number
     payMethod?: string
+    
+    createdate?: number
 }
 
 /**
@@ -123,7 +125,7 @@ export class IAccountingDocs extends Document {
 export const SAccounting:Schema = new Schema({
     title: String,
     description: String,
-    sender: String,
+    sender: { type: Schema.Types.ObjectId, ref: 'account' },
     target: String,
 
     content: [

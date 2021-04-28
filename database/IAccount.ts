@@ -19,7 +19,6 @@ export interface IAccount {
     phone: string
     firstdayofwork: number
     lastdayofwork: number
-    color: string
     class: string
     laborinsurance: number
     healthinsurance: number
@@ -27,6 +26,7 @@ export interface IAccount {
     block: boolean
     googlekey: string
     projects: Array<string>
+    createdate?: number
 }
 
 export class IAccountDocs extends Document implements IAccount {
@@ -41,7 +41,6 @@ export class IAccountDocs extends Document implements IAccount {
     phone: string = ""
     firstdayofwork: number = 0
     lastdayofwork: number = 0
-    color: string = ""
     class: string = ""
     laborinsurance: number = 0
     healthinsurance: number = 0
@@ -67,13 +66,12 @@ export const SAccount:Schema = new Schema({
     phone: String,
     firstdayofwork: Number,
     lastdayofwork: Number,
-    color: String,
-    class: String,
+    class: { type: Schema.Types.ObjectId, ref: 'class' },
     laborinsurance: Number,
     healthinsurance: Number,
     pension: Number,
     block: Boolean,
     googlekey: String,
-    projects: [String],
+    projects: [{ type: Schema.Types.ObjectId, ref: 'project' }],
     createdate: {type: Date, default: Date.now}
 })

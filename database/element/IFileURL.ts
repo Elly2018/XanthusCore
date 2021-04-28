@@ -14,6 +14,7 @@ export interface IFileURL{
       * How many page in the page
       */
      pageURL:Array<string>
+     createdate?: number
 }
 
 /**
@@ -27,7 +28,7 @@ export class IFileURLDocs extends Document implements IFileURL {
 
 export const SFileURL:Schema = new Schema({
     name: String,
-    filters:[String],
-    pageURL:[String],
+    filters:[{ type: Schema.Types.ObjectId, ref: 'filefilter' }],
+    pageURL:[{ type: Schema.Types.ObjectId, ref: 'fileurl' }],
     createdate: {type:Date, default:Date.now}
 })

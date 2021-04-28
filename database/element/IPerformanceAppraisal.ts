@@ -25,6 +25,7 @@ export interface IPerformanceAppraisal{
  
    finishRate: number
    quality: number
+   createdate?: number
 }
 
 /**
@@ -58,11 +59,11 @@ export class IPerformanceAppraisalDocs extends Document implements IPerformanceA
 }
 
 export const SPerformanceAppraisal:Schema = new Schema({
-  sender: String,
-  account: String,
-  task: String,
+  sender: { type: Schema.Types.ObjectId, ref: 'account' },
+  account: { type: Schema.Types.ObjectId, ref: 'account' },
+  task: { type: Schema.Types.ObjectId, ref: 'post' },
   time: Number,
-  post: String,
+  post: { type: Schema.Types.ObjectId, ref: 'post' },
 
   finishRate: Number,
   quality: Number,

@@ -22,6 +22,7 @@ export interface IMessage{
       * Image names
      */
      file: Array<string>
+     createdate?: number
 }
 
 /**
@@ -44,8 +45,8 @@ export class IMessageDocs extends Document implements IMessage{
 }
 
 export const SMessage:Schema = new Schema({
-    user: String,
-    channel: String,
+    user: { type: Schema.Types.ObjectId, ref: 'account' },
+    channel: { type: Schema.Types.ObjectId, ref: 'channel' },
     message: String,
     image:[String],
     file:[String],

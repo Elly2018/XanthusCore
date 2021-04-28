@@ -69,12 +69,13 @@ export class RolePermission{
     group: GroupPermission = new GroupPermission()
 }
 
-export interface IRole{
+export interface IRole {
     _id?: string
     name: string
     project: string
     color: string
     permission: RolePermission
+    createdate?: number
 }
 
 /**
@@ -89,7 +90,7 @@ export class IRoleDocs extends Document implements IRole{
 
 export const SRole:Schema = new Schema({
     name: String,
-    project: String,
+    project: { type: Schema.Types.ObjectId, ref: 'project' },
     color: String,
     permission: {
         project: {

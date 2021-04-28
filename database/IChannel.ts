@@ -15,6 +15,7 @@ export interface IChannel {
     fileSetting?: FileSetting
     issueSetting?: IssueSetting
     requestSetting?: RequestSetting
+    createdate?: number
 }
 
 export class IChannelDocs extends Document implements IChannel {
@@ -36,7 +37,7 @@ export const SChannel:Schema = new Schema({
     name: String,
     type: Number,
     group: Boolean,
-    groupid: String,
+    groupid: { type: Schema.Types.ObjectId, ref: 'group' },
 
     textSetting: {
         delay: Number

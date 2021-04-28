@@ -4,7 +4,7 @@ export { ChannelType, ChannelIconDict, ChannelTypeDict } from './Utility/Channel
 export { IBase } from './IBase'
 export { IBaseReply } from './IBaseReply'
 export { AccountingCategory, AccountingPayrollType, AccountingPurchaseType, AccountingTravelType, AccountingRecievedPaymentType, AccountingOutsourceType } from './Utility/AccountingFilter'
-export { ChannelTree } from './Utility/ChannelTree'
+export { ChannelTree, ChannelTreeView, LobbyChannelTree, GroupChannelTree } from './Utility/ChannelTree'
 export { CalendarData } from './Utility/CalendarData'
 export { IProgram, Programs } from './Utility/Programs'
 export { ProjectMember } from './Utility/Member'

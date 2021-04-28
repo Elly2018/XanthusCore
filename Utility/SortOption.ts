@@ -12,7 +12,6 @@ export enum SocialSort{
 
 export enum AccountingSort{
     Title = 0,
-    Category = 1,
     Value = 2,
     CreateDate = 3,
 }

@@ -68,7 +68,6 @@ export interface IProject {
      * Who's the owner of this project
      */
     owner: string
-    color: string
     group: Array<IProjectElement>
     staff: Array<IProjectElement>
     role: Array<string>
@@ -77,6 +76,7 @@ export interface IProject {
         lobby:IProjectLobbyChannel
         group:Array<IProjectGroupChannel>
     }
+    createdate?: number
 }
 
 export class IProjectDocs extends Document implements IProject {
@@ -90,7 +90,6 @@ export class IProjectDocs extends Document implements IProject {
     sign: number = 0
     initial: number = 0
     owner: string = ""
-    color: string = ""
     group: Array<IProjectElement> = []
     staff: Array<IProjectElement> = []
     role: Array<string> = []
@@ -119,7 +118,7 @@ export class IProjectDocs extends Document implements IProject {
 
 export const SProject:Schema = new Schema({
     name: String,
-    belong: String,
+    belong: { type: Schema.Types.ObjectId, ref: 'projectgroup' },
     secondary: String,
     description: String,
     budget: Number,
@@ -127,41 +126,37 @@ export const SProject:Schema = new Schema({
     endday: Number,
     sign: Number,
     Initial: Number,
-    owner: String,
-    color: {
-        type: String,
-        default: "#129853"
-    },
+    owner: { type: Schema.Types.ObjectId, ref: 'account' },
     group: [
         {
-            id: String,
+            id: { type: Schema.Types.ObjectId, ref: 'group' },
             roles: [String]
         }
     ],
     staff: [
         {
-            id: String,
+            id: { type: Schema.Types.ObjectId, ref: 'account' },
             roles: [String],
         }
     ],
-    role:[String],
-    code:[String],
+    role:[{ type: Schema.Types.ObjectId, ref: 'role' }],
+    code:[{ type: Schema.Types.ObjectId, ref: 'code' }],
     channel:{
         lobby:{
-            text: String,
-            file: String,
-            request: String,
-            graph: String,
-            bill: String,
-            outsource: String
+            text: { type: Schema.Types.ObjectId, ref: 'channel' },
+            file: { type: Schema.Types.ObjectId, ref: 'channel' },
+            request: { type: Schema.Types.ObjectId, ref: 'channel' },
+            graph: { type: Schema.Types.ObjectId, ref: 'channel' },
+            bill: { type: Schema.Types.ObjectId, ref: 'channel' },
+            outsource: { type: Schema.Types.ObjectId, ref: 'channel' }
         },
         group:[
             {
-                id: String,
+                id: { type: Schema.Types.ObjectId, ref: 'group' },
                 name: String,
-                text: String,
-                task: String,
-                issue: String
+                text: { type: Schema.Types.ObjectId, ref: 'channel' },
+                task: { type: Schema.Types.ObjectId, ref: 'channel' },
+                issue: { type: Schema.Types.ObjectId, ref: 'channel' }
             }
         ]
     },

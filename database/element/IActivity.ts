@@ -7,6 +7,7 @@ export interface IActivity {
     starttime: number
     endtime: number
     property: number
+    createdate?: number
 }
 
 export class IActivityDocs extends Document implements IActivity{
@@ -18,8 +19,8 @@ export class IActivityDocs extends Document implements IActivity{
 }
 
 export const SActivity:Schema = new Schema({
-    account: String,
-    task: String,
+    account: { type: Schema.Types.ObjectId, ref: 'account' },
+    task: { type: Schema.Types.ObjectId, ref: 'post' },
     starttime: Number,
     endtime: Number,
     property: Number,

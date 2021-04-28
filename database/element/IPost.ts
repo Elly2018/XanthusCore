@@ -166,7 +166,7 @@ export class IPostDocs extends Document implements IPost {
     
     task?: TaskProperty = undefined
     issue?: IssueProperty = undefined
-    
+    createdate?: number
 }
 
 export const SPost:Schema = new Schema({
@@ -179,7 +179,7 @@ export const SPost:Schema = new Schema({
     target: String,
     color: String,
 
-    sender: String,
+    sender: { type: Schema.Types.ObjectId, ref: 'account' },
     title: String,
     content: String,
     files: [String],

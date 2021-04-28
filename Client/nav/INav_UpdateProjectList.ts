@@ -1,3 +1,5 @@
+import { IProjectGroup } from "../../database/IProjectGroup";
+
 export interface INavProjectElement{
     _id: string
     name: string
@@ -7,6 +9,6 @@ export interface INavProjectElement{
 }
 
 export interface INavProjectGroupElement{
-    group: string
+    group: IProjectGroup,
     projects: Array<INavProjectElement>
 }

@@ -42,6 +42,7 @@ export interface IFileFilter{
       * It will search these name and get pass ignore filter options
       */
      extra: Array<string>
+     createdate?: number
 }
 
 /**

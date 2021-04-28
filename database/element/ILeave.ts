@@ -16,6 +16,7 @@ export interface ILeave{
      type: number
      subject: string
      content: string
+     createdate?: number
 }
 
 /**
@@ -26,10 +27,11 @@ export class ILeaveDocs extends Document implements ILeave{
     type: number = 0
     subject: string = ""
     content: string = ""
+
 }
 
 export const SLeave:Schema = new Schema({
-    account: String,
+    account: { type: Schema.Types.ObjectId, ref: 'account' },
     type: Number,
     subject: String,
     content: String,

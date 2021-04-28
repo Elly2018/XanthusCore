@@ -4,8 +4,7 @@ import { Schema, Document } from 'mongoose'
  * Class permission status
  */
  export class ClassPermission{
-    constructor(de?:boolean){
-        if(!de) return;
+    constructor(de:boolean){
         this.administrator = de;
         this.createProject = de;
         this.createNotice = de;
@@ -80,6 +79,7 @@ export interface IClass{
       * Permission status
       */
      permission: ClassPermission
+     createdate?: number
 }
 
 /**
@@ -99,7 +99,7 @@ export class IClassDocs extends Document implements IClass {
 }
 
 export const SClass:Schema = new Schema({
-    name: String,
+    name: {type: String, required: true, unique: true},
     description: String,
 
     rank: Number,
