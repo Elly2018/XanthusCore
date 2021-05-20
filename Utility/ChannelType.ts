@@ -1,3 +1,6 @@
+/**
+ * Channel enum
+ */
 export enum ChannelType{
     Text = 0,
     File = 1,
@@ -15,11 +18,16 @@ export enum ChannelType{
     Accounting = 60,
     ProjectManage = 61,
     ClassManage = 62,
+    Leave = 63,
+    Organization = 64,
 
     PrivateMessage = 100,
     Group = 1000,
 }
 
+/**
+ * Dict for channel type
+ */
 export const ChannelTypeDict = {
     0: "Text",
     1: "File",
@@ -38,11 +46,16 @@ export const ChannelTypeDict = {
     60: "Accounting",
     61: "ProjectManage",
     62: "ClassManage",
+    63: "Leave",
+    64: "Organization",
 
     100: "PrivateMessage",
     1000: "Group"
 }
 
+/**
+ * Icon binding for channel type in the client side
+ */
 export const ChannelIconDict = {
     0: "mdi-message-processing", 
     1: "mdi-file-multiple", 
@@ -61,6 +74,8 @@ export const ChannelIconDict = {
     60: "mdi-bank", 
     61: "mdi-server", 
     62: "mdi-shield", 
+    63: "mdi-export",
+    64: "mdi-sitemap",
 
     100: "mdi-account-location",
     1000: "mdi-account-multiple",

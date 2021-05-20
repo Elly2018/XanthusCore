@@ -20,6 +20,7 @@ export interface IAccount {
     firstdayofwork: number
     lastdayofwork: number
     class: string
+    manager: Array<string>
     laborinsurance: number
     healthinsurance: number
     pension: number
@@ -42,6 +43,7 @@ export class IAccountDocs extends Document implements IAccount {
     firstdayofwork: number = 0
     lastdayofwork: number = 0
     class: string = ""
+    manager: Array<string> = []
     laborinsurance: number = 0
     healthinsurance: number = 0
     pension: number = 0
@@ -67,6 +69,7 @@ export const SAccount:Schema = new Schema({
     firstdayofwork: Number,
     lastdayofwork: Number,
     class: { type: Schema.Types.ObjectId, ref: 'class' },
+    manager: [{ type: Schema.Types.ObjectId, ref: 'manager'}],
     laborinsurance: Number,
     healthinsurance: Number,
     pension: Number,

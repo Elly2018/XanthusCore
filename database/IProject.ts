@@ -125,7 +125,7 @@ export const SProject:Schema = new Schema({
     startday: Number,
     endday: Number,
     sign: Number,
-    Initial: Number,
+    initial: Number,
     owner: { type: Schema.Types.ObjectId, ref: 'account' },
     group: [
         {

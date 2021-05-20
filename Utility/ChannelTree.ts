@@ -1,6 +1,9 @@
 import { IGroup } from '../database/element/IGroup';
 import { IChannel } from './../database/IChannel'
 
+/**
+ * Lobby channel data structure
+ */
 export interface LobbyChannelTree{
     text: IChannel
     file: IChannel
@@ -10,7 +13,13 @@ export interface LobbyChannelTree{
     outsource: IChannel
 }
 
+/**
+ * Group channel data structure
+ */
 export interface GroupChannelTree{
+    /**
+     * Group target
+     */
     group: IGroup
     text: IChannel
     task: IChannel
@@ -18,7 +27,7 @@ export interface GroupChannelTree{
 }
 
 /**
- * Represent project channel structure
+ * project channel structure
  */
 export interface ChannelTree {
     lobby: LobbyChannelTree
@@ -26,7 +35,8 @@ export interface ChannelTree {
 }
 
 /**
- * The structure use for display channel on user interface
+ * The structure use for display channel on user interface\
+ * Tree data structure
  */
 export interface ChannelTreeView {
     id: string

@@ -1,4 +1,6 @@
 import { ProjectPermission, IRole, GroupPermission } from "../database/element/IRole";
+import { IGroup } from '../database/element/IGroup'
+import { IAccount } from "../database/IAccount";
 
 /**
  * In group position
@@ -7,11 +9,7 @@ export interface ProjectGroupMember{
     /**
      * Target group ID
      */
-    group: string
-    /**
-     * Can this staff view this group
-     */
-    visible: boolean
+    group: IGroup
     /**
      * In group permission
      */
@@ -38,4 +36,10 @@ export interface ProjectMember {
      * Project position
      */
     permission: ProjectPermission
+    /**
+     * Member target\
+     * undefine: self\
+     * have value: point to other
+     */
+    target?: IAccount
 }

@@ -1,3 +1,6 @@
+/**
+ * Top category of accounting
+ */
 export enum AccountingCategory {
     Payroll,
     RecievedPayment,
@@ -6,6 +9,9 @@ export enum AccountingCategory {
     Purchase,
 }
 
+/**
+ * Accounting payroll subtype
+ */
 export enum AccountingPayrollType {
     Salary,
     Health,
@@ -16,6 +22,9 @@ export enum AccountingPayrollType {
     Pension,
 }
 
+/**
+ * Accounting purchase subtype
+ */
 export enum AccountingPurchaseType {
     ComputerEquipment,
     OfficeEquipment,
@@ -40,6 +49,9 @@ export enum AccountingPurchaseType {
     Other,
 }
 
+/**
+ * Accounting travel subtype
+ */
 export enum AccountingTravelType {
     Accommodation,
     Parking,
@@ -48,6 +60,9 @@ export enum AccountingTravelType {
     Entertainment, 
 }
 
+/**
+ * Accounting recieved payment subtype
+ */
 export enum AccountingRecievedPaymentType {
     Project,
     Consultant,
@@ -56,6 +71,9 @@ export enum AccountingRecievedPaymentType {
     Subsidy,
 }
 
+/**
+ * Accounting outsource subtype
+ */
 export enum AccountingOutsourceType {
     Plan,
     Art,

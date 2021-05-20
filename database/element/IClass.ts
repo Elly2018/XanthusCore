@@ -79,6 +79,7 @@ export interface IClass{
       * Permission status
       */
      permission: ClassPermission
+
      createdate?: number
 }
 
@@ -99,7 +100,7 @@ export class IClassDocs extends Document implements IClass {
 }
 
 export const SClass:Schema = new Schema({
-    name: {type: String, required: true, unique: true},
+    name: {type: String, required: true},
     description: String,
 
     rank: Number,
@@ -125,5 +126,6 @@ export const SClass:Schema = new Schema({
         modifyAccounting: Boolean,
         projectManagement: Boolean
     },
+
     createdate: {type:Date, default:Date.now}
 })

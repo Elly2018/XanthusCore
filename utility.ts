@@ -1,3 +1,12 @@
+/**
+ * 
+ * 
+ * Utility organize the pack that might use in the application
+ * Mostly contain interface to layout the data structure
+ * Some of the file contain function and class for purpose
+ * 
+ * 
+ */
 //#region Utility
 export { AccountPrivacy } from './Utility/AccountPrivacy'
 export { ChannelType, ChannelIconDict, ChannelTypeDict } from './Utility/ChannelType'
@@ -6,24 +15,23 @@ export { IBaseReply } from './IBaseReply'
 export { AccountingCategory, AccountingPayrollType, AccountingPurchaseType, AccountingTravelType, AccountingRecievedPaymentType, AccountingOutsourceType } from './Utility/AccountingFilter'
 export { ChannelTree, ChannelTreeView, LobbyChannelTree, GroupChannelTree } from './Utility/ChannelTree'
 export { CalendarData } from './Utility/CalendarData'
-export { IProgram, Programs } from './Utility/Programs'
+export { IProgram } from './Utility/Programs'
 export { ProjectMember } from './Utility/Member'
 export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort, RequestSort, IssueSort, TaskSort } from './Utility/SortOption'
-export { ProjectLink, AccountLink, ActivityList } from './Utility/ActivityList'
-export { Lobby, Group, ChannelTemplate } from './Utility/ChannelSpawner'
+export { ActivityPack } from './Utility/ActivityPack'
 export { SocialDisplayAccount, SocialDisplayProjects } from './Utility/SocialDisplayAccount'
-export { ProjectManageDisplayGroup } from './Utility/ProjectManageDisplayGroup'
-export { ProjectManageDisplayStaff } from './Utility/ProjectManageDisplayStaff'
+export { ProjectManagementItem, ProjectManageDisplayGroup, ProjectManageDisplayStaff } from './Utility/ProjectManagementItem'
 export { AccountDetail } from './Utility/AccountDetail'
-export { ManagementPageRequest } from './Utility/ManagementPageRequest'
-export { GroupDetail } from './Utility/GroupDetail'
-export { StaffDetail } from './Utility/StaffDetail'
 export { FileStructure, RealFileStructure } from './Utility/FileStructure'
 export { RequestPostContent, IssuePostContent, TaskPostContent, IssueCommentContent, NoticePostContent, } from './Utility/PostContent'
-export { CommentElement } from "./Utility/CommentElement"
 export { PerformanceAppraisalData } from './Utility/PerformanceAppraisalData'
 export { LoginState } from './Utility/LoginState'
-export { NavProject } from './Utility/NavProject'
+export { AccountingDisplayItem } from './Utility/AccountingDisplayItem'
+export { NoticeDisplayItem, LeaveDisplayItem } from './Utility/PostDisplayItem'
+export { ProjectHeader, ProjectStaffPack, ProjectCodeHeader, ProjectGroupHeader, ProjectGroupPack, ProjectRoleHeader, ProjectStaffHeader, NavProject } from './Utility/ProjectHeader'
+export { MessagePack } from './Utility/MessagePack'
+export { Language } from './Utility/Language'
+export { PerformanceAppraisalPack } from './Utility/PerformanceAppraisalPack'
 //#endregion
 
 //#region Network Package Handler

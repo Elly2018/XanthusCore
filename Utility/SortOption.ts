@@ -38,6 +38,5 @@ export enum IssueSort{
 
 export enum TaskSort{
     Name = 0,
-    Deadline = 1,
-    CreateDate = 2,
+    CreateDate = 1,
 }

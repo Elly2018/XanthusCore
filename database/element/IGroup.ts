@@ -23,8 +23,8 @@ export class IGroupDocs extends Document implements IGroup{
 export const SGroup:Schema = new Schema({
     name: String,
     belong: { type: Schema.Types.ObjectId, ref: 'project' },
-    charge: { type: Schema.Types.ObjectId, ref: 'account' },
-    deputy: { type: Schema.Types.ObjectId, ref: 'account' },
+    charge: String,
+    deputy: String,
     description: String,
     member: [{ type: Schema.Types.ObjectId, ref: 'account' }],
     createdate: {type:Date, default: Date.now}

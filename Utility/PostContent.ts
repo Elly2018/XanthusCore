@@ -1,15 +1,29 @@
 import { IGroup } from "../database/element/IGroup";
-import { IPost } from "../database/element/IPost";
+import { IPost, PostType } from "../database/element/IPost";
 import { IAccount } from "../database/IAccount";
 import { IProject } from "../database/IProject";
 
+/**
+ * 
+ * 
+ * There are all kinds of post out there
+ * Here is the type definitions
+ * {@link PostType}
+ * 
+ * When we deal with different type of post
+ * The structure should also be different
+ * 
+*/
+
+/**
+ * Request post data pack
+ */
 export interface RequestPostContent{
     request: IPost // Request post
     sender: IAccount
     task: IPost // Target
     group: IGroup // Which group is sending
     belong: IProject // Which project
-    files: Array<string> // Contain files
 
     accept?: IPost // Accpet post
     reject?: IPost // Reject post
@@ -36,6 +50,4 @@ export interface NoticePostContent{
 export interface TaskPostContent{
     task: IPost // Task post
     sender: IAccount
-    belong: IGroup // Which project
-    files: Array<string> // Contain files
 }

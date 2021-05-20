@@ -1,5 +1,8 @@
 import { IFileURL } from './../database/element/IFileURL'
 
+/**
+ * 
+ */
 export interface FileStructure{
     target: IFileURL
     full: string
