@@ -4,6 +4,7 @@ export interface IActivity {
     _id?: string
     account: string
     task: string
+    container: string
     starttime: number
     endtime: number
     property: number
@@ -13,6 +14,7 @@ export interface IActivity {
 export class IActivityDocs extends Document implements IActivity{
     account: string = ""
     task: string = ""
+    container: string = ""
     starttime: number = 0
     endtime: number = 0
     property: number = 0
@@ -21,6 +23,7 @@ export class IActivityDocs extends Document implements IActivity{
 export const SActivity:Schema = new Schema({
     account: { type: Schema.Types.ObjectId, ref: 'account' },
     task: { type: Schema.Types.ObjectId, ref: 'post' },
+    container: { type: Schema.Types.ObjectId, ref: 'post' },
     starttime: Number,
     endtime: Number,
     property: Number,

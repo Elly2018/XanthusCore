@@ -1,10 +1,8 @@
 /**
  * 
- * 
  * Utility organize the pack that might use in the application
  * Mostly contain interface to layout the data structure
  * Some of the file contain function and class for purpose
- * 
  * 
  */
 //#region Utility
@@ -32,11 +30,19 @@ export { ProjectHeader, ProjectStaffPack, ProjectCodeHeader, ProjectGroupHeader,
 export { MessagePack } from './Utility/MessagePack'
 export { Language } from './Utility/Language'
 export { PerformanceAppraisalPack } from './Utility/PerformanceAppraisalPack'
+export { OrganizationPack } from './Utility/OrganizationPack'
+export { INavCreateProject } from './Utility/NavPack'
 //#endregion
 
-//#region Network Package Handler
+
+/**
+ * 
+ * Network component
+ * Receiver object is helping server and client to organized websocket signal
+ * 
+ */
+//#region Network
 export { MainReceiver } from './Receiver/MainReceiver'
 export { DataReceiver } from './Receiver/DataReceiver'
-export { DataSender } from './Sender/DataSender'
-export { ClientDataSender } from './Sender/DataSender'
+export { DataSender, ClientDataSender } from './Sender/DataSender'
 //#endregion

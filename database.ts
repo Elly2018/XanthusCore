@@ -1,10 +1,22 @@
-// Main
+/**
+ * 
+ * The primary data structure
+ * 
+ */
+//#region Main
 export { IAccount, SAccount, IAccountDocs } from './database/IAccount'
 export { IProject, SProject, IProjectDocs, IProjectElement, IProjectLobbyChannel, IProjectGroupChannel } from './database/IProject'
 export { IProjectGroup, SProjectGroup, IProjectGroupDocs } from './database/IProjectGroup'
 export { IChannel, SChannel, IChannelDocs } from './database/IChannel'
+//#endregion
 
-// Channel
+
+/**
+ * 
+ * Channel setting structure
+ * 
+ */
+//#region 
 export { TextSetting } from './database/channel/TextSetting'
 export { FileSetting, Nas } from './database/channel/FileSetting'
 export { IssueSetting } from './database/channel/IssueSetting'
@@ -13,11 +25,18 @@ export { BillSetting } from './database/channel/BillSetting'
 export { GraphSetting } from './database/channel/GraphSetting'
 export { OutsourceSetting } from './database/channel/OutsurceSetting'
 export { TaskSetting } from './database/channel/TaskSetting'
+//#endregion
 
-// Element
+
+/**
+ * 
+ * Element data structure
+ * 
+ */
+//#region Element
 export { IAccounting, SAccounting, IAccountingDocs, AccountingElement, AccountingOutsource, AccountingTravel, AccountingReceive, AccountingPurchase } from './database/element/IAccounting'
 export { IActivity, SActivity, IActivityDocs } from './database/element/IActivity'
-export { IClass, SClass, IClassDocs, ClassPermission, ClassLevel } from './database/element/IClass'
+export { IClass, SClass, IClassDocs, ClassLevel } from './database/element/IClass'
 export { IFileURL, SFileURL, IFileURLDocs } from './database/element/IFileURL'
 export { IFileFilter, SFileFilter, IFileFilterDocs, SingleFilter } from './database/element/IFileFilter'
 export { IGroup, SGroup, IGroupDocs } from './database/element/IGroup'
@@ -29,4 +48,5 @@ export { IProperty, IPropertyDocs, SProperty } from './database/element/IPropert
 export { IPropertyGroup, IPropertyGroupDocs, SPropertyGroup } from './database/element/IPropertyGroup'
 export { IRole, SRole, IRoleDocs, RolePermission, ProjectPermission, GroupPermission } from './database/element/IRole'
 export { IInviteCode, SInviteCode, IInviteCodeDocs } from './database/element/IInviteCode'
-export { IOrganization, SOrganization, IOrganizationDocs } from './database/element/IOrganization'
+export { IOrganization, SOrganization, IOrganizationDocs, ClassPermission } from './database/element/IOrganization'
+//#endregion

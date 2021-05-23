@@ -1,5 +1,5 @@
 import { IBase } from '../IBase';
-import { IArrayData, IArrayDataReply } from './ISingleData'
+import { IArrayData, IArrayDataReply } from './IData'
 
 export interface IRequestTableData extends IBase {
   options: Array<[any, any]>

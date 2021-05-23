@@ -23,7 +23,6 @@ export interface RequestPostContent{
     sender: IAccount
     task: IPost // Target
     group: IGroup // Which group is sending
-    belong: IProject // Which project
 
     accept?: IPost // Accpet post
     reject?: IPost // Reject post

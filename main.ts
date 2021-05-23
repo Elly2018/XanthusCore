@@ -1,5 +1,12 @@
+/**
+ * The data general interface for carry data (network purpose)
+ */
 export * from './general'
-export * from './client'
-export * from './server'
+/**
+ * Database layout and data structure
+ */
 export * from './database'
+/**
+ * All the tool and interface in here
+ */
 export * from './utility'

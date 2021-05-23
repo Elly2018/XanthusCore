@@ -4,7 +4,7 @@ import { IProject } from "../database/IProject";
 
 export interface PerformanceAppraisalData{
   account: IAccount,
-  belong: IProject,
-  task: IPost
+  finishRate: number
+  quality: number
   time: number
 }
