@@ -7,7 +7,7 @@
 export { IAccount, SAccount, IAccountDocs } from './database/IAccount'
 export { IProject, SProject, IProjectDocs, IProjectElement, IProjectLobbyChannel, IProjectGroupChannel } from './database/IProject'
 export { IProjectGroup, SProjectGroup, IProjectGroupDocs } from './database/IProjectGroup'
-export { IChannel, SChannel, IChannelDocs } from './database/IChannel'
+export { IChannel, SChannel, IChannelDocs, PMChannel } from './database/IChannel'
 //#endregion
 
 
@@ -48,5 +48,5 @@ export { IProperty, IPropertyDocs, SProperty } from './database/element/IPropert
 export { IPropertyGroup, IPropertyGroupDocs, SPropertyGroup } from './database/element/IPropertyGroup'
 export { IRole, SRole, IRoleDocs, RolePermission, ProjectPermission, GroupPermission } from './database/element/IRole'
 export { IInviteCode, SInviteCode, IInviteCodeDocs } from './database/element/IInviteCode'
-export { IOrganization, SOrganization, IOrganizationDocs, ClassPermission } from './database/element/IOrganization'
+export { IOrganization, SOrganization, IOrganizationDocs, ClassPermission, OrganFilter, ClassPermissionEnum } from './database/element/IOrganization'
 //#endregion

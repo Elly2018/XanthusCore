@@ -1,3 +1,5 @@
+import { IProjectGroup } from "../database/IProjectGroup";
+
 export interface INavCreateProject{
     name: string
     budget: number

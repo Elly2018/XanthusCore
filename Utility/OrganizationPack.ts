@@ -23,3 +23,18 @@ export interface OrganizationPack{
      */
     departmentLayer: Array<IOrganization>
 }
+
+/**
+ * The tree structure of organ\
+ * Use in server for analysis or client organ graph
+ */
+export interface OrganizationTree{
+    /**
+     * Target organization node
+     */
+    target: IOrganization
+    /**
+     * Children
+     */
+    children: Array<OrganizationTree>
+}

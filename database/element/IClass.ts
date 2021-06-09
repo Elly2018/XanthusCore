@@ -32,7 +32,6 @@ export interface IClass{
       * Each level detail
       */
      level: Array<ClassLevel>
-
      createdate?: number
 }
 

@@ -15,7 +15,7 @@ export { ChannelTree, ChannelTreeView, LobbyChannelTree, GroupChannelTree } from
 export { CalendarData } from './Utility/CalendarData'
 export { IProgram } from './Utility/Programs'
 export { ProjectMember } from './Utility/Member'
-export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort, RequestSort, IssueSort, TaskSort } from './Utility/SortOption'
+export { ActivitySort, SocialSort, AccountingSort, ServerManagementSort, RequestSort, IssueSort, TaskSort, PropertyGroupSort, OrganSort } from './Utility/SortOption'
 export { ActivityPack } from './Utility/ActivityPack'
 export { SocialDisplayAccount, SocialDisplayProjects } from './Utility/SocialDisplayAccount'
 export { ProjectManagementItem, ProjectManageDisplayGroup, ProjectManageDisplayStaff } from './Utility/ProjectManagementItem'

@@ -9,8 +9,13 @@ import { OutsourceSetting } from './channel/OutsurceSetting';
 import { TaskSetting } from './channel/TaskSetting';
 import { BillSetting } from './channel/BillSetting';
 
+export interface PMChannel{
+    accounts: Array<string>
+}
+
 export interface IChannel {
     _id?: string
+    name: string
     type: number
     groupid: string
     textSetting?: TextSetting
@@ -21,11 +26,13 @@ export interface IChannel {
     graphSetting?: GraphSetting
     outsourceSetting?: OutsourceSetting
     taskSetting?: TaskSetting
+    PMChannel?: PMChannel
     createdate?: number
 }
 
 export class IChannelDocs extends Document implements IChannel {
     _id?: string
+    name: string = ""
     type: number = 0
     groupid: string = ""
     textSetting?: TextSetting = undefined
@@ -36,6 +43,7 @@ export class IChannelDocs extends Document implements IChannel {
     graphSetting?: GraphSetting = undefined
     outsourceSetting?: OutsourceSetting = undefined
     taskSetting?: TaskSetting = undefined
+    PMChannel?: PMChannel = undefined
 
     GetChannelType(){
         return ChannelType[this.type]
@@ -44,6 +52,7 @@ export class IChannelDocs extends Document implements IChannel {
 
 export const SChannel:Schema = new Schema({
     type: Number,
+    name: String,
     groupid: { type: Schema.Types.ObjectId, ref: 'group' },
 
     textSetting: {
@@ -86,6 +95,10 @@ export const SChannel:Schema = new Schema({
     
     taskSetting: {
 
+    },
+
+    PMChannel: {
+        accounts: [{ type: Schema.Types.ObjectId, ref: 'account'}]
     },
     
     createdate: {type: Date, default: Date.now}

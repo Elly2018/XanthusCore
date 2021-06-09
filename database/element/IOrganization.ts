@@ -1,9 +1,32 @@
 import { Schema, Document } from 'mongoose'
 
+export enum OrganFilter{
+    All = 0,
+    Top = 1,
+    Sub = 2
+}
+
+/**
+ * Class permission enum type
+ */
+export enum ClassPermissionEnum{
+    administrator = 0,
+    createProject = 1,
+    createNotice = 2,
+    accountManagement = 3,
+    viewAccounting = 4,
+    modifyAccounting = 5,
+    viewOrganization = 6,
+    modifyOrganization = 7,
+    viewProperty = 8,
+    modifyProperty = 9,
+    projectManagement = 10,
+}
+
 /**
  * Class permission status
  */
-export class ClassPermission{
+export class ClassPermission {
     constructor(de:boolean){
         this.administrator = de;
         this.createProject = de;
@@ -11,6 +34,10 @@ export class ClassPermission{
         this.accountManagement = de;
         this.viewAccounting = de;
         this.modifyAccounting = de;
+        this.viewOrganization = de;
+        this.modifyOrganization = de;
+        this.viewProperty = de;
+        this.modifyProperty = de;
         this.projectManagement = de;
     }
     /**
@@ -38,6 +65,22 @@ export class ClassPermission{
      */
     modifyAccounting?: boolean = undefined
     /**
+     * You can see accounting channel and check bill record
+     */
+    viewOrganization?: boolean = undefined
+     /**
+      * You can sumbit and modify bill record
+      */
+    modifyOrganization?: boolean = undefined
+     /**
+     * You can see accounting channel and check bill record
+     */
+    viewProperty?: boolean = undefined
+    /**
+     * You can sumbit and modify bill record
+     */
+    modifyProperty?: boolean = undefined
+    /**
      * You can view project management channel and be able to modify them and view detail record
      */
     projectManagement?: boolean = undefined
@@ -53,6 +96,10 @@ export interface IOrganization{
      */
     name: string
     /**
+     * The layer of the organ
+     */
+    layer: number
+    /**
      * Department name\
      * If leave it to null, it means it's under some other department
      */
@@ -60,7 +107,7 @@ export interface IOrganization{
     /**
      * Node parent
      */
-    parent: string
+    parent: string | null
 
     /**
       * Permission status
@@ -69,16 +116,21 @@ export interface IOrganization{
     createdate?: number
 }
 
+/**
+ * Organizational chart data strcture
+ */
 export class IOrganizationDocs extends Document implements IOrganization {
     name: string = ""
+    layer: number = 0
     deparentment: string = ""
-    parent: string = ""
+    parent: string | null = null
     permission: ClassPermission = new ClassPermission(false)
 }
 
 export const SOrganization:Schema = new Schema({
     name: String,
     deparentment: String,
+    layer: {type: Number, default: 1},
     parent: { type: Schema.Types.ObjectId, ref: 'manager', default: null},
 
     permission:{
@@ -88,6 +140,10 @@ export const SOrganization:Schema = new Schema({
         accountManagement: Boolean,
         viewAccounting: Boolean,
         modifyAccounting: Boolean,
+        viewOrganization: Boolean,
+        modifyOrganization: Boolean,
+        viewProperty: Boolean,
+        modifyProperty: Boolean,
         projectManagement: Boolean
     },
 })

@@ -20,6 +20,7 @@ export enum ChannelType{
     ClassManage = 62,
     Leave = 63,
     Organization = 64,
+    Property = 65,
 
     PrivateMessage = 100,
     Group = 1000,
@@ -48,6 +49,7 @@ export const ChannelTypeDict = {
     62: "ClassManage",
     63: "Leave",
     64: "Organization",
+    65: "Property",
 
     100: "PrivateMessage",
     1000: "Group"
@@ -76,6 +78,7 @@ export const ChannelIconDict = {
     62: "mdi-shield", 
     63: "mdi-export",
     64: "mdi-sitemap",
+    65: "mdi-home-variant",
 
     100: "mdi-account-location",
     1000: "mdi-account-multiple",
